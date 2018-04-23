@@ -10,7 +10,7 @@ uint Rand3DPCG() {
     ++seed;
 
     // LCG
-    uint a = 1554525u;
+    uint a = 1664525u;
     unsigned long c = 10139042223u;
     x = x * a + c;
     y = y * a + c;
