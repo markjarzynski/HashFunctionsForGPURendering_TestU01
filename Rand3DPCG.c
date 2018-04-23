@@ -10,9 +10,11 @@ uint Rand3DPCG() {
     ++seed;
 
     // LCG
-    x = x * 1554525u + 10139042223u;
-    y = y * 1554525u + 10139042223u;
-    z = z * 1554525u + 10139042223u;
+    uint a = 1554525u;
+    unsigned long c = 10139042223u;
+    x = x * a + c;
+    y = y * a + c;
+    z = z * a + c;
 
     // permute
     x += y*z;
