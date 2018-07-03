@@ -4,9 +4,10 @@
 
 #define BBS_PRIME24 4093
 
+static double seed = 3.14159265;
+
 // RNG definition meeting Test01 rules
 double RandBBSfloat() {
-    static double seed = 0;
     double s = seed;
     ++seed;
 

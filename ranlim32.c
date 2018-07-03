@@ -1,13 +1,12 @@
 #include <unif01.h>
 #include <bbattery.h>
 
-// RNG definition meeting Test01 rules
-uint32_t Ranlim32() {
-    static uint32_t seed = 0;
-    uint32_t j = seed;
-    ++seed;
+static uint32_t seed = 2463534242U;
 
+// RNG definition meeting Test01 rules
+uint32_t ranlim32() {
     uint32_t u, v, w1, w2, x, y;
+    uint32_t j = seed;
 
     v = 2244614371U;
     w1 = 521288629U;
@@ -35,7 +34,7 @@ uint32_t Ranlim32() {
 
 // test harness
 int main() {
-    unif01_Gen *gen = unif01_CreateExternGenBits("Ranlim32", Ranlim32);
+    unif01_Gen *gen = unif01_CreateExternGenBits("ranlim32", ranlim32);
     bbattery_SmallCrush(gen);
     unif01_DeleteExternGen01(gen);
     return 0;

@@ -2,12 +2,11 @@
 #include <bbattery.h>
 #include <math.h>
 
+static uint32_t x = 2463534242u;
+static uint32_t y = 12345u;
+
 // RNG definition meeting Test01 rules
 double RandFast() {
-    static double seed = 0;
-    double x = seed, y = seed;
-    ++seed;
-
     double i;
 
     double Magic = 3571.0;

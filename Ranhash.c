@@ -1,9 +1,11 @@
 #include <unif01.h>
 #include <bbattery.h>
 
+static uint64_t u = 2463534242u;
 // RNG definition meeting Test01 rules
 uint32_t Ranhash() {
-    uint64_t u = 2463534242U;
+    u++;
+
     uint64_t v = u * 3935559000370003845LL + 2691343689449507681LL;
     v ^= v >> 21; v ^= v << 37; v ^= v >> 4;
     v *= 4768777513237032717LL;

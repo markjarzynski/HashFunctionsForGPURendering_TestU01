@@ -2,12 +2,11 @@
 #include <bbattery.h>
 #include <math.h>
 
+static double seed = 3.14159265;
+
 // RNG definition meeting Test01 rules
 double InterleavedGradientNoise() {
-    static double seed = 0;
-    double u, v;
-    double x = seed, y = seed, z = seed;
-    ++seed;
+    double u, v, x, y, z;
 
     double i;
 
