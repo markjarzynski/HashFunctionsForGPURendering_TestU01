@@ -6,7 +6,14 @@ SRCS := $(wildcard *.c)
 BINS := $(patsubst %.c,%,$(SRCS))
 OBJS := $(patsubst %,%.o,$(BINS))
 
+define \n
+
+endef
+
 all: $(BINS)
+
+run: 
+	$(foreach x,$(BINS),./$(x);)
 
 clean:
 	$(RM) $(BINS)
