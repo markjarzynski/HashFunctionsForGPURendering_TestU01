@@ -6,11 +6,10 @@ SRCS := $(wildcard *.c)
 BINS := $(patsubst %.c,%,$(SRCS))
 OBJS := $(patsubst %,%.o,$(BINS))
 
-define \n
-
-endef
-
 all: $(BINS)
+
+test: test.c morton.h
+	gcc -o test test.c
 
 run: 
 	$(foreach x,$(BINS),./$(x);)
