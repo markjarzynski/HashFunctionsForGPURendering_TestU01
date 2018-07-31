@@ -8,7 +8,7 @@ OBJS := $(patsubst %,%.o,$(BINS))
 
 all: $(BINS)
 
-test: test.c morton.h
+test: test.c morton.h util.h
 	gcc -o test test.c
 
 run: 
