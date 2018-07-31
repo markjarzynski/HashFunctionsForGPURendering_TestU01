@@ -11,7 +11,7 @@ typedef struct
 typedef struct
 {
     uint32_t x, y, z;
-} vec3
+} vec3;
 
 uint32_t morton (uint32_t x, uint32_t y)
 {
@@ -27,7 +27,7 @@ uint32_t morton (uint32_t x, uint32_t y)
 
 vec2 unmorton(uint32_t m)
 {
-    struct vec2 v = {0,0};
+    vec2 v = {0,0};
 
     for (int i = 0; i < sizeof(m) * CHAR_BIT; i++)
     {
@@ -46,7 +46,7 @@ uint32_t morton2(uint32_t x, uint32_t y)
 
 vec2 unmorton2(uint32_t m)
 {
-    return unmorton2(m);
+    return unmorton(m);
 }
 
 uint32_t morton3(uint32_t x, uint32_t y, uint32_t z) 
@@ -63,7 +63,7 @@ uint32_t morton3(uint32_t x, uint32_t y, uint32_t z)
 
 vec3 unmorton3(uint32_t m)
 {
-    struct vec3 v = {0,0,0};
+    vec3 v = {0,0,0};
 
     for (int i = 0; i < sizeof(m) * CHAR_BIT; i++)
     {
