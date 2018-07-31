@@ -19,7 +19,7 @@ big:
 	sed -i -e 's/SmallCrush/BigCrush/g' $(SRCS)
 
 small:
-	sed -i -e 's/BigCrush/SmallCurhs/g' $(SRCS)
+	sed -i -e 's/BigCrush/SmallCrush/g' $(SRCS)
 
 clean:
 	$(RM) $(BINS)
