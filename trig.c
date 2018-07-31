@@ -5,7 +5,7 @@
 static uint32_t seed = 12345u;
 
 // RNG definition meeting Test01 rules
-uint32_t trig() {
+double trig() {
 
     uint32_t x = seed, y = seed;
     seed++;
@@ -18,7 +18,7 @@ uint32_t trig() {
 
 // test harness
 int main() {
-    unif01_Gen *gen = unif01_CreateExternGenBits("trig", trig);
+    unif01_Gen *gen = unif01_CreateExternGen01("trig", trig);
     bbattery_SmallCrush(gen);
     unif01_DeleteExternGen01(gen);
     return 0;
