@@ -3,6 +3,7 @@
 #include <math.h>
 #include "morton.h"
 #include "util.h"
+#include <stdio.h>
 
 static uint32_t seed = 0u;
 
@@ -15,14 +16,15 @@ double trig() {
 
     seed++;
 
-    return frac(43757.5453 * sinf(x * 12.9898 + y * 78.233));
+	double s = x * 12.9898 + y * 78.233;
 
+    return frac(43757.5453 * s);
 }
 
 // test harness
 int main() {
     unif01_Gen *gen = unif01_CreateExternGen01("trig", trig);
-    bbattery_BigCrush(gen);
+    bbattery_Crush(gen);
     unif01_DeleteExternGen01(gen);
     return 0;
 }
