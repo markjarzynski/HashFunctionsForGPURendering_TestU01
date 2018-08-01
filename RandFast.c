@@ -12,6 +12,7 @@ double RandFast() {
     uint32_t x, y;
 
     vec2 v = unmorton2(seed);
+    x = v.x; y = v.y;
 
     double Magic = 3571.0;
 
