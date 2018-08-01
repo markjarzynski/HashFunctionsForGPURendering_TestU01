@@ -1,12 +1,18 @@
 #include <unif01.h>
 #include <bbattery.h>
+#include "morton.h"
 
-static unsigned int x = 2463534242U;
-static unsigned int y = 2463534242U;
-static unsigned int z = 2463534242U;
+static uint32_t seed = 0U;
 
 // RNG definition meeting Test01 rules
 uint32_t pcg3d() {
+
+    uint32_t x, y, z;
+
+    vec3 v = unmorton3(seed);
+    x = v.x; y = v.y; z = v.z;
+
+    seed++;
 
     // LCG
     uint32_t a = 1664525u;
@@ -30,14 +36,13 @@ uint32_t pcg3d() {
     y += z*x;
     z += x*y;
     
-
     return z;
 }
 
 // test harness
 int main() {
     unif01_Gen *gen = unif01_CreateExternGenBits("pcg3d", pcg3d);
-    bbattery_SmallCrush(gen);
-    unif01_DeleteExternGen01(gen);
+    bbattery_BigCrush(gen);
+    unif01_DeleteExternGenBits(gen);
     return 0;
 }
