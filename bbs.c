@@ -1,12 +1,13 @@
 #include <unif01.h>
 #include <bbattery.h>
 
-static uint32_t seed = 2463534242U; 
+static uint32_t seed = 0U;
 
 // RNG definition meeting Test01 rules
 uint32_t bbs() {
 
     uint32_t v = seed;
+    seed++;
 
     v = v % 65521u;
     v = (v * v) % 65521u;
@@ -18,7 +19,7 @@ uint32_t bbs() {
 // test harness
 int main() {
     unif01_Gen *gen = unif01_CreateExternGenBits("bbs", bbs);
-    bbattery_SmallCrush(gen);
-    unif01_DeleteExternGen01(gen);
+    bbattery_BigCrush(gen);
+    unif01_DeleteExternGenBits(gen);
     return 0;
 }

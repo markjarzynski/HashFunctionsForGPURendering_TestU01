@@ -15,7 +15,7 @@ unsigned int JKISS32()
 // test harness
 int main() {
     unif01_Gen *gen = unif01_CreateExternGenBits("JKISS32", JKISS32);
-    bbattery_SmallCrush(gen);
-    unif01_DeleteExternGen01(gen);
+    bbattery_BigCrush(gen);
+    unif01_DeleteExternGenBits(gen);
     return 0;
 }
