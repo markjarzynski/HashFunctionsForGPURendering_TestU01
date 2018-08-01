@@ -28,7 +28,7 @@ uint32_t tea() {
 // test harness
 int main() {
     unif01_Gen *gen = unif01_CreateExternGenBits("tea2", tea);
-    bbattery_SmallCrush(gen);
+    bbattery_BigCrush(gen);
     unif01_DeleteExternGenBits(gen);
     return 0;
 }
