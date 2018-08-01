@@ -12,20 +12,19 @@ double ign() {
     u = seed * 47 * 0.695f;
     v = seed * 17 * 0.695f;    
 
+    seed++;
+
     x = 0.06711056f;
     y = 0.00583715f;
     z = 52.9829189f;
 
-    seed++;
-
     return frac(z * frac(u*x + v*y));
-    //return modf(z * modf(u*x + v*y, &i), &i);
 }
 
 // test harness
 int main() {
     unif01_Gen *gen = unif01_CreateExternGen01("ign", ign);
-    bbattery_Crush(gen);
+    bbattery_BigCrush(gen);
     unif01_DeleteExternGen01(gen);
     return 0;
 }
