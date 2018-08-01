@@ -3,7 +3,6 @@
 #include <math.h>
 #include "morton.h"
 #include "util.h"
-#include <stdio.h>
 
 static uint32_t seed = 0u;
 
@@ -16,9 +15,8 @@ double trig() {
 
     seed++;
 
-	double s = x * 12.9898 + y * 78.233;
-
-    return frac(43757.5453 * s);
+    return frac(43757.5453 * (x * 12.9898 + y * 78.233));
+    //return frac(43757.5453 * sin(x * 12.9898 + y * 78.233));
 }
 
 // test harness
