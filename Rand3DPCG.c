@@ -1,12 +1,17 @@
 #include <unif01.h>
 #include <bbattery.h>
+#include "morton.h"
 
-static unsigned int x = 2463534242U;
-static unsigned int y = 2463534242U;
-static unsigned int z = 2463534242U;
+static uint32_t seed = 0U;
+static uint32_t count = 0U;
 
 // RNG definition meeting Test01 rules
 uint32_t Rand3DPCG() {
+
+    uint32_t x, y, z;
+
+    vec3 v = unmorton3(seed);
+    x = v.x; y = v.y; z = v.z;
 
     // LCG
     uint32_t a = 1664525u;
@@ -30,13 +35,23 @@ uint32_t Rand3DPCG() {
     y ^= y >> 16u;
     z ^= z >> 16u;
 
-    return z;
+    if (count % 3 == 0) {
+        ret = z;
+    } else if (count % 3 == 1) {
+        ret = y;
+    } else {
+        ret = x;
+        seed++;
+    } 
+    count++;
+
+    return ret;
 }
 
 // test harness
 int main() {
     unif01_Gen *gen = unif01_CreateExternGenBits("Rand3DPCG", Rand3DPCG);
-    bbattery_SmallCrush(gen);
+    bbattery_BigCrush(gen);
     unif01_DeleteExternGen01(gen);
     return 0;
 }
