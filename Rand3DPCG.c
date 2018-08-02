@@ -35,6 +35,8 @@ uint32_t Rand3DPCG() {
     y ^= y >> 16u;
     z ^= z >> 16u;
 
+    uint32_t ret;
+
     if (count % 3 == 0) {
         ret = z;
     } else if (count % 3 == 1) {
