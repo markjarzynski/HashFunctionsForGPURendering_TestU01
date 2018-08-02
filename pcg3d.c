@@ -3,6 +3,7 @@
 #include "morton.h"
 
 static uint32_t seed = 0U;
+static uint32_t count = 0U;
 
 // RNG definition meeting Test01 rules
 uint32_t pcg3d() {
@@ -11,8 +12,6 @@ uint32_t pcg3d() {
 
     vec3 v = unmorton3(seed);
     x = v.x; y = v.y; z = v.z;
-
-    seed++;
 
     // LCG
     uint32_t a = 1664525u;
@@ -35,8 +34,23 @@ uint32_t pcg3d() {
     x += y*z;
     y += z*x;
     z += x*y;
-    
-    return z;
+   
+
+    // rotate the outputs z,y,x before we increment seed;
+    uint32_t ret;
+
+    if (count % 3 == 0) {
+        ret = z;
+    else if (count % 3 == 1) {
+        ret = y;
+    } else {
+        seed++;
+        ret = x;
+    } 
+    count++;
+
+    return ret;
+
 }
 
 // test harness
