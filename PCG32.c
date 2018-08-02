@@ -25,7 +25,7 @@ uint32_t PCG32() {
 // test harness
 int main() {
     unif01_Gen *gen = unif01_CreateExternGenBits("PCG32", PCG32);
-    bbattery_SmallCrush(gen);
+    bbattery_BigCrush(gen);
     unif01_DeleteExternGen01(gen);
     return 0;
 }
