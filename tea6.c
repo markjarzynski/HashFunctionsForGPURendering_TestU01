@@ -1,17 +1,20 @@
 #include <unif01.h>
 #include <bbattery.h>
+#include "morton.h"
 
+#define TEA 6
 
-static uint32_t a = 12345u;
-static uint32_t b = 98765u;
-static uint32_t seed = 2463534242U;
+static uint32_t seed = 0U;
 
 // RNG definition meeting Test01 rules
-uint32_t tea6() {
+uint32_t tea() {
 
-    uint32_t x = a, y = b, s = seed;
+    uint32_t x, y, s = 0U;
+    vec2 v = unmorton(seed);
+    x = v.x; y = v.y;
+    seed++;
 
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < TEA; i++)
     {
         s += 0x9E3779B9u;
         x += (y << 4u) ^ (y + s) ^ (y >> 5u);
@@ -24,8 +27,8 @@ uint32_t tea6() {
 
 // test harness
 int main() {
-    unif01_Gen *gen = unif01_CreateExternGenBits("tea6", tea6);
-    bbattery_SmallCrush(gen);
-    unif01_DeleteExternGen01(gen);
+    unif01_Gen *gen = unif01_CreateExternGenBits("tea6", tea);
+    bbattery_BigCrush(gen);
+    unif01_DeleteExternGenBits(gen);
     return 0;
 }
