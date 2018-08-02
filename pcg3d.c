@@ -41,7 +41,7 @@ uint32_t pcg3d() {
 
     if (count % 3 == 0) {
         ret = z;
-    else if (count % 3 == 1) {
+    } else if (count % 3 == 1) {
         ret = y;
     } else {
         seed++;
