@@ -14,27 +14,22 @@
 
 int main() {
 
-    uint32_t x = 5;
+    uint32_t x = 1;
     uint32_t y = 2;
     uint32_t z = 3;
-    uint32_t m = 0;
-
-    m = morton3(x,y,z);
+    uint128_t m = morton3(x,y,z); // set m to be the morton3 of xyz
     
-    printf("%d %d %d %d\n", x, y, z, m);
+    printf("%u %u %u %llu\n", x, y, z, (unsigned long long) m);
     printf(""PATTERN" "PATTERN" "PATTERN" "PATTERN"\n", BINARY(x), BINARY(y), BINARY(z), BINARY(m));
 
-    x = 0;
-    y = 0;
-    z = 0;
+    // reset xyz and get their values from unmorton3(m)
+    x = y = z = 0;
 
-    struct vec3 v = unmorton3(m);
-
+    vec3 v = unmorton3(m);
     x = v.x; y = v.y; z = v.z;
 
-    printf("%d %d %d %d\n", x, y, z, m);
+    printf("%u %u %u %llu\n", x, y, z, (unsigned long long) m);
     printf(""PATTERN" "PATTERN" "PATTERN" "PATTERN"\n", BINARY(x), BINARY(y), BINARY(z), BINARY(m));
-
 
     /*
     for (int i = 0; i < sizeof(x) * CHAR_BIT; i++)
