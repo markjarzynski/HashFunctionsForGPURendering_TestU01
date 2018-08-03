@@ -3,6 +3,9 @@
 
 #include "testu01.h"
 
+typedef __int128 int128_t;
+typedef unsigned __int128 uint128_t;
+
 typedef struct
 {
     uint32_t x, y;
@@ -13,9 +16,14 @@ typedef struct
     uint32_t x, y, z;
 } vec3;
 
-uint32_t morton (uint32_t x, uint32_t y)
+typedef struct
 {
-    uint32_t m = 0;
+    uint32_t x, y, z, w;
+} vec4;
+
+uint64_t morton (uint32_t x, uint32_t y)
+{
+    uint64_t m = 0;
 
     for (int i = 0; i < sizeof(x) * CHAR_BIT; i++)
     {
@@ -25,7 +33,7 @@ uint32_t morton (uint32_t x, uint32_t y)
     return m;
 }
 
-vec2 unmorton(uint32_t m)
+vec2 unmorton(uint64_t m)
 {
     vec2 v = {0,0};
 
@@ -39,7 +47,7 @@ vec2 unmorton(uint32_t m)
 
 }
 
-uint32_t morton2(uint32_t x, uint32_t y)
+uint64_t morton2(uint32_t x, uint32_t y)
 {
     return morton(x, y);
 }
@@ -49,9 +57,9 @@ vec2 unmorton2(uint32_t m)
     return unmorton(m);
 }
 
-uint32_t morton3(uint32_t x, uint32_t y, uint32_t z) 
+uint128_t morton3(uint32_t x, uint32_t y, uint32_t z) 
 {
-    uint32_t m = 0;
+    uint128_t m = 0;
 
     for (int i = 0; i < sizeof(x) * CHAR_BIT; i++)
     {
@@ -61,7 +69,7 @@ uint32_t morton3(uint32_t x, uint32_t y, uint32_t z)
     return m;
 }
 
-vec3 unmorton3(uint32_t m)
+vec3 unmorton3(uint128_t m)
 {
     vec3 v = {0,0,0};
 
