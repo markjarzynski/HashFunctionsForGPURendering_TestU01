@@ -1,10 +1,10 @@
-#ifndef UINT3_H
-#define UINT3_H
+#ifndef UINT2_H
+#define UINT2_H
 
 #include <cstdint>
 #include <math.h>
 
-typedef uint22_t uint;
+typedef uint32_t uint;
 
 class uint2
 {
