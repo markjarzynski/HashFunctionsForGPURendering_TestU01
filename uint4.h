@@ -9,16 +9,24 @@ typedef uint32_t uint;
 class uint4
 {
 public:
-   uint x, y, z, w;
+    uint x, y, z, w;
 
 public:
-   uint4 () {
-       x = y = z = w = 0;
-   }
+    uint4 () {
+        x = y = z = w = 0;
+    }
 
-   uint4 (uint x, uint y, uint z) {
-       this->x = x; this->y = y; this->z = z, this->w = w;
-   }
+    uint4 (uint i) {
+        x = y = z = w = i;
+    }
+
+    uint4 (uint x, uint y, uint z, uint w) {
+        this->x = x; this->y = y; this->z = z, this->w = w;
+    }
+
+    uint4 (uint4 v) {
+        x = v.x; y = v.y; z = v.z; w = v.w;
+    }
 };
 
 // vector addition

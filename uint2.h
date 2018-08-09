@@ -9,16 +9,24 @@ typedef uint32_t uint;
 class uint2
 {
 public:
-   uint x, y;
+    uint x, y;
 
 public:
-   uint2 () {
-       x = y = 0;
-   }
+    uint2 () {
+        x = y = 0;
+    }
 
-   uint2 (uint x, uint y) {
-       this->x = x; this->y = y;
-   }
+    uint2 (uint i) {
+        x = y = i;
+    }
+
+    uint2 (uint x, uint y) {
+        this->x = x; this->y = y;
+    }
+
+    uint2 (uint2 v) {
+        x = v.x; y = v.y;
+    }
 };
 
 // vector addition

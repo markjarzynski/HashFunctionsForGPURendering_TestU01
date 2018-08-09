@@ -9,16 +9,25 @@ typedef uint32_t uint;
 class uint3
 {
 public:
-   uint x, y, z;
+    uint x, y, z;
 
 public:
-   uint3 () {
-       x = y = z = 0;
-   }
+    uint3 () {
+        x = y = z = 0;
+    }
 
-   uint3 (uint x, uint y, uint z) {
-       this->x = x; this->y = y; this->z = z;
-   }
+    uint3 (uint i) {
+        x = y = z = i;
+    }
+
+    uint3 (uint x, uint y, uint z) {
+        this->x = x; this->y = y; this->z = z;
+    }
+    
+    uint3 (uint3 v) {
+        x = v.x; y = v.y; z = v.z;
+    }
+
 };
 
 // vector addition
