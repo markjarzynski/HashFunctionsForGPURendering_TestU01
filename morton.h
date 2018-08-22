@@ -1,41 +1,31 @@
 #ifndef MORTON_H
 #define MORTON_H
 
-#include "testu01.h"
+#include "uint2.h"
+#include "uint3.h"
+#include "uint4.h"
+#include "uint96.h"
+
+#include <cstdint>
 
 typedef __int128 int128_t;
 typedef unsigned __int128 uint128_t;
 
-typedef struct
-{
-    uint32_t x, y;
-} vec2;
-
-typedef struct
-{
-    uint32_t x, y, z;
-} vec3;
-
-typedef struct
-{
-    uint32_t x, y, z, w;
-} vec4;
-
-uint64_t morton (uint32_t x, uint32_t y)
+uint64_t morton (uint2 v)
 {
     uint64_t m = 0;
 
-    for (int i = 0; i < sizeof(x) * CHAR_BIT; i++)
+    for (int i = 0; i < sizeof(v.x) * CHAR_BIT; i++)
     {
-        m |= (x & 1U << i) << i | (y & 1U << i) << (i + 1);
+        m |= (v.x & 1U << i) << i | (v.y & 1U << i) << (i + 1);
     }
-    
+
     return m;
 }
 
-vec2 unmorton(uint64_t m)
+uint2 morton2 (uint64_t m)
 {
-    vec2 v = {0,0};
+    uint2 v = uint2();
 
     for (int i = 0; i < sizeof(m) * CHAR_BIT; i++)
     {
@@ -44,40 +34,56 @@ vec2 unmorton(uint64_t m)
     }
 
     return v;
-
 }
 
-uint64_t morton2(uint32_t x, uint32_t y)
+uint96_t morton (uint3 v)
 {
-    return morton(x, y);
-}
 
-vec2 unmorton2(uint32_t m)
-{
-    return unmorton(m);
-}
+    uint96_t m = 0u;
+    w
 
-uint128_t morton3(uint32_t x, uint32_t y, uint32_t z) 
-{
-    uint128_t m = 0;
-
-    for (int i = 0; i < sizeof(x) * CHAR_BIT; i++)
+    for (int i = 0; i < sizeof(v.x) * CHAR_BIT; i++)
     {
-        m |= (x & 1U << i) << (2 * i) | (y & 1U << i) << (2 * i + 1) | (z & 1U << i) << (2 * i + 2);
+        m |= (v.x & 1U << i) << (2 * i) | (v.y & 1U << i) << (2 * i + 1) | (v.z & 1U << i) << (2 * i + 2);
     }
 
-    return m;
 }
 
-vec3 unmorton3(uint128_t m)
+uint3 morton3 (uint96_t m)
 {
-    vec3 v = {0,0,0};
-
+    uint3 v = uint3();
+    
     for (int i = 0; i < sizeof(m) * CHAR_BIT; i++)
     {
         v.x |= (m & 1U << (3 * i)) >> (2 * i);
         v.y |= (m & 1U << (3 * i + 1)) >> (2 * i + 1);
         v.z |= (m & 1U << (3 * i + 2)) >> (2 * i + 2);
+    }
+    
+    return v;
+}
+
+uint128_t morton (uint4 v)
+{
+    uint128_t m = 0u;
+    
+    for (int i = 0; i < sizeof(v.x) * CHAR_BIT; i++)
+    {
+        m |= (v.x & 1u << i) << (3 * i) | (v.y & 1u << i) << (3 * i + 1) | (v.z & 1u << i) << (3 * i + 2) | (v.w & 1u << i) << (3 * i + 3);
+    }
+
+}
+
+uint4 morton4 (uint128_t m)
+{
+    uint4 v = uint4();
+
+    for (int i = 0; i < sizeof(m) * CHAR_BIT; i++)
+    {
+        v.x |= (m & 1u << (4 * i)) >> (3 * i);
+        v.y |= (m & 1u << (4 * i + 1)) >> (3 * i + 1);
+        v.z |= (m & 1u << (4 * i + 2)) >> (3 * i + 2);
+        v.w |= (m & 1u << (4 * i + 3)) >> (3 * i + 3);
     }
 
     return v;
