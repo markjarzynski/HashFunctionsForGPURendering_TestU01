@@ -56,39 +56,34 @@ struct uint96
 
         return *this;
     }
-
-    uint96 operator + (const uint a) const
+    
+    uint96 operator ~ () const
     {
-        uint96 ret = 0u;
-
-        if ((ret.i[2] = i[2] + a) < i[2]) {
-            if ((ret.i[1] = i[1] + 1) < i[1]) {
-                ret.i[0] = i[0] + 1;
-            }
-        }
-
-        return ret;
+        return uint96(~x, ~y, ~z);
     }
 
-    uint96& operator += (const uint a)
+    uint96 operator & (const uint96 a) const
     {
-        *this = *this + a;
+        return uint96(x & a.x, y & a.y, z & a.z);
+    }
+    
+    uint96 operator &= (const uint96 a)
+    {
+        *this = *this & a;
+        return *this;
+    }
+
+    uint96 operator & (const uint a) const
+    {
+        return uint96( x & 0u, y & 0u, z & a);
+    }
+
+    uint96 operator &= (const uint a) 
+    {
+        *this = *this & a;
         return *this;
     }
     
-    uint96& operator ++ ()
-    {
-        *this = *this + 1u;
-        return *this;
-    }
-
-    uint96 operator ++ (int)
-    {
-        uint96 temp = *this;
-        ++*this;
-        return temp;
-    }
-
     uint96 operator | (const uint96 a) const
     {
         return uint96(x | a.x, y | a.y, z | a.z);
@@ -105,10 +100,118 @@ struct uint96
         return uint96(x, y, z | a);
     }
 
-    uint96 operator |= (const uint a)
+    uint96& operator |= (const uint a)
     {
         *this = *this | a;
         return *this;
+    }
+
+    uint96 operator ^ (const uint96 a) const
+    {
+        return uint96(x ^ a.x, y ^ a.y, z ^ a.z);
+    }
+
+    uint96& operator ^= (const uint96 a)
+    {
+        *this = *this ^ a;
+        return *this;
+    }
+
+    uint96 operator ^ (const uint a) const
+    {
+        return uint96(x ^ 0u, y ^ 0u, z ^ a);
+    }
+
+    uint96& operator ^= (const uint a)
+    {
+        *this = *this ^ a;
+        return *this;
+    }
+ 
+    uint96 operator + (const uint96 a) const
+    {
+        uint96 ret = 0u;
+
+
+        ret.x = x + a.x;
+        ret.y = y + a.y;
+        ret.z = z + a.z;
+
+        if (ret.x < x) {
+            ret.y++;
+        }
+
+        if (ret.y < y) {
+            ret.z++;
+        }
+
+        return ret;
+    }
+
+    uint96& operator += (const uint96 a)
+    {
+        *this = *this + a;
+        return *this;
+    }
+
+    uint96 operator + (const uint a) const
+    {
+        uint96 ret = 0u;
+
+        ret.x = x + a;
+        
+        if (ret.x < x) {
+            ret.y++;
+            if (ret.y < y) {
+                ret.z++;
+            }
+        }
+
+        return ret;
+    }
+
+    uint96& operator += (const uint a)
+    {
+        *this = *this + a;
+        return *this;
+    }
+
+
+    uint96 operator - (const uint96 a) const
+    {
+        return this + ~a + 1u;
+    }
+
+    uint96 operator -= (const uint96 a)
+    {
+        *this = *this - a;
+        return *this;
+    }
+    
+    uint96& operator ++ ()
+    {
+        *this = *this + 1u;
+        return *this;
+    }
+
+    uint96 operator ++ (int)
+    {
+        uint96 temp = *this;
+        ++*this;
+        return temp;
+    }
+
+    uint96& operator -- ()
+    {
+        *this = *this - 1u;
+        return *this;
+    }
+
+    uint96 operator -- (int)
+    {
+        uint96 temp = *this;
+        --*this;
+        return temp;
     }
 };
 
