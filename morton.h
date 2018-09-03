@@ -40,7 +40,6 @@ uint96_t morton (uint3 v)
 {
 
     uint96_t m = 0u;
-    w
 
     for (int i = 0; i < sizeof(v.x) * CHAR_BIT; i++)
     {
