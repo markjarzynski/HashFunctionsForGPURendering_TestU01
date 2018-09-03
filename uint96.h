@@ -97,7 +97,7 @@ struct uint96
 
     uint96 operator | (const uint a) const
     {
-        return uint96(x, y, z | a);
+        return uint96(x | 0u, y | 0u, z | a);
     }
 
     uint96& operator |= (const uint a)
@@ -183,6 +183,17 @@ struct uint96
     }
 
     uint96 operator -= (const uint96 a)
+    {
+        *this = *this - a;
+        return *this;
+    }
+
+    uint96 operator - (const uint a) const
+    {
+        return this + ~a + 1u;
+    }
+
+    uint96& operator -= (const uint a)
     {
         *this = *this - a;
         return *this;
