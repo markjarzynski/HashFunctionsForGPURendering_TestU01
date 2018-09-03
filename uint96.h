@@ -15,7 +15,12 @@ typedef uint32_t uint;
 
 struct uint96
 {
-    uint i[3];
+    union {
+        uint i[3];
+        struct {
+            uint x, y, z;
+        };
+    };
 
     uint96 ()
     {
@@ -52,16 +57,6 @@ struct uint96
         return *this;
     }
 
-    bool operator > (const uint a)
-    {
-        if (i[2] > a or i[1] > 0 or i[0] > 0)
-        {
-            return true;
-        }
-
-        return false;
-    }
-
     uint96 operator + (const uint a) const
     {
         uint96 ret = 0u;
@@ -92,6 +87,28 @@ struct uint96
         uint96 temp = *this;
         ++*this;
         return temp;
+    }
+
+    uint96 operator | (const uint96 a) const
+    {
+        return uint96(x | a.x, y | a.y, z | a.z);
+    }
+
+    uint96& operator |= (const uint96 a)
+    {
+        *this = *this | a;
+        return *this;
+    }
+
+    uint96 operator | (const uint a) const
+    {
+        return uint96(x, y, z | a);
+    }
+
+    uint96 operator |= (const uint a)
+    {
+        *this = *this | a;
+        return *this;
     }
 };
 
