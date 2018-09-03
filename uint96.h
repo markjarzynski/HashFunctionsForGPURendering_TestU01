@@ -228,37 +228,4 @@ struct uint96
 
 typedef uint96 uint96_t;
 
-/*
-class uint96
-{
-public:
-    uint i[3];
-
-public:
-    uint96 () 
-    {
-        i[0] = i[1] = i[2] = 0;        
-    }
-
-    uint96 (uint32_t i)
-    {
-        this->i[0] = this->i[1] = 0;
-        this->i[2] = i;
-    }
-
-
-
-};
-
-inline uint96 operator ++ (const uint96 &a)
-{
-    if (i[2]++ == 0)
-    {
-        if (i[1]++ == 0)
-        {
-            i[0]++;
-        }
-    }
-}
-*/
 #endif
