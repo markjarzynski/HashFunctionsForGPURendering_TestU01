@@ -224,6 +224,50 @@ struct uint96
         --*this;
         return temp;
     }
+
+    uint96 operator * (const uint96 a) const
+    {
+
+    }
+
+    uint96& operator *= (const uint96 a)
+    {
+        *this = *this * a;
+        return *this;
+    }
+
+    uint96 operator * (const uint a) const
+    {
+
+    }
+
+    uint96& operator *= (const uint a)
+    {
+        *this = *this * a;
+        return *this;
+    }
+
+    uint96 operator / (const uint96 a) const
+    {
+
+    }
+
+    uint96& operator /= (const uint96 a)
+    {
+        *this = *this / a;
+        return *this;
+    }
+
+    uint96 operator / (const uint a) const
+    {
+
+    }
+
+    uint96& operator /= (const uint a)
+    {
+        *this = *this / a;
+        return *this;
+    }
 };
 
 typedef uint96 uint96_t;
