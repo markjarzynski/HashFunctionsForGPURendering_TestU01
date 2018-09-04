@@ -9,12 +9,13 @@
 #ifndef UINT96_H
 #define UINT96_H
 
-#include <cstdint>
+#include <stdint.h>
 
 typedef uint32_t uint;
 
-struct uint96
+class uint96
 {
+public:
     union {
         uint i[3];
         struct {
@@ -56,7 +57,14 @@ struct uint96
 
         return *this;
     }
-    
+   
+    uint96& operator = (const uint a[3])
+    {
+        x = a[0];
+        y = a[1];
+        z = a[2];
+    }
+ 
     uint96 operator ~ () const
     {
         return uint96(~x, ~y, ~z);
@@ -127,7 +135,41 @@ struct uint96
         *this = *this ^ a;
         return *this;
     }
- 
+
+    uint96 operator >> (const uint8_t a) const
+    {
+        uint96 ret = 0u;
+
+        ret.x = x >> a;
+        ret.y = (x << 32u - a) | (y >> a);
+        ret.y = (y << 32u - a) | (z >> a);
+
+        return ret;
+    }
+
+    uint96& operator >>= (const uint8_t a)
+    {
+        *this = *this >> a;
+        return *this;
+    }
+
+    uint96 operator << (const uint8_t a) const
+    {
+        uint96 ret = 0u;
+
+        ret.x = (x << a) | (y >> 32u - a);
+        ret.y = (y << a) | (z >> 32u - a);
+        ret.y = (z << a);
+
+        return ret;
+    }
+
+    uint96& operator <<= (const uint8_t a)
+    {
+        *this = *this << a;
+        return *this;
+    }
+
     uint96 operator + (const uint96 a) const
     {
         uint96 ret = 0u;
@@ -137,12 +179,12 @@ struct uint96
         ret.y = y + a.y;
         ret.z = z + a.z;
 
-        if (ret.x < x) {
+        if (ret.z < z) {
             ret.y++;
         }
 
         if (ret.y < y) {
-            ret.z++;
+            ret.x++;
         }
 
         return ret;
@@ -158,12 +200,14 @@ struct uint96
     {
         uint96 ret = 0u;
 
-        ret.x = x + a;
+        ret.x = x;
+        ret.y = y;
+        ret.z = z + a;
         
-        if (ret.x < x) {
+        if (ret.z < z) {
             ret.y++;
             if (ret.y < y) {
-                ret.z++;
+                ret.x++;
             }
         }
 
@@ -179,10 +223,10 @@ struct uint96
 
     uint96 operator - (const uint96 a) const
     {
-        return this + ~a + 1u;
+        return *this + ~a + 1u;
     }
 
-    uint96 operator -= (const uint96 a)
+    uint96& operator -= (const uint96 a)
     {
         *this = *this - a;
         return *this;
@@ -190,7 +234,9 @@ struct uint96
 
     uint96 operator - (const uint a) const
     {
-        return this + ~a + 1u;
+        uint96 ret = *this + ~a + 1u;
+        
+        return ret;
     }
 
     uint96& operator -= (const uint a)
