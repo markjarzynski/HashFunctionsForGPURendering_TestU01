@@ -136,7 +136,7 @@ public:
         return *this;
     }
 
-    uint96 operator >> (const uint8_t a) const
+    uint96 operator >> (const uint a) const
     {
         uint96 ret = 0u;
 
@@ -147,13 +147,13 @@ public:
         return ret;
     }
 
-    uint96& operator >>= (const uint8_t a)
+    uint96& operator >>= (const uint a)
     {
         *this = *this >> a;
         return *this;
     }
 
-    uint96 operator << (const uint8_t a) const
+    uint96 operator << (const uint a) const
     {
         uint96 ret = 0u;
 
@@ -164,7 +164,7 @@ public:
         return ret;
     }
 
-    uint96& operator <<= (const uint8_t a)
+    uint96& operator <<= (const uint a)
     {
         *this = *this << a;
         return *this;
@@ -314,7 +314,15 @@ public:
         *this = *this / a;
         return *this;
     }
+
+    operator uint()
+    {
+        return z;
+    }
+
 };
+
+
 
 typedef uint96 uint96_t;
 

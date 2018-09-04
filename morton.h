@@ -6,6 +6,7 @@
 #include "uint4.h"
 #include "uint96.h"
 
+#include <climits>
 #include <cstdint>
 
 typedef __int128 int128_t;
@@ -41,9 +42,9 @@ uint96_t morton (uint3 v)
 
     uint96_t m = 0u;
 
-    for (int i = 0; i < sizeof(v.x) * CHAR_BIT; i++)
+    for (uint i = 0; i < sizeof(v.x) * CHAR_BIT; i++)
     {
-        m |= (v.x & 1U << i) << (2 * i) | (v.y & 1U << i) << (2 * i + 1) | (v.z & 1U << i) << (2 * i + 2);
+        m |= (uint96(v.x) & 1u << i) << (2u * i) | (uint96(v.y) & 1u << i) << (2u * i + 1u) | (uint96(v.z) & 1u << i) << (2u * i + 2u);
     }
 
 }
@@ -52,11 +53,11 @@ uint3 morton3 (uint96_t m)
 {
     uint3 v = uint3();
     
-    for (int i = 0; i < sizeof(m) * CHAR_BIT; i++)
+    for (uint i = 0; i < sizeof(m) * CHAR_BIT; i++)
     {
-        v.x |= (m & 1U << (3 * i)) >> (2 * i);
-        v.y |= (m & 1U << (3 * i + 1)) >> (2 * i + 1);
-        v.z |= (m & 1U << (3 * i + 2)) >> (2 * i + 2);
+        v.x |= uint((m & 1u << (3u * i)) >> (2u * i));
+        v.y |= uint((m & 1u << (3u * i + 1u)) >> (2u * i + 1u));
+        v.z |= uint((m & 1u << (3u * i + 2u)) >> (2u * i + 2u));
     }
     
     return v;
@@ -77,12 +78,12 @@ uint4 morton4 (uint128_t m)
 {
     uint4 v = uint4();
 
-    for (int i = 0; i < sizeof(m) * CHAR_BIT; i++)
+    for (uint i = 0; i < sizeof(m) * CHAR_BIT; i++)
     {
-        v.x |= (m & 1u << (4 * i)) >> (3 * i);
-        v.y |= (m & 1u << (4 * i + 1)) >> (3 * i + 1);
-        v.z |= (m & 1u << (4 * i + 2)) >> (3 * i + 2);
-        v.w |= (m & 1u << (4 * i + 3)) >> (3 * i + 3);
+        v.x |= (m & 1u << (4u * i)) >> (3u * i);
+        v.y |= (m & 1u << (4u * i + 1u)) >> (3u * i + 1u);
+        v.z |= (m & 1u << (4u * i + 2u)) >> (3u * i + 2u);
+        v.w |= (m & 1u << (4u * i + 3u)) >> (3u * i + 3u);
     }
 
     return v;

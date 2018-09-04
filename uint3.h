@@ -24,8 +24,8 @@ public:
         this->x = x; this->y = y; this->z = z;
     }
     
-    uint3 (uint3 v) {
-        x = v.x; y = v.y; z = v.z;
+    uint3 (uint3* v) {
+        x = v->x; y = v->y; z = v->z;
     }
 
 };
