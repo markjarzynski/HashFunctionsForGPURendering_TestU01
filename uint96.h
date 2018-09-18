@@ -40,6 +40,14 @@ public:
         i[0] = x; i[1] = y; i[2] = z;
     }
 
+    uint96 ( uint *arr )
+    {
+        i[0] = arr[0];
+        i[1] = arr[1];
+        i[2] = arr[2];
+    }
+
+public:
     uint96& operator = (const uint96 a)
     {
         i[0] = a.i[0];
@@ -63,6 +71,8 @@ public:
         x = a[0];
         y = a[1];
         z = a[2];
+
+        return *this;
     }
  
     uint96 operator ~ () const
@@ -141,8 +151,8 @@ public:
         uint96 ret = 0u;
 
         ret.x = x >> a;
-        ret.y = (x << 32u - a) | (y >> a);
-        ret.y = (y << 32u - a) | (z >> a);
+        ret.y = (x << (32u - a)) | (y >> a);
+        ret.z = (y << (32u - a)) | (z >> a);
 
         return ret;
     }
@@ -157,9 +167,9 @@ public:
     {
         uint96 ret = 0u;
 
-        ret.x = (x << a) | (y >> 32u - a);
-        ret.y = (y << a) | (z >> 32u - a);
-        ret.y = (z << a);
+        ret.x = (x << a) | (y >> (32u - a));
+        ret.y = (y << a) | (z >> (32u - a));
+        ret.z = (z << a);
 
         return ret;
     }
@@ -273,7 +283,7 @@ public:
 
     uint96 operator * (const uint96 a) const
     {
-
+        return 0u;
     }
 
     uint96& operator *= (const uint96 a)
@@ -284,7 +294,7 @@ public:
 
     uint96 operator * (const uint a) const
     {
-
+        return 0u;
     }
 
     uint96& operator *= (const uint a)
@@ -295,7 +305,7 @@ public:
 
     uint96 operator / (const uint96 a) const
     {
-
+        return 0u;
     }
 
     uint96& operator /= (const uint96 a)
@@ -306,7 +316,7 @@ public:
 
     uint96 operator / (const uint a) const
     {
-
+        return 0u;
     }
 
     uint96& operator /= (const uint a)
