@@ -47,6 +47,7 @@ uint96_t morton (uint3 v)
         m |= (uint96(v.x) & 1u << i) << (2u * i) | (uint96(v.y) & 1u << i) << (2u * i + 1u) | (uint96(v.z) & 1u << i) << (2u * i + 2u);
     }
 
+    return m;
 }
 
 uint3 morton3 (uint96_t m)
