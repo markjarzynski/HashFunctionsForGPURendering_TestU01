@@ -73,6 +73,7 @@ uint128_t morton (uint4 v)
         m |= (v.x & 1u << i) << (3 * i) | (v.y & 1u << i) << (3 * i + 1) | (v.z & 1u << i) << (3 * i + 2) | (v.w & 1u << i) << (3 * i + 3);
     }
 
+    return m;
 }
 
 uint4 morton4 (uint128_t m)
