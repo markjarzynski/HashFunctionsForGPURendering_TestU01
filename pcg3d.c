@@ -1,5 +1,8 @@
-#include <unif01.h>
-#include <bbattery.h>
+extern "C" {
+    #include "TestU01.h"
+}
+
+#include "uint3.h"
 #include "morton.h"
 
 static uint32_t seed = 0U;
@@ -10,7 +13,7 @@ uint32_t pcg3d() {
 
     uint32_t x, y, z;
 
-    vec3 v = unmorton3(seed);
+    uint3 v = morton3(seed);
     x = v.x; y = v.y; z = v.z;
 
     // LCG
@@ -55,7 +58,7 @@ uint32_t pcg3d() {
 
 // test harness
 int main() {
-    unif01_Gen *gen = unif01_CreateExternGenBits("pcg3d", pcg3d);
+    unif01_Gen *gen = unif01_CreateExternGenBits((char*) "pcg3d", pcg3d);
     bbattery_BigCrush(gen);
     unif01_DeleteExternGenBits(gen);
     return 0;
