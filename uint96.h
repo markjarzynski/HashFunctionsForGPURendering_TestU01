@@ -150,9 +150,23 @@ public:
     {
         uint96 ret = 0u;
 
-        ret.x = x >> a;
-        ret.y = (x << (32u - a)) | (y >> a);
-        ret.z = (y << (32u - a)) | (z >> a);
+        if ( a < 32u ) {
+            ret.x = x >> a;
+            ret.y = (x << (32u - a)) | (y >> a);
+            ret.z = (y << (32u - a)) | (z >> a); 
+        } else if ( 32u <= a && a < 64u ) {
+            ret.x = 0u;
+            ret.y = x >> (a - 32u);
+            ret.z = (x << (64u - a)) | (y >> (a - 32u));
+        } else if ( 64u <= a && a < 96u ) {
+            ret.x = 0u;
+            ret.y = 0u;
+            ret.z = x >> (a - 64u);
+        } else {
+            ret.x = x;
+            ret.y = y;
+            ret.z = z;
+        }
 
         return ret;
     }
@@ -167,9 +181,23 @@ public:
     {
         uint96 ret = 0u;
 
-        ret.x = (x << a) | (y >> (32u - a));
-        ret.y = (y << a) | (z >> (32u - a));
-        ret.z = (z << a);
+        if ( a < 32u ) {
+            ret.x = (x << a) | (y >> (32u - a));
+            ret.y = (y << a) | (z >> (32u - a));
+            ret.z = (z << a);
+        } else if ( 32u <= a && a < 64u ) {
+            ret.x = (y << (a - 32u)) | (z >> (64u - a));
+            ret.y = z << (a - 32u);
+            ret.z = 0u;
+        } else if ( 64u <= a && a < 96u ) {
+            ret.x = z << (a - 64u);
+            ret.y = 0u;
+            ret.z = 0u;
+        } else {
+            ret.x = x;
+            ret.y = y;
+            ret.z = z;
+        }
 
         return ret;
     }
