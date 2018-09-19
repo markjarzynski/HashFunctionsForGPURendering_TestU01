@@ -11,6 +11,8 @@
 
 #include <stdint.h>
 
+#include <stdio.h>
+
 typedef uint32_t uint;
 
 class uint96
@@ -150,7 +152,7 @@ public:
     {
         uint96 ret = 0u;
 
-        if ( a < 32u ) {
+        if ( 1u <= a && a < 32u ) {
             ret.x = x >> a;
             ret.y = (x << (32u - a)) | (y >> a);
             ret.z = (y << (32u - a)) | (z >> a); 
@@ -181,7 +183,7 @@ public:
     {
         uint96 ret = 0u;
 
-        if ( a < 32u ) {
+        if ( 1u <= a && a < 32u ) {
             ret.x = (x << a) | (y >> (32u - a));
             ret.y = (y << a) | (z >> (32u - a));
             ret.z = (z << a);
@@ -208,10 +210,59 @@ public:
         return *this;
     }
 
+    bool operator == (const uint a) const
+    {
+        return x == 0u && y == 0u && z == a;
+    }
+
+    bool operator == (const uint96 a) const
+    {
+        return x == a.x && y == a.y && z == a.z;
+    }
+
+    bool operator > (const uint a) const
+    {
+        return x > 1u || y > 1u || z > a;
+    }
+    
+    bool operator >= (const uint a) const
+    {
+        return x > 1u || y > 1u || z >= a;
+    }
+
+    bool operator > (const uint96 a) const
+    {
+        if ( x > a.x) {
+            return true;
+        } else if ( x == a.x ) {
+            if ( y > a.y ) {
+                return true;
+            } else if ( y == a.y ) {
+                return z > a.z;
+            }
+        }
+
+        return false;
+    }
+
+    bool operator >= (const uint96 a) const
+    {
+        if ( x > a.x ) {
+            return true;
+        } else if ( x == a.x ) {
+            if ( y > a.y ) {
+                return true;
+            } else if (y == a.y) {
+                return z >= a.z;
+            }
+        }
+
+        return false;
+    }   
+
     uint96 operator + (const uint96 a) const
     {
         uint96 ret = 0u;
-
 
         ret.x = x + a.x;
         ret.y = y + a.y;
@@ -311,7 +362,15 @@ public:
 
     uint96 operator * (const uint96 a) const
     {
-        return 0u;
+        uint96 ret = 0u;
+
+        for (uint i = 0; i < 96; i++) {
+            if (((*this >> i) & 1u) == 1u) {
+                ret += a << i;
+            }
+        }
+
+        return ret;
     }
 
     uint96& operator *= (const uint96 a)
@@ -322,7 +381,7 @@ public:
 
     uint96 operator * (const uint a) const
     {
-        return 0u;
+        return *this * uint96(a);
     }
 
     uint96& operator *= (const uint a)
@@ -331,9 +390,24 @@ public:
         return *this;
     }
 
-    uint96 operator / (const uint96 a) const
+    uint96 operator / (const uint96 d) const
     {
-        return 0u;
+        if (d == 0u) {
+            // error divide by zero
+        }
+
+        uint96 q = 0u;
+        uint96 r = 0u;
+
+        for (uint i = 96u; i > 0u; i--) {
+            r = r << 1u;
+            r = (r & ~uint96(1u)) | ((*this >> (i - 1u)) & 1u);
+            if (r >= d) {
+                r = r - d;
+                q |= uint96(1u) << (i - 1u);
+            }
+        }
+        return q; 
     }
 
     uint96& operator /= (const uint96 a)
@@ -344,7 +418,7 @@ public:
 
     uint96 operator / (const uint a) const
     {
-        return 0u;
+        return *this / uint96(a);
     }
 
     uint96& operator /= (const uint a)
@@ -357,6 +431,7 @@ public:
     {
         return z;
     }
+
 
 };
 
