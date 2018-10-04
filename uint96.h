@@ -173,6 +173,11 @@ public:
         return ret;
     }
 
+    uint96 operator >> (const int a) const
+    {
+        return *this >> uint(a);
+    }
+
     uint96& operator >>= (const uint a)
     {
         *this = *this >> a;
