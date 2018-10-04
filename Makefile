@@ -8,8 +8,14 @@ OBJS := $(patsubst %,%.o,$(BINS))
 
 all: $(BINS)
 
-run: 
-	$(foreach x,$(BINS),./$(x) >> $(x).txt;)
+.PHONY: run big small clean
+
+run:
+ifdef r
+	gstdbuf -o 0 ./$(r) | tee $(r).txt
+else
+	$(foreach x,$(BINS),gstdbuf -i 0 ./$(x) | tee $(x).txt;)
+endif
 
 big:
 	sed -i -e 's/SmallCrush/BigCrush/g' $(SRCS)
