@@ -7,18 +7,19 @@
 #include "uint96.h"
 
 #include <climits>
-#include <cstdint>
+#include <iostream>
+#include <bitset>
 
 typedef __int128 int128_t;
 typedef unsigned __int128 uint128_t;
 
 uint64_t morton (uint2 v)
 {
-    uint64_t m = 0;
+    uint64_t m = 0u;
 
-    for (int i = 0; i < sizeof(v.x) * CHAR_BIT; i++)
+    for (int i = 0; i < 32; i++)
     {
-        m |= (v.x & 1U << i) << i | (v.y & 1U << i) << (i + 1);
+        m |= (v.x & 1u << i) << i | (v.y & 1u << i) << (i + 1);
     }
 
     return m;
@@ -28,37 +29,42 @@ uint2 morton2 (uint64_t m)
 {
     uint2 v = uint2();
 
-    for (int i = 0; i < sizeof(m) * CHAR_BIT; i++)
+    //for (int i = 0; i < sizeof(m) * CHAR_BIT; i++)
+    for (int i = 0; i < 32; i++)
     {
-        v.x |= (m & 1U << i) >> i;
-        v.y |= (m & 1U << (i + 1)) >> i;
+        v.x |= (m & (uint64_t(1u) << (2 * i))) >> i;
+        v.y |= (m & (uint64_t(1u) << (2 * i + 1))) >> (i + 1);
     }
 
     return v;
 }
 
-uint96_t morton (uint3 v)
+//uint96_t morton (uint3 v)
+uint64_t morton (uint3 v)
 {
+    uint64_t m = 0u;
+    v = v & 0x1fffffu; // Only look at the first 21 bits.
 
-    uint96_t m = 0u;
-
-    for (uint i = 0; i < sizeof(v.x) * CHAR_BIT; i++)
+    //for (uint i = 0; i < sizeof(v.x) * CHAR_BIT; i++)
+    for (uint i = 0; i < 21; i++)
     {
-        m |= (uint96(v.x) & 1u << i) << (2u * i) | (uint96(v.y) & 1u << i) << (2u * i + 1u) | (uint96(v.z) & 1u << i) << (2u * i + 2u);
+        m |= (v.x & 1u << i) << (2u * i) | (v.y & 1u << i) << (2u * i + 1u) | (v.z & 1u << i) << (2u * i + 2u);
     }
 
     return m;
 }
 
-uint3 morton3 (uint96_t m)
+//uint3 morton3 (uint96_t m)
+uint3 morton3 (uint64_t m)
 {
     uint3 v = uint3();
     
-    for (uint i = 0; i < sizeof(m) * CHAR_BIT; i++)
+    //for (int i = 0; i < sizeof(m) * CHAR_BIT; i++)
+    for (int i = 0; i < 21; i++)
     {
-        v.x |= uint((m & 1u << (3u * i)) >> (2u * i));
-        v.y |= uint((m & 1u << (3u * i + 1u)) >> (2u * i + 1u));
-        v.z |= uint((m & 1u << (3u * i + 2u)) >> (2u * i + 2u));
+        v.x |= (m & ( uint64_t(1u) << (3 * i))) >> (2 * i);
+        v.y |= (m & (uint64_t(1u) << (3 * i + 1))) >> (2 * i + 1);
+        v.z |= (m & (uint64_t(1u) << (3 * i + 2))) >> (2 * i + 2);
     }
     
     return v;
