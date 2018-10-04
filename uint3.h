@@ -103,4 +103,9 @@ inline uint dot (const uint3 &a, const uint3 &b)
     return a.x * b.x + a.y * b.y + a.z * b.z;
 }
 
+inline uint3 operator & (const uint3 &a, const uint s)
+{
+    return uint3(a.x & s, a.y & s, a.z & s);
+}
+
 #endif
