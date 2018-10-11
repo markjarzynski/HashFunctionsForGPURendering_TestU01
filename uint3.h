@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <math.h>
 
-typedef uint32_t uint;
+#include "uint.h"
 
 class uint3
 {
@@ -106,6 +106,21 @@ inline uint dot (const uint3 &a, const uint3 &b)
 inline uint3 operator & (const uint3 &a, const uint s)
 {
     return uint3(a.x & s, a.y & s, a.z & s);
+}
+
+inline uint3 operator >> (const uint3 &a, const uint s)
+{
+    return uint3(a.x >> s, a.y >> s, a.z >> s);
+}
+
+inline uint3 operator ^ (const uint3 &a, const uint s)
+{
+    return uint3(a.x ^ s, a.y ^ s, a.z ^ s);
+}
+
+inline uint3 operator ^ (const uint3 &a, const uint3 &b)
+{
+    return uint3(a.x ^ b.x, a.y ^ b.y, a.z ^ b.z);
 }
 
 #endif

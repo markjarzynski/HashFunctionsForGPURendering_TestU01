@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <math.h>
 
-typedef uint32_t uint;
+#include "uint.h"
 
 class uint2
 {
@@ -100,6 +100,26 @@ inline uint2 operator / (const uint s, const uint2 &a)
 inline uint dot (const uint2 &a, const uint2 &b)
 {
     return a.x * b.x + a.y * b.y;
+}
+
+inline uint2 operator >> (const uint2 &a, const uint s)
+{
+    return uint2(a.x >> s, a.y >> s);
+}
+
+inline uint2 operator >> (const uint2 &a, const uint2 &b)
+{
+    return uint2(a.x >> b.x, a.y >> b.y);
+}
+
+inline uint2 operator ^ (const uint2 &a, const uint s)
+{
+    return uint2(a.x ^ s, a.y ^ s);
+}
+
+inline uint2 operator ^ (const uint2 &a, const uint2 &b)
+{
+    return uint2(a.x ^ b.x, a.y ^ b.y);
 }
 
 #endif

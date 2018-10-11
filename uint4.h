@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <math.h>
 
-typedef uint32_t uint;
+#include "uint.h"
 
 class uint4
 {

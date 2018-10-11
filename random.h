@@ -1,7 +1,18 @@
+#pragma once
+
+#include "uint.h"
+#include "uint2.h"
+#include "uint3.h"
+#include "uint4.h"
+
+#include "float2.h"
+#include "float3.h"
+
+#include "util.h"
+
 // Commonly used constants
 #define c1 0xcc9e2d51u
 #define c2 0x1b873593u
-
 
 // Helper Functions
 uint rotl(uint x, uint r)
@@ -35,7 +46,7 @@ uint mur(uint a, uint h) {
 }
 
 // convert 2D seed to 1D
-uint seed(uvec2 p) {
+uint seed(uint2 p) {
     return 19u * p.x + 47u * p.y + 101u;
 }
 
@@ -69,19 +80,19 @@ uint city(uint s)
 }
 
 // UE4 RandFast function
-float fast(vec2 v) {
-    v = (1./4320.) * v + vec2(0.25,0.);
-    float state = fract( dot( v * v, vec2(3571)));
-    return fract( state * state * (3571. * 2.));
+float fast(float2 v) {
+    v = (1./4320.) * v + float2(0.25,0.);
+    float state = frac( dot( v * v, float2(3571)));
+    return frac( state * state * (3571. * 2.));
 }
 
 // Interleaved Gradient Noise
 //  - Jimenez, Next Generation Post Processing in Call of Duty: Advanced Warfare
 //    Advances in Real-time Rendering, SIGGRAPH 2014
-float ign(vec2 v)
+float ign(float2 v)
 {
-    vec3 magic = vec3(0.06711056f, 0.00583715f, 52.9829189f);
-    return fract(magic.z * fract(dot(v, magic.xy)));
+    float3 magic = float3(0.06711056f, 0.00583715f, 52.9829189f);
+    return frac(magic.z * frac(dot(v, float2(magic.x, magic.y))));//frac(magic.z * frac(dot(v, magic.xy)));
 }
 
 // Integer Hash - I
@@ -99,13 +110,13 @@ uint iqint1(uint n)
 // Integer Hash - II
 // - Inigo Quilez, Integer Hash - II, 2017
 //   https://www.shadertoy.com/view/XlXcW4
-uvec3 iqint2(uvec3 x)
+uint3 iqint2(uint3 x)
 {
     const uint k = 1103515245u;
     
-    x = ((x>>8U)^x.yzx)*k;
-    x = ((x>>8U)^x.yzx)*k;
-    x = ((x>>8U)^x.yzx)*k;
+    x = ((x>>8U)^uint3(x.y, x.z, x.x))*k;//((x>>8U)^x.yzx)*k;
+    x = ((x>>8U)^uint3(x.y, x.z, x.x))*k;//((x>>8U)^x.yzx)*k;
+    x = ((x>>8U)^uint3(x.y, x.z, x.x))*k;//((x>>8U)^x.yzx)*k;
     
     return x;
 }
@@ -113,9 +124,9 @@ uvec3 iqint2(uvec3 x)
 // Integer Hash - III
 // - Inigo Quilez, Integer Hash - III, 2017
 //   https://www.shadertoy.com/view/4tXyWN
-uint iqint3(uvec2 x)
+uint iqint3(uint2 x)
 {
-    uvec2 q = 1103515245U * ( (x>>1U) ^ (x.yx   ) );
+    uint2 q = 1103515245U * ( (x>>1U) ^ (uint2(x.y, x.x)) );//1103515245U * ( (x>>1U) ^ (x.yx   ) );
     uint  n = 1103515245U * ( (q.x  ) ^ (q.y>>3U) );
     
     return n;
@@ -125,7 +136,7 @@ uint iqint3(uvec2 x)
 // - David Jones, Good Practice in (Pseudo) Random Number Generation for 
 //   Bioinformatics Applications, 2010
 //   http://www0.cs.ucl.ac.uk/staff/d.jones/GoodPracticeRNG.pdf
-uint jkiss32(uvec2 p)
+uint jkiss32(uint2 p)
 {
     uint x = p.x, y = p.y;
     
@@ -148,7 +159,7 @@ uint lcg(uint p)
 }
 
 // Adapted from MurmurHas3_x86_32 from https://github.com/aappleby/smhasher
-uint murmur3(uvec2 seed)
+uint murmur3(uint2 seed)
 {
     uint h = seed.x;
     uint k = seed.y;
@@ -172,7 +183,7 @@ uint murmur3(uvec2 seed)
 }
 
 // UE4 RandPCG3D32
-uvec3 pcg3d(uvec3 v)
+uint3 pcg3d(uint3 v)
 {
 	v = v * 1664525u + 1013904223u;   
 
@@ -184,13 +195,13 @@ uvec3 pcg3d(uvec3 v)
     v.y += v.z*v.x;
     v.z += v.x*v.y;
     
-    v ^= v>>16u;
+    v = v ^ (v>>16u);
     
     return v;
 }
 
 // UE4 RandPCG3d16
-uvec3 pcg3d16(uvec3 v)
+uint3 pcg3d16(uint3 v)
 {
     v = v * 12829u + 47989u;
     v.x += v.y*v.z;
@@ -204,9 +215,9 @@ uvec3 pcg3d16(uvec3 v)
 }
 
 // UE4 PseudoRandom function
-float pseudo(vec2 v) {
-    v = fract(v/128.)*128.f + vec2(-64.340622f, -72.465622f);
-    return fract(dot(v.xyx * v.xyy, vec3(20.390625f, 60.703125f, 2.4281209f)));
+float pseudo(float2 v) {
+    v = frac(v/128.)*128.f + float2(-64.340622f, -72.465622f);
+    return frac(dot(float3(v.x, v.y, v.x) * float3(v.x, v.y, v.y), float3(20.390625f, 60.703125f, 2.4281209f)));//frac(dot(v.xyx * v.xyy, float3(20.390625f, 60.703125f, 2.4281209f)));
 }
 
 uint ranlim32(uint j)
@@ -268,7 +279,7 @@ uint superfast(uint data)
 
 }
 
-uvec2 tea(int t, uvec3 p)
+uint2 tea(int t, uint3 p)
 {
     uint s = p.z;
 
@@ -277,12 +288,12 @@ uvec2 tea(int t, uvec3 p)
         p.x += (p.y<<4u)^(p.y+s)^(p.y>>5u);
         p.y += (p.x<<4u)^(p.x+s)^(p.x>>5u);
     }
-    return p.xy;
+    return uint2(p.x, p.y);//p.xy;
 }
 
-float trig(vec2 p)
+float trig(float2 p)
 {
-    return fract(43757.5453*sin(dot(p, vec2(12.9898,78.233))));
+    return frac(43757.5453*sin(dot(p, float2(12.9898,78.233))));
 }
 
 // Wang hash, described on http://burtleburtle.net/bob/hash/integer.html
@@ -299,11 +310,11 @@ uint wang(uint v)
 
 // 128-bit xorshift
 //  - Marsaglia, Xorshift RNGs, Journal of Statistical Software, v8n14, 2003
-uvec4 xorshift128(uvec4 v)
+uint4 xorshift128(uint4 v)
 {
     v.w ^= v.w << 11u;
     v.w ^= v.w >> 8u;
-    v = v.wxyz;
+    v = uint4(v.w, v.x, v.y, v.z); //v.wxyz;
     v.x ^= v.y;
     v.x ^= v.y >> 19u;
     return v;
@@ -320,7 +331,7 @@ uint xorshift32(uint v) {
 
 // xxhash (https://github.com/Cyan4973/xxHash)
 //   From https://www.shadertoy.com/view/Xt3cDn
-uint xxhash32(uvec2 p)
+uint xxhash32(uint2 p)
 {
     const uint PRIME32_2 = 2246822519U, PRIME32_3 = 3266489917U;
 	const uint PRIME32_4 = 668265263U, PRIME32_5 = 374761393U;
@@ -332,11 +343,11 @@ uint xxhash32(uvec2 p)
 }
 
 // Hash without Sine, https://www.shadertoy.com/view/4djSRW
-vec3 hashwithoutsine(vec2 p)
+float3 hashwithoutsine(float2 p)
 {
-	vec3 p3 = fract(vec3(p.xyx) * vec3(.1031, .1030, .0973));
-    p3 += dot(p3, p3.yxz+19.19);
-    return fract((p3.xxy+p3.yzz)*p3.zyx);
+	float3 p3 = frac(float3(p.x, p.y, p.x) * float3(.1031, .1030, .0973));//frac(float3(p.xyx) * float3(.1031, .1030, .0973));
+    p3 = p3 + dot(p3, float3(p3.y, p3.x, p3.z) + 19.19);//dot(p3, p3.yxz+19.19);
+    return frac((float3(p3.x, p3.x, p3.y) + float3(p3.y, p3.z, p3.z)) * float3(p3.z, p3.y, p3.x));//frac((p3.xxy+p3.yzz)*p3.zyx);
 }
 
 uint taus(uint z, int s1, int s2, int s3, uint m)
@@ -346,7 +357,7 @@ uint taus(uint z, int s1, int s2, int s3, uint m)
 }
 
 // https://developer.nvidia.com/gpugems/GPUGems3/gpugems3_ch37.html
-uint hybridtaus(uvec4 z)
+uint hybridtaus(uint4 z)
 {
     for (int i = 0; i < 1; i++) {
         z.x = taus(z.x, 13, 19, 12, 4294967294u);
