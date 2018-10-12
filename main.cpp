@@ -122,7 +122,7 @@ int main ( int argc, char** argv )
 #undef genbits
 #undef gen01
 
-            bbattery_SmallCrush(gen);
+            bbattery_BigCrush(gen);
             unif01_DeleteExternGenBits(gen);
         }
     }
