@@ -21,41 +21,6 @@ int main ( int argc, char** argv )
     {
         for (int i = 1; i < argc; i++) 
         {
-            /*
-            if ( strcmp(argv[i], "pcg3d") == 0 ) 
-            {
-                gen = unif01_CreateExternGenBits((char*) "pcg3d", test_pcg3d);
-            }
-            else if ( strcmp(argv[i], "pcg3dx") == 0 ) 
-            {
-                gen = unif01_CreateExternGenBits((char*) "pcg3d.x", test_pcg3dx);
-            }
-            else if ( strcmp(argv[i], "pcg3dy") == 0 ) 
-            {
-                gen = unif01_CreateExternGenBits((char*) "pcg3d.y", test_pcg3dy);
-            }
-            else if ( strcmp(argv[i], "pcg3dz") == 0 ) 
-            {
-                gen = unif01_CreateExternGenBits((char*) "pcg3d.z", test_pcg3dz);
-            }
-            else if ( strcmp(argv[i], "bbs") == 0 ) 
-            {
-                gen = unif01_CreateExternGenBits((char*) "bbs", test_bbs);
-            }
-            else if ( strcmp(argv[i], "city") == 0 ) 
-            {
-                gen = unif01_CreateExternGenBits((char*) "city", test_city);
-            }
-            else if ( strcmp(argv[i], "fast") == 0 ) 
-            {
-                gen = unif01_CreateExternGen01((char*) "fast", test_fast);
-            }
-            else if ( strcmp(argv[i], "ign") == 0 ) 
-            {
-                gen = unif01_CreateExternGen01((char*) "ign", test_ign);
-            }
-            */
-            
             if ( false ) { }
 
 #define genbits(NAME, HASH)                                                     \
@@ -113,6 +78,7 @@ int main ( int argc, char** argv )
             genbits("xxhash32", xxhash32)
             gen01("hashwithoutsine", hashwithoutsine)
             genbits("hybridtaus", hybridtaus)
+            genbits("Rand3DPCG32", Rand3DPCG32)
 
             else
             {

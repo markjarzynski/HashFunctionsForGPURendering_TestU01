@@ -368,3 +368,22 @@ uint hybridtaus(uint4 z)
     
     return z.x ^ z.y ^ z.z ^ z.w;
 }
+
+uint3 Rand3DPCG32(uint3 v)
+{
+    // Linear congruential step.
+    v = v * 1664525u + 1013904223u;
+
+    // swapping low and high bits makes all 32 bits pretty good
+    v = v * (1u << 16u) + (v >> 16u);
+
+    // final shuffle
+    v.x += v.y*v.z;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y;
+    v.x += v.y*v.z;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y;
+
+    return v;
+}
