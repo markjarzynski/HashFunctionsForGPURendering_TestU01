@@ -79,6 +79,9 @@ int main ( int argc, char** argv )
             gen01("hashwithoutsine", hashwithoutsine)
             genbits("hybridtaus", hybridtaus)
             genbits("Rand3DPCG32", Rand3DPCG32)
+            genbits("Rand4DPCG32", Rand3DPCG32)
+            genbits("pcg2d", pcg2d)
+            genbits("pcg4d", pcg4d)
 
             else
             {

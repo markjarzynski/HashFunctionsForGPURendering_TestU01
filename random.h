@@ -191,11 +191,11 @@ uint3 pcg3d(uint3 v)
     v.y += v.z*v.x;
     v.z += v.x*v.y;
     
+    v = v ^ (v>>16u);
+    
     v.x += v.y*v.z;
     v.y += v.z*v.x;
     v.z += v.x*v.y;
-    
-    v = v ^ (v>>16u);
     
     return v;
 }
@@ -385,5 +385,59 @@ uint3 Rand3DPCG32(uint3 v)
     v.y += v.z*v.x;
     v.z += v.x*v.y;
 
+    return v;
+}
+
+uint4 Rand4DPCG32(uint4 v)
+{
+    v = v * 1664525u + 1013904223u;
+
+    v = v * (1u << 16u) + (v >> 16u);
+
+    v.x += v.y*v.w;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y;
+    v.w += v.y*v.z;
+    v.x += v.y*v.w;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y;
+    v.w += v.y*v.z;
+
+    return v;
+}
+
+uint4 pcg4d(uint4 v)
+{
+	v = v * 1664525u + 1013904223u;   
+    
+    v.x += v.y*v.w;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y;
+    v.w += v.y*v.z;
+
+    v.x += v.y*v.w;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y;
+    v.w += v.y*v.z;
+
+    v = v ^ (v>>16u);
+    
+    return v;
+}
+
+uint2 pcg2d(uint2 v)
+{
+    v = v * 1664525u + 1013904223u;
+
+    v.x += v.y * 1664525u;
+    v.y += v.x * 1664525u;
+
+    v = v ^ (v>>16u);
+
+    v.x += v.y * 1664525u;
+    v.y += v.x * 1664525u;
+
+    v = v ^ (v>>16u);
+    
     return v;
 }

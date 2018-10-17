@@ -102,4 +102,14 @@ inline uint dot (const uint4 &a, const uint4 &b)
     return a.x * b.x + a.y * b.y + a.z * b.z + a.w * b.w;
 }
 
+inline uint4 operator >> (const uint4 &a, const uint s)
+{
+    return uint4(a.x >> s, a.y >> s, a.z >> s, a.w >> s);
+}
+
+inline uint4 operator ^ (const uint4 &a, const uint4 &b)
+{
+    return uint4(a.x ^ b.x, a.y ^ b.y, a.z ^ b.z, a.w ^ b.w);
+}
+
 #endif

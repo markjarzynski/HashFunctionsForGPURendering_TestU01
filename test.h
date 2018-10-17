@@ -19,6 +19,25 @@ uint32_t test_##HASH()              \
     return HASH(morton2(seed++));   \
 }
 
+#define test22(HASH)                \
+uint32_t test_##HASH()              \
+{                                   \
+    static uint32_t seed = 0u;      \
+    static uint32_t count = 0u;     \
+    static uint2 m, p;              \
+                                    \
+    if (count == 0) {               \
+        m = morton2(seed);          \
+        p = HASH(m);                \
+        count++;                    \
+        return p.x;                 \
+    } else {                        \
+        seed++;                     \
+        count = 0;                  \
+        return p.y;                 \
+    }                               \
+}
+
 #define test31(HASH)                \
 uint32_t test_##HASH()              \
 {                                   \
@@ -252,3 +271,7 @@ test11(xorshift32)
 test21(xxhash32)
 ftest23(hashwithoutsine)
 test41(hybridtaus)
+test33(Rand3DPCG32)
+test44(Rand4DPCG32)
+test22(pcg2d)
+test44(pcg4d)

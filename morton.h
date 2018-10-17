@@ -62,7 +62,7 @@ uint3 morton3 (uint64_t m)
     //for (int i = 0; i < sizeof(m) * CHAR_BIT; i++)
     for (int i = 0; i < 21; i++)
     {
-        v.x |= (m & ( uint64_t(1u) << (3 * i))) >> (2 * i);
+        v.x |= (m & (uint64_t(1u) << (3 * i))) >> (2 * i);
         v.y |= (m & (uint64_t(1u) << (3 * i + 1))) >> (2 * i + 1);
         v.z |= (m & (uint64_t(1u) << (3 * i + 2))) >> (2 * i + 2);
     }
@@ -70,11 +70,11 @@ uint3 morton3 (uint64_t m)
     return v;
 }
 
-uint128_t morton (uint4 v)
+uint64_t morton (uint4 v)
 {
-    uint128_t m = 0u;
+    uint64_t m = 0u;
     
-    for (int i = 0; i < sizeof(v.x) * CHAR_BIT; i++)
+    for (int i = 0; i < 16; i++)
     {
         m |= (v.x & 1u << i) << (3 * i) | (v.y & 1u << i) << (3 * i + 1) | (v.z & 1u << i) << (3 * i + 2) | (v.w & 1u << i) << (3 * i + 3);
     }
@@ -82,16 +82,16 @@ uint128_t morton (uint4 v)
     return m;
 }
 
-uint4 morton4 (uint128_t m)
+uint4 morton4 (uint64_t m)
 {
     uint4 v = uint4();
 
-    for (uint i = 0; i < sizeof(m) * CHAR_BIT; i++)
+    for (int i = 0; i < 16; i++)
     {
-        v.x |= (m & 1u << (4u * i)) >> (3u * i);
-        v.y |= (m & 1u << (4u * i + 1u)) >> (3u * i + 1u);
-        v.z |= (m & 1u << (4u * i + 2u)) >> (3u * i + 2u);
-        v.w |= (m & 1u << (4u * i + 3u)) >> (3u * i + 3u);
+        v.x |= (m & uint64_t(1u) << (4 * i)) >> (3 * i);
+        v.y |= (m & uint64_t(1u) << (4 * i + 1)) >> (3 * i + 1);
+        v.z |= (m & uint64_t(1u) << (4 * i + 2)) >> (3 * i + 2);
+        v.w |= (m & uint64_t(1u) << (4 * i + 3)) >> (3 * i + 3);
     }
 
     return v;
