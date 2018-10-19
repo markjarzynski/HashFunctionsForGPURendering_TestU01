@@ -36,6 +36,18 @@ uint32_t test_##HASH()              \
         count = 0;                  \
         return p.y;                 \
     }                               \
+}                                   \
+                                    \
+uint32_t test_##HASH##x()           \
+{                                   \
+    static uint32_t seed = 0u;      \
+    return HASH(morton2(seed++)).x; \
+}                                   \
+                                    \
+uint32_t test_##HASH##y()           \
+{                                   \
+    static uint32_t seed = 0u;      \
+    return HASH(morton2(seed++)).y; \
 }
 
 #define test31(HASH)                \
@@ -263,7 +275,7 @@ test22(tea2)
 test22(tea3)
 test22(tea4)
 test22(tea5)
-test32(tea6)
+test22(tea6)
 ftest21(trig)
 test11(wang)
 test44(xorshift128)
