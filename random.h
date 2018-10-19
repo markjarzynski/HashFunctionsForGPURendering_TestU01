@@ -279,9 +279,9 @@ uint superfast(uint data)
 
 }
 
-uint2 tea(int t, uint3 p)
+uint2 tea(int t, uint2 p)
 {
-    uint s = p.z;
+    uint s = 0u;
 
     for( int i = 0; i < t; i++) {
         s += 0x9E3779B9u;

@@ -233,7 +233,7 @@ uint32_t test_##HASH##z()           \
 }
 
 #define MAKETEA(T)                  \
-uint2 tea##T(uint3 p)               \
+uint2 tea##T(uint2 p)               \
 {                                   \
     return tea(T, p);               \
 }
@@ -259,10 +259,10 @@ ftest21(pseudo)
 test11(ranlim32)
 test11(sca08)
 test11(superfast)
-test32(tea2)
-test32(tea3)
-test32(tea4)
-test32(tea5)
+test22(tea2)
+test22(tea3)
+test22(tea4)
+test22(tea5)
 test32(tea6)
 ftest21(trig)
 test11(wang)
