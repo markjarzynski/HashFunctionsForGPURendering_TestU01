@@ -8,6 +8,8 @@
 #include "float2.h"
 #include "float3.h"
 
+#include "uint316.h"
+
 #include "util.h"
 
 // Commonly used constants
