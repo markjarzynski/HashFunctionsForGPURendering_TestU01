@@ -4,7 +4,7 @@ extern "C" {
 
 #include <functional>
 #include <map>
-#include <string>
+#include <cstring>
 #include <iostream>
 
 #include "random.h"
