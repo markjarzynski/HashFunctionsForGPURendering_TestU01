@@ -13,6 +13,9 @@ hashes := bbs city fast ign iqint1 iqint2 iqint2.x iqint2.y iqint2.z iqint3 jkis
 
 all: $(BINS)
 
+cluster:
+	/usr/cluster/contrib/gcc/gcc-5.5.0/bin/g++ -std=c++11 -O3 -Wall -o main main.cpp -Iinclude -Llib -ltestu01 -lprobdist -lmylib -lm
+
 .PHONY: run big small clean
 
 run:
