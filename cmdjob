@@ -1,0 +1,21 @@
+#!/bin/bash
+
+ALGO=$1
+
+jobfile=$(mktemp)
+cat << EOF > $jobfile
+#!/bin/bash
+
+#SBATCH --job-name=$ALGO
+#SBATCH --output=$ALGO.txt
+#SBATCH --error=$ALGO.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=markj1@umbc.edu
+#SBATCH --partition=batch
+#SBATCH --array=0-159
+#SBATCH --mem-per-cpu=1000
+
+srun ./main --big --test=\$SLURM_ARRAY_TASK_ID $ALGO
+EOF
+
+sbatch $jobfile

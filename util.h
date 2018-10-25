@@ -5,6 +5,7 @@
 #include "float3.h"
 #include "float4.h"
 
+#include <cstring>
 #include <math.h>
 
 double frac( double m )

@@ -2,23 +2,105 @@ extern "C" {
     #include "TestU01.h"
 }
 
+#include <cstring>
 #include <functional>
 #include <map>
-#include <cstring>
 #include <iostream>
+//#include <vector>
 
 #include "random.h"
 #include "test.h"
+
+#define SMALLCRUSH_NUM 10
+#define CRUSH_NUM 96
+#define BIGCRUSH_NUM 106
+#define RABBIT_NUM 26
+#define ALPHABIT_NUM 9
 
 using namespace std;
 
 int main ( int argc, char** argv )
 {
     unif01_Gen *gen;
-   
+
+    int size = 0; 
+    int *Rep, Rep_len;
 
     if (argc > 1)
     {
+        for (int i = 1; i < argc; i++)
+        {
+            if (strcmp(argv[i], "--small") == 0)
+            {
+                size = 0;
+                Rep_len = SMALLCRUSH_NUM;
+                Rep = new int[Rep_len + 1];
+                break;
+            } 
+            else if (strcmp(argv[i], "--crush") == 0)
+            {
+                size = 1;
+                Rep_len = CRUSH_NUM;
+                Rep = new int[Rep_len + 1];
+                break;
+            }
+            else if (strcmp(argv[i], "--big") == 0)
+            {
+                size = 2;
+                Rep_len = BIGCRUSH_NUM;
+                Rep = new int[Rep_len + 1];
+                break;
+            }
+            else if (strcmp(argv[i], "--rabbit") == 0)
+            {
+                size = 3;
+                Rep_len = RABBIT_NUM;
+                Rep = new int[Rep_len + 1];
+                break;
+            }
+            else if (strcmp(argv[i], "--alphabit") == 0)
+            {
+                size = 4;
+                Rep_len = ALPHABIT_NUM;
+                Rep = new int[Rep_len + 1];
+                break;
+            }
+        }
+        
+        // Set all Rep[] to be 1
+        for (int i = 0; i < Rep_len; i++)
+        {
+            Rep[i] = 1;
+        }
+
+        // If we have any cmd line args that start with --test=
+        // set all of Rep[] to be 0
+        for (int i = 1; i < argc; i++)
+        {
+            if (strncmp(argv[i], "--test=", 7) == 0)
+            {
+                for (int i = 0; i < Rep_len; i++)
+                {
+                    Rep[i] = 0;
+                }
+                break; 
+            }
+        }
+
+        for (int i = 1; i < argc; i++)
+        {
+            if ( strncmp(argv[i], "--test=", 7) == 0 )
+            {
+                int len = strlen(argv[i]) - 6;
+                char test[len];
+                strncpy(test, argv[i] + 7, len);
+                test[len - 1] = '\0';
+                
+                int i = atoi(test) + 1;
+                Rep[i] = 1;
+            }
+        }
+
         for (int i = 1; i < argc; i++) 
         {
             if ( false ) { }
@@ -95,7 +177,27 @@ int main ( int argc, char** argv )
 #undef genbits
 #undef gen01
 
-            bbattery_BigCrush(gen);
+            if (size == 0)
+            {
+                bbattery_RepeatSmallCrush(gen, Rep);
+            }
+            else if (size == 1)
+            {
+                bbattery_RepeatCrush(gen, Rep);
+            }
+            else if (size == 2)
+            {
+                bbattery_RepeatBigCrush(gen, Rep);
+            }
+            else if (size == 3)
+            { 
+                //Rabbit(gen, NULL, nb, Rep);
+            }
+            else if (size == 4)
+            {
+                //Alphabit(gen, NULL, nb, r, s, FALSE, 0, Rep);
+            }
+
             unif01_DeleteExternGenBits(gen);
         }
     }
