@@ -16,7 +16,7 @@ all: $(BINS)
 cluster:
 	/usr/cluster/contrib/gcc/gcc-5.5.0/bin/g++ -std=c++11 -O3 -Wall -o main main.cpp -Iinclude -Llib -ltestu01 -lprobdist -lmylib -lm
 
-.PHONY: run big small clean
+.PHONY: run clean
 
 run:
 ifdef r
@@ -24,12 +24,6 @@ ifdef r
 else
 	$(foreach x,$(hashes),gstdbuf -i 0 ./main $(x) | tee $(x).txt;)
 endif
-
-big:
-	sed -i -e 's/SmallCrush/BigCrush/g' $(SRCS)
-
-small:
-	sed -i -e 's/BigCrush/SmallCrush/g' $(SRCS)
 
 clean:
 	$(RM) $(BINS)
