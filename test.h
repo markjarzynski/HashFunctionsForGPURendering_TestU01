@@ -64,38 +64,6 @@ uint32_t test_##HASH()              \
     return HASH(morton4(seed++));   \
 }
 
-#define test32(HASH)                \
-uint32_t test_##HASH()              \
-{                                   \
-    static uint32_t seed = 0u;      \
-    static uint32_t count = 0u;     \
-    static uint3 m;                 \
-    static uint2 p;                 \
-                                    \
-    if (count == 0) {               \
-        m = morton3(seed);          \
-        p = HASH(m);                \
-        count++;                    \
-        return p.x;                 \
-    } else {                        \
-        seed++;                     \
-        count = 0;                  \
-        return p.y;                 \
-    }                               \
-}                                   \
-                                    \
-uint32_t test_##HASH##x()           \
-{                                   \
-    static uint32_t seed = 0u;      \
-    return HASH(morton3(seed++)).x; \
-}                                   \
-                                    \
-uint32_t test_##HASH##y()           \
-{                                   \
-    static uint32_t seed = 0u;      \
-    return HASH(morton3(seed++)).y; \
-}
-
 #define test33(HASH)                \
 uint32_t test_##HASH()              \
 {                                   \

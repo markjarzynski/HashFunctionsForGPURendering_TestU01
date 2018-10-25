@@ -23,8 +23,11 @@ int main ( int argc, char** argv )
 {
     unif01_Gen *gen;
 
-    int size = 0; 
-    int *Rep, Rep_len;
+    int size = 0;
+    int* Rep;
+    int Rep_len = 0;
+
+    Rep = new int[Rep_len + 1];
 
     if (argc > 1)
     {
@@ -95,6 +98,8 @@ int main ( int argc, char** argv )
                 char test[len];
                 strncpy(test, argv[i] + 7, len);
                 test[len - 1] = '\0';
+
+                cout << "Test=" << test << endl;
                 
                 int i = atoi(test) + 1;
                 Rep[i] = 1;
@@ -167,7 +172,13 @@ int main ( int argc, char** argv )
             genbits("Rand3DPCG32", Rand3DPCG32)
             genbits("Rand4DPCG32", Rand3DPCG32)
             genbits("pcg2d", pcg2d)
+            genbits("pcg2d.x", pcg2dx)
+            genbits("pcg2d.y", pcg2dy)
             genbits("pcg4d", pcg4d)
+            genbits("pcg4d.x", pcg4dx)
+            genbits("pcg4d.y", pcg4dy)
+            genbits("pcg4d.z", pcg4dz)
+            genbits("pcg4d.w", pcg4dw)
 
             else
             {
