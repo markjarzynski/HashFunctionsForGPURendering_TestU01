@@ -4,9 +4,9 @@ extern "C" {
 
 #include <cstring>
 #include <functional>
-#include <map>
 #include <iostream>
-//#include <vector>
+//#include <map>
+#include <string>
 
 #include "random.h"
 #include "test.h"
@@ -28,6 +28,8 @@ int main ( int argc, char** argv )
     int Rep_len = 0;
 
     Rep = new int[Rep_len + 1];
+
+    string outfile = "/umbc/xfs1/bailey/users/markj1/", hash, test;
 
     if (argc > 1)
     {
@@ -69,42 +71,57 @@ int main ( int argc, char** argv )
                 break;
             }
         }
-        
-        // Set all Rep[] to be 1
-        for (int i = 0; i < Rep_len; i++)
-        {
-            Rep[i] = 1;
-        }
 
-        // If we have any cmd line args that start with --test=
-        // set all of Rep[] to be 0
+        bool flag_test = false;
+
         for (int i = 1; i < argc; i++)
         {
             if (strncmp(argv[i], "--test=", 7) == 0)
             {
-                for (int i = 0; i < Rep_len; i++)
-                {
-                    Rep[i] = 0;
-                }
-                break; 
+                flag_test = true;
+                break;
             }
         }
-
-        for (int i = 1; i < argc; i++)
+       
+        if (flag_test) 
         {
-            if ( strncmp(argv[i], "--test=", 7) == 0 )
+            for (int i = 1; i < Rep_len; i++)
             {
-                int len = strlen(argv[i]) - 6;
-                char test[len];
-                strncpy(test, argv[i] + 7, len);
-                test[len - 1] = '\0';
+                Rep[i] = 0;
+            }
+            for (int i = 1; i < argc; i++)
+            {
+                if ( strncmp(argv[i], "--test=", 7) == 0 )
+                {
+                    int len = strlen(argv[i]) - 7;
+                    char temp[len];
+                    strncpy(temp, argv[i] + 7, len);
+                    test = temp;
 
-                cout << "Test=" << test << endl;
-                
-                int i = atoi(test) + 1;
+                    //cout << test << endl;
+                    
+                    int i = atoi(temp);
+                    Rep[i] = 1;
+                    //cout << Rep[i] << "," << i << endl;
+                }
+            }
+        } 
+        else 
+        {
+            for (int i = 0; i < Rep_len; i++)
+            {
                 Rep[i] = 1;
             }
         }
+
+        /*
+        cout << "Rep: ";
+        for (int i = 0; i < Rep_len; i++)
+        {
+            cout << Rep[i];
+        }
+        cout << endl;
+        */
 
         for (int i = 1; i < argc; i++) 
         {
@@ -113,12 +130,14 @@ int main ( int argc, char** argv )
 #define genbits(NAME, HASH)                                                     \
             else if ( strcmp(argv[i], NAME) == 0 )                              \
             {                                                                   \
+                hash = NAME;                                                    \
                 gen = unif01_CreateExternGenBits((char*) NAME, test_##HASH);    \
             }
 
 #define gen01(NAME, HASH)                                                       \
             else if ( strcmp(argv[i], NAME) == 0 )                              \
             {                                                                   \
+                hash = NAME;                                                    \
                 gen = unif01_CreateExternGen01((char*) NAME, test_##HASH);      \
             }
 
@@ -188,6 +207,10 @@ int main ( int argc, char** argv )
 #undef genbits
 #undef gen01
 
+            outfile += "/" + hash + "-" + test + ".txt";
+            freopen(outfile.c_str(), "w", stdout);
+            //setvbuf(stdout, NULL, _IONBF, 0);
+
             if (size == 0)
             {
                 bbattery_RepeatSmallCrush(gen, Rep);
@@ -210,6 +233,8 @@ int main ( int argc, char** argv )
             }
 
             unif01_DeleteExternGenBits(gen);
+
+            fclose(stdout);
         }
     }
     else 
