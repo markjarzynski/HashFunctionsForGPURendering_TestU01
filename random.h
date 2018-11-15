@@ -443,3 +443,20 @@ uint2 pcg2d(uint2 v)
     
     return v;
 }
+
+uint3 sca08_pcg3d( uint u )
+{
+    return pcg3d(uint3(sca08(u), 0, 0)); 
+}
+
+uint3 sca08_hash31( uint u )
+{
+    uint n = sca08(u);
+
+    return uint3(n, n * 16807u, n * 48271u);// n * 69621u);
+}
+
+uint3 sca08_hash3( uint u )
+{
+    return uint3(sca08(u), sca08(u + 16807u), sca08(u + 48271u));
+}

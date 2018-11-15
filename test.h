@@ -212,6 +212,50 @@ uint32_t test_##HASH##z()           \
     return HASH(float2(m.x,m.y)).z; \
 }
 
+#define test13(HASH)                \
+uint32_t test_##HASH()              \
+{                                   \
+    static uint32_t seed = 0u;      \
+    static uint32_t count = 0u;     \
+    static uint3 p;                 \
+                                    \
+    if (count == 0) {               \
+        p = HASH(seed);             \
+                                    \
+        count++;                    \
+                                    \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+                                    \
+        return p.y;                 \
+    } else {                        \
+                                    \
+        seed++;                     \
+        count = 0;                  \
+                                    \
+        return p.z;                 \
+    }                               \
+}                                   \
+                                    \
+uint32_t test_##HASH##x()           \
+{                                   \
+    static uint32_t seed = 0u;      \
+    return HASH(seed++).x;          \
+}                                   \
+                                    \
+uint32_t test_##HASH##y()           \
+{                                   \
+    static uint32_t seed = 0u;      \
+    return HASH(seed++).y;          \
+}                                   \
+                                    \
+uint32_t test_##HASH##z()           \
+{                                   \
+    static uint32_t seed = 0u;      \
+    return HASH(seed++).z;          \
+}
+
 #define MAKETEA(T)                  \
 uint2 tea##T(uint2 p)               \
 {                                   \
@@ -256,3 +300,6 @@ test33(Rand3DPCG32)
 test44(Rand4DPCG32)
 test22(pcg2d)
 test44(pcg4d)
+test13(sca08_pcg3d)
+test13(sca08_hash31)
+test13(sca08_hash3)
