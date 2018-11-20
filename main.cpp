@@ -198,6 +198,9 @@ int main ( int argc, char** argv )
             genbits("pcg4d.y", pcg4dy)
             genbits("pcg4d.z", pcg4dz)
             genbits("pcg4d.w", pcg4dw)
+            genbits("sca08_pcg3d", sca08_pcg3d)
+            genbits("sca08_hash31", sca08_hash31)
+            genbits("sca08_hash3", sca08_hash3)
 
             else
             {
