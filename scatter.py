@@ -9,7 +9,7 @@ if not (len(sys.argv) > 1):
 filename = sys.argv[1]
 
 with open(filename, 'r') as f:
-    reader = csv.reader(f)
+    reader = csv.reader(f, delimiter='\t')
     l = list(reader)
     
 name = []
