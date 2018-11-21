@@ -16,11 +16,14 @@ all: $(BINS)
 cluster:
 	/usr/cluster/contrib/gcc/gcc-5.5.0/bin/g++ -std=c++11 -O2 -Wall -o main main.cpp -Iinclude -Llib -ltestu01 -lprobdist -lmylib -lm
 
+correct:
+	g++ -std=c++11 -O2 -Wall main.cpp -o main -ltestu01 -lprobdist -lmylib -lm
+
 .PHONY: run clean
 
 run:
 ifdef r
-	gstdbuf -o 0 ./main $(r) | tee $(r).txt
+	stdbuf -o 0 ./main $(r) | tee $(r).txt
 else
 	$(foreach x,$(hashes),gstdbuf -i 0 ./main $(x) | tee $(x).txt;)
 endif

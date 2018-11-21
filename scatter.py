@@ -1,8 +1,14 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
+import sys
 import csv
 import matplotlib.pyplot as plt
 
-with open('data.csv', 'r') as f:
+if not (len(sys.argv) > 1):
+    exit()
+
+filename = sys.argv[1]
+
+with open(filename, 'r') as f:
     reader = csv.reader(f)
     l = list(reader)
     
