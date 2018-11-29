@@ -460,3 +460,100 @@ uint3 sca08_hash3( uint u )
 {
     return uint3(sca08(u), sca08(u + 16807u), sca08(u + 48271u));
 }
+
+uint pcg1da( uint v )
+{   
+	v = v * 1664525u + 1013904223u;   
+
+    uint y = v;
+    uint z = 1u;
+
+    z += v*y;
+    v += y*z;
+
+    v = v ^ (v>>16u);    
+    
+    return v;
+}
+
+uint pcg1db( uint v )
+{
+    v = v * 1664525u + 1013904223u;
+
+    v += v*v*v;
+
+    v = v ^ (v>>16u);
+
+    return v;
+}
+
+uint pcg1dc( uint v )
+{
+    v = v * 1664525u + 1013904223u;
+    v = v ^ (v>>16u);
+    return v;
+}
+
+uint pcg1dd( uint v )
+{
+    v = v * 1664525u + 1013904223u;
+    v = v*v*v;
+    v = v ^ (v>>16u);
+    return v;
+}
+
+uint3 pcg3d20(uint2 u)
+{
+    uint3 v = uint3(u.x, u.y, 0u);
+
+    v = v * 1664525u + 1013904223u;
+
+    v.x += v.y*v.z;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y;
+
+    v.x += v.y*v.z;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y;
+    
+    v = v ^ (v>>16u);
+
+    return v;
+}
+
+uint3 pcg3d21(uint2 u)
+{
+    uint3 v = uint3(u.x, u.y, 1u);
+
+    v = v * 1664525u + 1013904223u;
+
+    v.x += v.y*v.z;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y;
+
+    v.x += v.y*v.z;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y;
+    
+    v = v ^ (v>>16u);
+
+    return v;
+}
+
+uint3 pcg3d21a(uint2 u)
+{
+    u = u * 1664525u + 1013904223u;
+    uint3 v = uint3(u.x, u.y, 1u);
+
+    v.x += v.y;//*v.z;
+    v.y += v.x;//*v.z;
+    v.z = v.x*v.y;
+
+    v.x += v.y*v.z;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y;
+
+    v = v ^ (v>>16u);
+
+    return v;
+}

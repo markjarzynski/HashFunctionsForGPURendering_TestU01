@@ -1,0 +1,6278 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n307, Linux
+
+tea3.y
+
+
+sstring_HammingIndep test:
+-----------------------------------------------
+   N =  1,  n = 10000000,  r = 25,   s = 5,   L = 1200,   d = 0
+
+
+
+Counters with expected numbers >= 10
+-----------------------------------------------
+Number of degrees of freedom          : 11825
+Chi-square statistic                  :12135.16
+p-value of test                       :    0.02
+
+-----------------------------------------------
+CPU time used                    :  00:06:51.63
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:51.63
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n306, Linux
+
+tea3.y
+
+
+sstring_Run test:
+-----------------------------------------------
+   N =  1,  n = 2000000000,  r =  0,   s =    3
+
+
+-----------------------------------------------
+Total number of 1 runs:  2000000001
+
+Number of degrees of freedom          :   54
+Chi2 statistic for number of runs     :5.31e+12
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Total number of bits:  7938585933
+
+Normal statistic for number of bits   : -485.52
+p-value of test                       : 1 - eps1    *****
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:03:49.77
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  2
+ Total CPU time:   00:03:49.77
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 101  Run of bits, r = 0               eps  
+ 101  Run of bits, r = 0             1 - eps1
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n150, Linux
+
+tea3.y
+
+
+sstring_Run test:
+-----------------------------------------------
+   N =  1,  n = 2000000000,  r = 27,   s =    3
+
+
+-----------------------------------------------
+Total number of 1 runs:  2000000000
+
+Number of degrees of freedom          :   54
+Chi2 statistic for number of runs     :  582.08
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Total number of bits:  8000002083
+
+Normal statistic for number of bits   :   0.016
+p-value of test                       :    0.49
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:04:18.66
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  2
+ Total CPU time:   00:04:18.66
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 102  Run of bits, r = 27              eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n307, Linux
+
+tea3.y
+
+
+sstring_AutoCor test:
+-----------------------------------------------
+   N = 10,  n = 1000000030,  r =  0,   s = 3,   d = 1
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.20
+p-value of test                       :    0.40
+
+Kolmogorov-Smirnov- statistic = D-    :    0.80
+p-value of test                       :  1.1e-7    *****
+
+Anderson-Darling statistic = A2       :  239.81
+p-value of test                       :4.5e-106    *****
+
+Tests on the sum of all N observations
+Standardized normal statistic         :  832.81
+p-value of test                       :   eps      *****
+
+Sample variance                       :75907.15
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:06:03.20
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:03.20
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 103  AutoCor, d=1, r=0                eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n152, Linux
+
+tea3.y
+
+
+sstring_AutoCor test:
+-----------------------------------------------
+   N = 10,  n = 1000000029,  r =  0,   s = 3,   d = 3
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Tests on the sum of all N observations
+Standardized normal statistic         : -6.29e+4
+p-value of test                       : 1 - eps1    *****
+
+Sample variance                       :19717.11
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:05:57.36
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:05:57.36
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 104  AutoCor, d=3, r=0              1 - eps1
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n314, Linux
+
+tea3.y
+
+
+sstring_AutoCor test:
+-----------------------------------------------
+   N = 10,  n = 1000000030,  r = 27,   s = 3,   d = 1
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.16
+p-value of test                       :    0.55
+
+Kolmogorov-Smirnov- statistic = D-    :    0.17
+p-value of test                       :    0.50
+
+Anderson-Darling statistic = A2       :    0.51
+p-value of test                       :    0.73
+
+Tests on the sum of all N observations
+Standardized normal statistic         :    0.27
+p-value of test                       :    0.39
+
+Sample variance                       :    0.44
+p-value of test                       :    0.91
+
+-----------------------------------------------
+CPU time used                    :  00:06:35.32
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:35.32
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n152, Linux
+
+tea3.y
+
+
+sstring_AutoCor test:
+-----------------------------------------------
+   N = 10,  n = 1000000029,  r = 27,   s = 3,   d = 3
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :4.21e-30
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Tests on the sum of all N observations
+Standardized normal statistic         :  -31.95
+p-value of test                       : 1 - eps1    *****
+
+Sample variance                       :    0.62
+p-value of test                       :    0.78
+
+-----------------------------------------------
+CPU time used                    :  00:06:08.75
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:08.75
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 106  AutoCor, d=3, r=27             1 - eps1
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = n238, Linux
+
+tea3.y
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r = 27,   d =    8,   t = 14,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         :     1342
+p-value of test                       :    0.72
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940795334462
+  j =  1                              :        599997316
+  j =  2                              :             1342
+  j =  3                              :                0
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:05:35.87
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:05:35.93
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = n238, Linux
+
+tea3.y
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r =  0,   d =    4,   t = 21,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         : 427479516
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131941222812636
+  j =  1                              :        137464659
+  j =  2                              :         16848624
+  j =  3                              :          5796524
+  j =  4                              :          2971572
+  j =  5                              :          1804896
+
+-----------------------------------------------
+CPU time used                    :  00:03:25.91
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:03:25.96
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 11  CollisionOver, t = 21            eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = n238, Linux
+
+tea3.y
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r = 28,   d =    4,   t = 21,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         :     1394
+p-value of test                       :    0.21
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940795334514
+  j =  1                              :        599997212
+  j =  2                              :             1394
+  j =  3                              :                0
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:05:09.52
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:05:09.56
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n238, Linux
+
+tea3.y
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 100,  n = 10000000,  r =  0,    d = 2147483648,    t = 2,    p = 1
+
+
+      Number of cells = d^t = 4611686018427387904
+      Lambda = Poisson mean =      54.2101
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    5421.01
+Total observed number                 :  148499
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:06:27.43
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:27.43
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 13  BirthdaySpacings, t = 2          eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n238, Linux
+
+tea3.y
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 20000000,  r =  0,    d = 2097152,    t = 3,    p = 1
+
+
+      Number of cells = d^t = 9223372036854775808
+      Lambda = Poisson mean =     216.8404
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    4336.81
+Total observed number                 :  232989
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:03:12.43
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:03:12.44
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 14  BirthdaySpacings, t = 3          eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n238, Linux
+
+tea3.y
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 30000000,  r = 14,    d = 65536,    t = 4,    p = 1
+
+
+      Number of cells = d^t = 18446744073709551616
+      Lambda = Poisson mean =     365.9182
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    7318.36
+Total observed number                 :    7260
+p-value of test                       :    0.75
+
+
+-----------------------------------------------
+CPU time used                    :  00:05:47.56
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:05:47.57
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n239, Linux
+
+tea3.y
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 20000000,  r =  0,    d = 512,    t = 7,    p = 1
+
+
+      Number of cells = d^t = 9223372036854775808
+      Lambda = Poisson mean =     216.8404
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    4336.81
+Total observed number                 : 128295286
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:05:12.41
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:05:12.43
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 16  BirthdaySpacings, t = 7          eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n239, Linux
+
+tea3.y
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 20000000,  r =  7,    d = 512,    t = 7,    p = 1
+
+
+      Number of cells = d^t = 9223372036854775808
+      Lambda = Poisson mean =     216.8404
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    4336.81
+Total observed number                 :    4709
+p-value of test                       :  1.3e-8    *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:05:25.39
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:05:25.42
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 17  BirthdaySpacings, t = 7         1.3e-8
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n239, Linux
+
+tea3.y
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 30000000,  r = 14,    d = 256,    t = 8,    p = 1
+
+
+      Number of cells = d^t = 18446744073709551616
+      Lambda = Poisson mean =     365.9182
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    7318.36
+Total observed number                 :    7389
+p-value of test                       :    0.21
+
+
+-----------------------------------------------
+CPU time used                    :  00:09:00.13
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:09:00.15
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n239, Linux
+
+tea3.y
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 30000000,  r = 22,    d = 256,    t = 8,    p = 1
+
+
+      Number of cells = d^t = 18446744073709551616
+      Lambda = Poisson mean =     365.9182
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    7318.36
+Total observed number                 :    7215
+p-value of test                       :    0.89
+
+
+-----------------------------------------------
+CPU time used                    :  00:08:59.58
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:08:59.60
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_SerialOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = n311, Linux
+
+tea3.y
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N =  1,  n = 1000000000,  r =  0,   d =  256,   t =  3,
+       Sparse =  FALSE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =           16777216
+       Expected number per cell =   59.604645
+       Hashing =  FALSE
+
+   For Delta > -1, we use the ChiSquare approximation
+   Correction factor of the ChiSquare: 
+       Delta =     1,    Mu =   0.0083558402,    Sigma =          1
+
+-----------------------------------------------
+Test Results for Delta =   1.0000
+
+Number of degrees of freedom          : 16711680
+Value of the statistic                :2.50e+11
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:54.68
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:01:54.70
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+  1  SerialOver, r = 0                eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n239, Linux
+
+tea3.y
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 30000000,  r =  0,    d = 16,    t = 16,    p = 1
+
+
+      Number of cells = d^t = 18446744073709551616
+      Lambda = Poisson mean =     365.9182
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    7318.36
+Total observed number                 : 533239109
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:14:14.08
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:14:14.11
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 20  BirthdaySpacings, t = 16         eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n239, Linux
+
+tea3.y
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 30000000,  r = 26,    d = 16,    t = 16,    p = 1
+
+
+      Number of cells = d^t = 18446744073709551616
+      Lambda = Poisson mean =     365.9182
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    7318.36
+Total observed number                 :    7473
+p-value of test                       :    0.04
+
+
+-----------------------------------------------
+CPU time used                    :  00:15:23.19
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:15:23.21
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n239, Linux
+
+tea3.y
+
+
+snpair_ClosePairs test:
+-----------------------------------------------
+   N = 30,  n = 6000000,  r =  0,  t = 3,  p = 0,  m = 30,  Torus =  TRUE
+
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+
+---------------------------------------
+Test based on the 2 nearest points (NP):
+
+Stat. AD on the N values (NP)         :  279.10
+p-value of test                       :3.6e-123    *****
+
+
+A2 test based on the spacings between the
+   successive jump times of process Y_n(t):
+
+A2 test on the values of A2 (m-NP)    : 1072.10
+p-value of test                       :   eps      *****
+
+Test on the Nm values of W_{n,i}(mNP1): 8389.90
+p-value of test                       :   eps      *****
+
+Test on the jump times of Y
+   (superposition of Yn):
+
+Expected number of jumps of Y = mN    :     900
+Number of jumps of Y                  > 1500000     *****
+p-value of test                       :   eps      *****
+
+Stat. AD (mNP2)                       : 3.58e+5
+p-value of test                       :   eps      *****
+
+Stat. AD after spacings (mNP2-S)      : 3.95e+7
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:04:16.36
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  6
+ Total CPU time:   00:04:16.95
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 22  ClosePairs NP, t = 3          3.6e-123
+ 22  ClosePairs mNP, t = 3            eps  
+ 22  ClosePairs mNP1, t = 3           eps  
+ 22  ClosePairs mNP2, t = 3           eps  
+ 22  ClosePairs NJumps, t = 3         eps  
+ 22  ClosePairs mNP2S, t = 3          eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n239, Linux
+
+tea3.y
+
+
+snpair_ClosePairs test:
+-----------------------------------------------
+   N = 20,  n = 4000000,  r =  0,  t = 5,  p = 0,  m = 30,  Torus =  TRUE
+
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+
+---------------------------------------
+Test based on the 2 nearest points (NP):
+
+Stat. AD on the N values (NP)         :  542.84
+p-value of test                       :7.4e-238    *****
+
+
+A2 test based on the spacings between the
+   successive jump times of process Y_n(t):
+
+A2 test on the values of A2 (m-NP)    :  714.74
+p-value of test                       :   eps      *****
+
+Test on the Nm values of W_{n,i}(mNP1):13798.02
+p-value of test                       :   eps      *****
+
+Test on the jump times of Y
+   (superposition of Yn):
+
+Expected number of jumps of Y = mN    :     600
+Number of jumps of Y                  > 1000000     *****
+p-value of test                       :   eps      *****
+
+Stat. AD (mNP2)                       : 8.45e+6
+p-value of test                       :   eps      *****
+
+Stat. AD after spacings (mNP2-S)      : 1.04e+7
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:08:53.87
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  6
+ Total CPU time:   00:08:54.27
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 23  ClosePairs NP, t = 5          7.4e-238
+ 23  ClosePairs mNP, t = 5            eps  
+ 23  ClosePairs mNP1, t = 5           eps  
+ 23  ClosePairs mNP2, t = 5           eps  
+ 23  ClosePairs NJumps, t = 5         eps  
+ 23  ClosePairs mNP2S, t = 5          eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n240, Linux
+
+tea3.y
+
+
+snpair_ClosePairs test:
+-----------------------------------------------
+   N = 10,  n = 3000000,  r =  0,  t = 9,  p = 0,  m = 30,  Torus =  TRUE
+
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+
+---------------------------------------
+Test based on the 2 nearest points (NP):
+
+Stat. AD on the N values (NP)         :  357.37
+p-value of test                       :3.2e-157    *****
+
+
+A2 test based on the spacings between the
+   successive jump times of process Y_n(t):
+
+A2 test on the values of A2 (m-NP)    :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the Nm values of W_{n,i}(mNP1):10721.04
+p-value of test                       :   eps      *****
+
+Test on the jump times of Y
+   (superposition of Yn):
+
+Expected number of jumps of Y = mN    :     300
+Number of jumps of Y                  > 500000     *****
+p-value of test                       :   eps      *****
+
+Stat. AD (mNP2)                       : 1.03e+7
+p-value of test                       :   eps      *****
+
+Stat. AD after spacings (mNP2-S)      : 1.00e+7
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  01:09:06.43
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  6
+ Total CPU time:   01:09:06.73
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 24  ClosePairs NP, t = 9          3.2e-157
+ 24  ClosePairs mNP, t = 9         3.2e-157
+ 24  ClosePairs mNP1, t = 9           eps  
+ 24  ClosePairs mNP2, t = 9           eps  
+ 24  ClosePairs NJumps, t = 9         eps  
+ 24  ClosePairs mNP2S, t = 9          eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n240, Linux
+
+tea3.y
+
+
+snpair_ClosePairs test:
+-----------------------------------------------
+   N =  5,  n = 2000000,  r =  0,  t = 16,  p = 0,  m = 30,  Torus =  TRUE
+
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+*********  WARNING in file  snpair.c  on line  294
+*********  res->NumClose > 50000
+
+---------------------------------------
+Test based on the 2 nearest points (NP):
+
+Stat. AD on the N values (NP)         :  178.68
+p-value of test                       : 1.8e-79    *****
+
+
+A2 test based on the spacings between the
+   successive jump times of process Y_n(t):
+
+A2 test on the values of A2 (m-NP)    :  178.68
+p-value of test                       : 1.8e-79    *****
+
+Test on the Nm values of W_{n,i}(mNP1): 5360.52
+p-value of test                       :   eps      *****
+
+Test on the jump times of Y
+   (superposition of Yn):
+
+Expected number of jumps of Y = mN    :     150
+Number of jumps of Y                  > 250000     *****
+p-value of test                       :   eps      *****
+
+Stat. AD (mNP2)                       : 8.93e+6
+p-value of test                       :   eps      *****
+
+Stat. AD after spacings (mNP2-S)      : 8.93e+6
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  04:16:44.97
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  6
+ Total CPU time:   04:16:45.45
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 25  ClosePairs NP, t = 16          1.8e-79
+ 25  ClosePairs mNP, t = 16         1.8e-79
+ 25  ClosePairs mNP1, t = 16          eps  
+ 25  ClosePairs mNP2, t = 16          eps  
+ 25  ClosePairs NJumps, t = 16        eps  
+ 25  ClosePairs mNP2S, t = 16         eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n240, Linux
+
+tea3.y
+
+
+sknuth_SimpPoker test:
+-----------------------------------------------
+   N =  1,  n = 400000000,  r =  0,   d =    8,   k =    8
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    7
+Chi-square statistic                  :8.89e+13
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:04:40.32
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:04:40.32
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 26  SimpPoker, r = 0                 eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n240, Linux
+
+tea3.y
+
+
+sknuth_SimpPoker test:
+-----------------------------------------------
+   N =  1,  n = 400000000,  r = 27,   d =    8,   k =    8
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    7
+Chi-square statistic                  :  192.61
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:05:13.69
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:05:13.69
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 27  SimpPoker, r = 27                eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n240, Linux
+
+tea3.y
+
+
+sknuth_SimpPoker test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r =  0,   d =   32,   k =   32
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   18
+Chi-square statistic                  :9.26e+14
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:04:29.10
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:04:29.10
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 28  SimpPoker, r = 0                 eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n240, Linux
+
+tea3.y
+
+
+sknuth_SimpPoker test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r = 25,   d =   32,   k =   32
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   18
+Chi-square statistic                  :   36.24
+p-value of test                       :  6.6e-3
+
+-----------------------------------------------
+CPU time used                    :  00:05:08.50
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:05:08.50
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_SerialOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = n311, Linux
+
+tea3.y
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N =  1,  n = 1000000000,  r = 22,   d =  256,   t =  3,
+       Sparse =  FALSE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =           16777216
+       Expected number per cell =   59.604645
+       Hashing =  FALSE
+
+   For Delta > -1, we use the ChiSquare approximation
+   Correction factor of the ChiSquare: 
+       Delta =     1,    Mu =   0.0083558402,    Sigma =          1
+
+-----------------------------------------------
+Test Results for Delta =   1.0000
+
+Number of degrees of freedom          : 16711680
+Value of the statistic                : 1.67e+7
+p-value of test                       :  4.8e-4    *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:56.62
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:02:56.63
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+  2  SerialOver, r = 22              4.8e-4
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n240, Linux
+
+tea3.y
+
+
+sknuth_CouponCollector test:
+-----------------------------------------------
+   N =  1,  n = 200000000,  r =  0,   d =    8
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   54
+Chi-square statistic                  :8.59e+10
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:16:08.50
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:16:08.50
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 30  CouponCollector, r = 0           eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n240, Linux
+
+tea3.y
+
+
+sknuth_CouponCollector test:
+-----------------------------------------------
+   N =  1,  n = 200000000,  r = 10,   d =    8
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   54
+Chi-square statistic                  :87582.48
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:06:49.81
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:49.81
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 31  CouponCollector, r = 10          eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n241, Linux
+
+tea3.y
+
+
+sknuth_CouponCollector test:
+-----------------------------------------------
+   N =  1,  n = 200000000,  r = 20,   d =    8
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   54
+Chi-square statistic                  :   62.32
+p-value of test                       :    0.20
+
+-----------------------------------------------
+CPU time used                    :  00:06:47.07
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:47.07
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n241, Linux
+
+tea3.y
+
+
+sknuth_CouponCollector test:
+-----------------------------------------------
+   N =  1,  n = 200000000,  r = 27,   d =    8
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   54
+Chi-square statistic                  :   99.72
+p-value of test                       :  1.5e-4    *****
+
+-----------------------------------------------
+CPU time used                    :  00:06:46.87
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:46.87
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 33  CouponCollector, r = 27         1.5e-4
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n241, Linux
+
+tea3.y
+
+
+sknuth_Gap test:
+-----------------------------------------------
+   N =  1,  n = 500000000,  r =  0,   Alpha =        0,   Beta  =   0.0625
+
+
+-----------------------------------------------
+Number of degrees of freedom          :  232
+Chi-square statistic                  :8.48e+10
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:11:03.39
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:11:03.39
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 34  Gap, r = 0                       eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n241, Linux
+
+tea3.y
+
+
+sknuth_Gap test:
+-----------------------------------------------
+   N =  1,  n = 300000000,  r = 25,   Alpha =        0,   Beta  =  0.03125
+
+
+-----------------------------------------------
+Number of degrees of freedom          :  434
+Chi-square statistic                  : 1070.55
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:12:35.01
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:12:35.01
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 35  Gap, r = 25                      eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n241, Linux
+
+tea3.y
+
+
+sknuth_Gap test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r =  0,   Alpha =        0,   Beta  = 0.0078125
+
+
+-----------------------------------------------
+Number of degrees of freedom          : 1437
+Chi-square statistic                  : 2.62e+9
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:18:04.17
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:18:04.17
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 36  Gap, r = 0                       eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n241, Linux
+
+tea3.y
+
+
+sknuth_Gap test:
+-----------------------------------------------
+   N =  1,  n = 10000000,  r = 20,   Alpha =        0,   Beta  = 0.000976562
+
+
+-----------------------------------------------
+Number of degrees of freedom          : 7046
+Chi-square statistic                  :17646.93
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:13:09.50
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:13:09.50
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 37  Gap, r = 20                      eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n241, Linux
+
+tea3.y
+
+
+sknuth_Run test:
+-----------------------------------------------
+   N =  5,  n = 1000000000,  r =  0,   Up = FALSE
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  178.68
+p-value of test                       : 1.8e-79    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          :   30
+Chi-square statistic                  : 2.54e+8
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:07:21.22
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:07:21.22
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 38  Run, r = 0                       eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n241, Linux
+
+tea3.y
+
+
+sknuth_Run test:
+-----------------------------------------------
+   N = 10,  n = 1000000000,  r = 15,   Up =  TRUE
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          :   60
+Chi-square statistic                  :27937.81
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:15:42.63
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:15:42.63
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 39  Run, r = 15                      eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = n311, Linux
+
+tea3.y
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r =  0,   d = 2097152,   t =  2,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         :   153934
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940795487054
+  j =  1                              :        599692244
+  j =  2                              :           153710
+  j =  3                              :              112
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:03:38.09
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:03:38.12
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+  3  CollisionOver, t = 2             eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test sknuth_Permutation calling smultin_Multinomial
+
+***********************************************************
+HOST = n242, Linux
+
+tea3.y
+
+
+smultin_Multinomial test:
+-----------------------------------------------
+   N =  1,  n = 1000000000,  r =  5,   t =  3,
+       Sparse =  FALSE
+
+       GenerCell = smultin_GenerCellPermut
+       Number of cells = t! =                  6
+       Expected number per cell =  1.6666667e+08
+       Hashing =  FALSE
+
+   For Delta > -1, we use the ChiSquare approximation
+   Correction factor of the ChiSquare: 
+       Delta =     1,    Mu =  2.5000002e-09,    Sigma =          1
+
+-----------------------------------------------
+Test Results for Delta =   1.0000
+
+Number of degrees of freedom          :    5
+Value of the statistic                : 1.78e+7
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:04:05.81
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:04:05.81
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 40  Permutation, t = 3               eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test sknuth_Permutation calling smultin_Multinomial
+
+***********************************************************
+HOST = n242, Linux
+
+tea3.y
+
+
+smultin_Multinomial test:
+-----------------------------------------------
+   N =  1,  n = 1000000000,  r =  5,   t =  5,
+       Sparse =  FALSE
+
+       GenerCell = smultin_GenerCellPermut
+       Number of cells = t! =                120
+       Expected number per cell =   8333333.3
+       Hashing =  FALSE
+
+   For Delta > -1, we use the ChiSquare approximation
+   Correction factor of the ChiSquare: 
+       Delta =     1,    Mu =  5.9500005e-08,    Sigma =          1
+
+-----------------------------------------------
+Test Results for Delta =   1.0000
+
+Number of degrees of freedom          :  119
+Value of the statistic                : 1.30e+8
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:07:05.74
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:07:05.74
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 41  Permutation, t = 5               eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test sknuth_Permutation calling smultin_Multinomial
+
+***********************************************************
+HOST = n242, Linux
+
+tea3.y
+
+
+smultin_Multinomial test:
+-----------------------------------------------
+   N =  1,  n = 500000000,  r =  5,   t =  7,
+       Sparse =  FALSE
+
+       GenerCell = smultin_GenerCellPermut
+       Number of cells = t! =               5040
+       Expected number per cell =   99206.349
+       Hashing =  FALSE
+
+   For Delta > -1, we use the ChiSquare approximation
+   Correction factor of the ChiSquare: 
+       Delta =     1,    Mu =  5.0390004e-06,    Sigma =          1
+
+-----------------------------------------------
+Test Results for Delta =   1.0000
+
+Number of degrees of freedom          : 5039
+Value of the statistic                : 2.02e+8
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:05:11.93
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:05:11.93
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 42  Permutation, t = 7               eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test sknuth_Permutation calling smultin_Multinomial
+
+***********************************************************
+HOST = n242, Linux
+
+tea3.y
+
+
+smultin_Multinomial test:
+-----------------------------------------------
+   N =  1,  n = 500000000,  r = 10,   t = 10,
+       Sparse =  FALSE
+
+       GenerCell = smultin_GenerCellPermut
+       Number of cells = t! =            3628800
+       Expected number per cell =    137.7866
+       Hashing =  FALSE
+
+   For Delta > -1, we use the ChiSquare approximation
+   Correction factor of the ChiSquare: 
+       Delta =     1,    Mu =   0.0036287993,    Sigma =          1
+
+-----------------------------------------------
+Test Results for Delta =   1.0000
+
+Number of degrees of freedom          : 3628799
+Value of the statistic                : 6.68e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:08:27.81
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:08:27.82
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 43  Permutation, t = 10              eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test sknuth_CollisionPermut calling smultin_Multinomial
+
+***********************************************************
+HOST = n242, Linux
+
+tea3.y
+
+
+smultin_Multinomial test:
+-----------------------------------------------
+   N = 20,  n = 20000000,  r =  0,   t = 14,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellPermut
+       Number of cells = t! =        87178291200
+       Expected number per cell =  1 /  4358.9146
+       EColl = n^2 / (2k) =   2294.14912
+       Hashing =   TRUE
+
+       Collision test,    Mu =      2293.9736,    Sigma =    47.8841
+
+-----------------------------------------------
+Test Results for Collisions
+
+For the total number of collisions, we use
+      the Poisson approximation:
+Expected number of collisions = N*Mu  :    45879.47
+Observed number of collisions         : 11887086
+p-value of test                       :   eps      *****
+
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :    1743177711086
+  j =  1                              :        377959878
+  j =  2                              :          8753637
+  j =  3                              :          1133609
+  j =  4                              :           211444
+  j =  5                              :            43027
+
+-----------------------------------------------
+CPU time used                    :  00:10:56.61
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:10:56.62
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 44  CollisionPermut, r = 0           eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test sknuth_CollisionPermut calling smultin_Multinomial
+
+***********************************************************
+HOST = n242, Linux
+
+tea3.y
+
+
+smultin_Multinomial test:
+-----------------------------------------------
+   N = 20,  n = 20000000,  r = 10,   t = 14,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellPermut
+       Number of cells = t! =        87178291200
+       Expected number per cell =  1 /  4358.9146
+       EColl = n^2 / (2k) =   2294.14912
+       Hashing =   TRUE
+
+       Collision test,    Mu =      2293.9736,    Sigma =    47.8841
+
+-----------------------------------------------
+Test Results for Collisions
+
+For the total number of collisions, we use
+      the Poisson approximation:
+Expected number of collisions = N*Mu  :    45879.47
+Observed number of collisions         :    46524
+p-value of test                       :  1.3e-3
+
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :    1743165870524
+  j =  1                              :        399906960
+  j =  2                              :            46508
+  j =  3                              :                8
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:11:02.76
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:11:02.78
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n242, Linux
+
+tea3.y
+
+
+sknuth_MaxOft test:
+-----------------------------------------------
+   N = 40,  n = 10000000,  r =  0,   d = 100000,   t =  8
+
+      Number of categories = 100000
+      Expected number per category  = 100.00
+
+
+-----------------------------------------------
+Test results for chi2 with 99999 degrees of freedom:
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       : 1429.47
+p-value of test                       :   eps      *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 3999960
+Chi-square statistic                  :4.77e+11
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test results for Anderson-Darling:
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       : 1429.47
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:06:43.82
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  2
+ Total CPU time:   00:06:43.82
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 46  MaxOft, t = 8                    eps  
+ 46  MaxOft AD, t = 8                 eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n242, Linux
+
+tea3.y
+
+
+sknuth_MaxOft test:
+-----------------------------------------------
+   N = 30,  n = 10000000,  r =  0,   d = 100000,   t = 16
+
+      Number of categories = 100000
+      Expected number per category  = 100.00
+
+
+-----------------------------------------------
+Test results for chi2 with 99999 degrees of freedom:
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       : 1072.10
+p-value of test                       :   eps      *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 2999970
+Chi-square statistic                  :1.42e+12
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test results for Anderson-Darling:
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       : 1072.10
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:08:08.55
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  2
+ Total CPU time:   00:08:08.55
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 47  MaxOft, t = 16                   eps  
+ 47  MaxOft AD, t = 16                eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n243, Linux
+
+tea3.y
+
+
+sknuth_MaxOft test:
+-----------------------------------------------
+   N = 20,  n = 10000000,  r =  0,   d = 100000,   t = 24
+
+      Number of categories = 100000
+      Expected number per category  = 100.00
+
+
+-----------------------------------------------
+Test results for chi2 with 99999 degrees of freedom:
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  714.74
+p-value of test                       :   eps      *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 1999980
+Chi-square statistic                  :1.67e+12
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test results for Anderson-Darling:
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  714.74
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:07:30.68
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  2
+ Total CPU time:   00:07:30.68
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 48  MaxOft, t = 24                   eps  
+ 48  MaxOft AD, t = 24                eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n243, Linux
+
+tea3.y
+
+
+sknuth_MaxOft test:
+-----------------------------------------------
+   N = 20,  n = 10000000,  r =  0,   d = 100000,   t = 32
+
+      Number of categories = 100000
+      Expected number per category  = 100.00
+
+
+-----------------------------------------------
+Test results for chi2 with 99999 degrees of freedom:
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  714.74
+p-value of test                       :   eps      *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 1999980
+Chi-square statistic                  :3.21e+12
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test results for Anderson-Darling:
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  714.74
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:09:37.00
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  2
+ Total CPU time:   00:09:37.00
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 49  MaxOft, t = 32                   eps  
+ 49  MaxOft AD, t = 32                eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = n311, Linux
+
+tea3.y
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r =  9,   d = 2097152,   t =  2,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         :     1320
+p-value of test                       :    0.88
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940795334440
+  j =  1                              :        599997360
+  j =  2                              :             1320
+  j =  3                              :                0
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:04:27.14
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:04:27.17
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n243, Linux
+
+tea3.y
+
+
+svaria_SampleProd test:
+-----------------------------------------------
+   N = 40,  n = 10000000,  r =  0,   t = 8
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       : 1429.47
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:06:03.76
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:03.77
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 50  SampleProd, t = 8                eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n243, Linux
+
+tea3.y
+
+
+svaria_SampleProd test:
+-----------------------------------------------
+   N = 20,  n = 10000000,  r =  0,   t = 16
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  714.74
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:05:20.18
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:05:20.18
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 51  SampleProd, t = 16               eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n243, Linux
+
+tea3.y
+
+
+svaria_SampleProd test:
+-----------------------------------------------
+   N = 20,  n = 10000000,  r =  0,   t = 24
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  714.74
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:07:43.52
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:07:43.52
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 52  SampleProd, t = 24               eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n243, Linux
+
+tea3.y
+
+
+svaria_SampleMean test:
+-----------------------------------------------
+   N = 20000000,  n = 30,  r =  0
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.29
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :    0.32
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       : 3.12e+7
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:07.87
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:01:07.90
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 53  SampleMean, r = 0                eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n243, Linux
+
+tea3.y
+
+
+svaria_SampleMean test:
+-----------------------------------------------
+   N = 20000000,  n = 30,  r = 10
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    : 4.08e-3
+p-value of test                       :2.5e-290    *****
+
+Kolmogorov-Smirnov- statistic = D-    : 2.26e-3
+p-value of test                       : 4.1e-89    *****
+
+Anderson-Darling statistic = A2       : 1039.97
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:14.20
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:01:14.23
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 54  SampleMean, r = 10               eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n150, Linux
+
+tea3.y
+
+
+svaria_SampleCorr test:
+-----------------------------------------------
+   N =  1,  n = 2000000000,  r =  0,   k = 1
+
+
+-----------------------------------------------
+Normal statistic                      : 9333.90
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:34.37
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:02:34.37
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 55  SampleCorr, k = 1                eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n315, Linux
+
+tea3.y
+
+
+svaria_SampleCorr test:
+-----------------------------------------------
+   N =  1,  n = 2000000000,  r =  0,   k = 2
+
+
+-----------------------------------------------
+Normal statistic                      : 7193.78
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:34.09
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:02:34.09
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 56  SampleCorr, k = 2                eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n315, Linux
+
+tea3.y
+
+
+svaria_AppearanceSpacings test:
+-----------------------------------------------
+   N =  1,   Q = 10000000,   K = 1000000000,   r = 0,   s = 3,   L = 15
+
+   Sequences of n = (K + Q)L =  15150000000 bits
+   Q = 10000000 initialization blocks
+   K = 1000000000 blocks for the test
+   the blocks have L = 15 bits
+
+
+
+-----------------------------------------------
+Normal statistic                      : -2.10e+5
+p-value of test                       : 1 - eps1    *****
+
+-----------------------------------------------
+CPU time used                    :  00:07:12.31
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:07:12.31
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 57  AppearanceSpacings, r = 0      1 - eps1
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n152, Linux
+
+tea3.y
+
+
+svaria_AppearanceSpacings test:
+-----------------------------------------------
+   N =  1,   Q = 10000000,   K = 1000000000,   r = 27,   s = 3,   L = 15
+
+   Sequences of n = (K + Q)L =  15150000000 bits
+   Q = 10000000 initialization blocks
+   K = 1000000000 blocks for the test
+   the blocks have L = 15 bits
+
+
+
+-----------------------------------------------
+Normal statistic                      :    0.51
+p-value of test                       :    0.31
+
+-----------------------------------------------
+CPU time used                    :  00:07:19.00
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:07:19.00
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n152, Linux
+
+tea3.y
+
+
+svaria_WeightDistrib test:
+-----------------------------------------------
+   N =  1,  n = 20000000,  r =  0,  k = 256,  Alpha =      0,  Beta =   0.25
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   67
+Chi-square statistic                  :8.40e+12
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:06:25.79
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:25.79
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 59  WeightDistrib, r = 0             eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = n311, Linux
+
+tea3.y
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r =  0,   d = 16384,   t =  3,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         :  3881244
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940799214364
+  j =  1                              :        592302054
+  j =  2                              :          3754507
+  j =  3                              :            60029
+  j =  4                              :             2010
+  j =  5                              :              140
+
+-----------------------------------------------
+CPU time used                    :  00:04:59.05
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:04:59.10
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+  5  CollisionOver, t = 3             eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n318, Linux
+
+tea3.y
+
+
+svaria_WeightDistrib test:
+-----------------------------------------------
+   N =  1,  n = 20000000,  r = 20,  k = 256,  Alpha =      0,  Beta =   0.25
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   67
+Chi-square statistic                  :  106.76
+p-value of test                       :  1.4e-3
+
+-----------------------------------------------
+CPU time used                    :  00:06:42.51
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:42.51
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n315, Linux
+
+tea3.y
+
+
+svaria_WeightDistrib test:
+-----------------------------------------------
+   N =  1,  n = 20000000,  r = 28,  k = 256,  Alpha =      0,  Beta =   0.25
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   67
+Chi-square statistic                  :  238.63
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:06:41.54
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:41.54
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 61  WeightDistrib, r = 28            eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n315, Linux
+
+tea3.y
+
+
+svaria_WeightDistrib test:
+-----------------------------------------------
+   N =  1,  n = 20000000,  r =  0,  k = 256,  Alpha =      0,  Beta = 0.0625
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   37
+Chi-square statistic                  :6.86e+12
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:06:25.81
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:25.81
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 62  WeightDistrib, r = 0             eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n316, Linux
+
+tea3.y
+
+
+svaria_WeightDistrib test:
+-----------------------------------------------
+   N =  1,  n = 20000000,  r = 10,  k = 256,  Alpha =      0,  Beta = 0.0625
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   37
+Chi-square statistic                  :52846.49
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:06:42.13
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:42.13
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 63  WeightDistrib, r = 10            eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n314, Linux
+
+tea3.y
+
+
+svaria_WeightDistrib test:
+-----------------------------------------------
+   N =  1,  n = 20000000,  r = 26,  k = 256,  Alpha =      0,  Beta = 0.0625
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   37
+Chi-square statistic                  :   47.83
+p-value of test                       :    0.11
+
+-----------------------------------------------
+CPU time used                    :  00:06:41.79
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:41.79
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n304, Linux
+
+tea3.y
+
+
+svaria_SumCollector test:
+-----------------------------------------------
+   N =  1,  n = 500000000,  r =  0,   g = 10
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   29
+Chi-square statistic                  :9.25e+13
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:13:16.08
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:13:16.08
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 65  SumCollector                     eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n308, Linux
+
+tea3.y
+
+
+smarsa_MatrixRank test:
+-----------------------------------------------
+   N = 10,  n = 1000000,  r =  0,    s = 5,    L = 30,    k = 30
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          :   40
+Chi-square statistic                  :1.19e+11
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:57.68
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:02:57.68
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 66  MatrixRank, L=30, r=0            eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n314, Linux
+
+tea3.y
+
+
+smarsa_MatrixRank test:
+-----------------------------------------------
+   N = 10,  n = 1000000,  r = 25,    s = 5,    L = 30,    k = 30
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.30
+p-value of test                       :    0.13
+
+Kolmogorov-Smirnov- statistic = D-    :   0.070
+p-value of test                       :    0.87
+
+Anderson-Darling statistic = A2       :    1.24
+p-value of test                       :    0.25
+
+Test on the sum of all N observations
+Number of degrees of freedom          :   40
+Chi-square statistic                  :   31.11
+p-value of test                       :    0.84
+
+-----------------------------------------------
+CPU time used                    :  00:03:12.81
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:03:12.81
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n154, Linux
+
+tea3.y
+
+
+smarsa_MatrixRank test:
+-----------------------------------------------
+   N =  1,  n = 5000,  r =  0,    s = 4,    L = 1000,    k = 1000
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    3
+Chi-square statistic                  :    1.75
+p-value of test                       :    0.63
+
+-----------------------------------------------
+CPU time used                    :  00:03:56.84
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:03:56.84
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n314, Linux
+
+tea3.y
+
+
+smarsa_MatrixRank test:
+-----------------------------------------------
+   N =  1,  n = 5000,  r = 26,    s = 4,    L = 1000,    k = 1000
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    3
+Chi-square statistic                  :    3.36
+p-value of test                       :    0.34
+
+-----------------------------------------------
+CPU time used                    :  00:03:53.65
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:03:53.65
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = n311, Linux
+
+tea3.y
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r = 16,   d = 16384,   t =  3,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         :     1345
+p-value of test                       :    0.69
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940795334465
+  j =  1                              :        599997310
+  j =  2                              :             1345
+  j =  3                              :                0
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:05:36.69
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:05:36.74
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n308, Linux
+
+tea3.y
+
+
+smarsa_MatrixRank test:
+-----------------------------------------------
+   N =  1,  n = 80,  r = 15,    s = 15,    L = 5000,    k = 5000
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    2
+Chi-square statistic                  :    1.82
+p-value of test                       :    0.40
+
+-----------------------------------------------
+CPU time used                    :  00:02:23.37
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:02:23.37
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n154, Linux
+
+tea3.y
+
+
+smarsa_MatrixRank test:
+-----------------------------------------------
+   N =  1,  n = 80,  r =  0,    s = 30,    L = 5000,    k = 5000
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    2
+Chi-square statistic                  :   0.010
+p-value of test                       :    0.9949
+
+-----------------------------------------------
+CPU time used                    :  00:02:09.15
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:02:09.15
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n308, Linux
+
+tea3.y
+
+
+smarsa_Savir2 test:
+-----------------------------------------------
+   N = 10,  n = 10000000,  r = 10,    m = 1048576,    t = 30
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       : 4.3e-94    *****
+
+Anderson-Darling statistic = A2       :  306.11
+p-value of test                       :6.4e-135    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          :  130
+Chi-square statistic                  : 1489.34
+p-value of test                       :2.2e-229    *****
+
+-----------------------------------------------
+CPU time used                    :  00:04:00.71
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:04:00.71
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 72  Savir2                        2.2e-229
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n314, Linux
+
+tea3.y
+
+
+smarsa_GCD test:
+-----------------------------------------------
+   N = 10,  n = 50000000,  r =  0,   s = 30
+
+
+-----------------------------------------------
+Test results for GCD values:
+
+Kolmogorov-Smirnov+ statistic = D+    : 2.64e-3
+p-value of test                       :    0.9973
+
+Kolmogorov-Smirnov- statistic = D-    :    0.34
+p-value of test                       :    0.08
+
+Anderson-Darling statistic = A2       :    3.14
+p-value of test                       :    0.02
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 17430
+Chi-square statistic                  :17920.48
+p-value of test                       :  4.6e-3
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:42.15
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:02:42.15
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n308, Linux
+
+tea3.y
+
+
+swalk_RandomWalk1 test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r =  0,   s = 5,   L0 =   50,   L1 =   50
+
+
+
+-----------------------------------------------
+Test on the values of the Statistic H
+
+Number of degrees of freedom          :   36
+ChiSquare statistic                   :1.85e+11
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic M
+
+Number of degrees of freedom          :   35
+ChiSquare statistic                   :7.65e+10
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic J
+
+Number of degrees of freedom          :   25
+ChiSquare statistic                   : 4.36e+7
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic R
+
+Number of degrees of freedom          :   24
+ChiSquare statistic                   : 4.05e+7
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic C
+
+Number of degrees of freedom          :   17
+ChiSquare statistic                   : 4.08e+7
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:59.87
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  5
+ Total CPU time:   00:01:59.87
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 74  RandomWalk1 H (L=50, r=0)        eps  
+ 74  RandomWalk1 M (L=50, r=0)        eps  
+ 74  RandomWalk1 J (L=50, r=0)        eps  
+ 74  RandomWalk1 R (L=50, r=0)        eps  
+ 74  RandomWalk1 C (L=50, r=0)        eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n314, Linux
+
+tea3.y
+
+
+swalk_RandomWalk1 test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r = 25,   s = 5,   L0 =   50,   L1 =   50
+
+
+
+-----------------------------------------------
+Test on the values of the Statistic H
+
+Number of degrees of freedom          :   36
+ChiSquare statistic                   :   53.59
+p-value of test                       :    0.03
+
+
+-----------------------------------------------
+Test on the values of the Statistic M
+
+Number of degrees of freedom          :   35
+ChiSquare statistic                   :   42.10
+p-value of test                       :    0.19
+
+
+-----------------------------------------------
+Test on the values of the Statistic J
+
+Number of degrees of freedom          :   25
+ChiSquare statistic                   :   29.47
+p-value of test                       :    0.24
+
+
+-----------------------------------------------
+Test on the values of the Statistic R
+
+Number of degrees of freedom          :   24
+ChiSquare statistic                   :   22.18
+p-value of test                       :    0.57
+
+
+-----------------------------------------------
+Test on the values of the Statistic C
+
+Number of degrees of freedom          :   17
+ChiSquare statistic                   :   21.78
+p-value of test                       :    0.19
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:14.05
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  5
+ Total CPU time:   00:02:14.05
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n304, Linux
+
+tea3.y
+
+
+swalk_RandomWalk1 test:
+-----------------------------------------------
+   N =  1,  n = 10000000,  r =  0,   s = 10,   L0 = 1000,   L1 = 1000
+
+
+
+-----------------------------------------------
+Test on the values of the Statistic H
+
+Number of degrees of freedom          :  146
+ChiSquare statistic                   :1.57e+11
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic M
+
+Number of degrees of freedom          :  146
+ChiSquare statistic                   :6.60e+10
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic J
+
+Number of degrees of freedom          :  500
+ChiSquare statistic                   : 9.53e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic R
+
+Number of degrees of freedom          :  136
+ChiSquare statistic                   : 9.63e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic C
+
+Number of degrees of freedom          :   74
+ChiSquare statistic                   : 1.03e+7
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:25.75
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  5
+ Total CPU time:   00:02:25.75
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 76  RandomWalk1 H (L=1000, r=0)      eps  
+ 76  RandomWalk1 M (L=1000, r=0)      eps  
+ 76  RandomWalk1 J (L=1000, r=0)      eps  
+ 76  RandomWalk1 R (L=1000, r=0)      eps  
+ 76  RandomWalk1 C (L=1000, r=0)      eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n152, Linux
+
+tea3.y
+
+
+swalk_RandomWalk1 test:
+-----------------------------------------------
+   N =  1,  n = 10000000,  r = 20,   s = 10,   L0 = 1000,   L1 = 1000
+
+
+
+-----------------------------------------------
+Test on the values of the Statistic H
+
+Number of degrees of freedom          :  146
+ChiSquare statistic                   :  143.47
+p-value of test                       :    0.54
+
+
+-----------------------------------------------
+Test on the values of the Statistic M
+
+Number of degrees of freedom          :  146
+ChiSquare statistic                   :  125.75
+p-value of test                       :    0.89
+
+
+-----------------------------------------------
+Test on the values of the Statistic J
+
+Number of degrees of freedom          :  500
+ChiSquare statistic                   :  534.03
+p-value of test                       :    0.14
+
+
+-----------------------------------------------
+Test on the values of the Statistic R
+
+Number of degrees of freedom          :  136
+ChiSquare statistic                   :  142.40
+p-value of test                       :    0.34
+
+
+-----------------------------------------------
+Test on the values of the Statistic C
+
+Number of degrees of freedom          :   74
+ChiSquare statistic                   :   91.96
+p-value of test                       :    0.08
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:38.47
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  5
+ Total CPU time:   00:02:38.47
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n243, Linux
+
+tea3.y
+
+
+swalk_RandomWalk1 test:
+-----------------------------------------------
+   N =  1,  n = 1000000,  r =  0,   s = 15,   L0 = 10000,   L1 = 10000
+
+
+
+-----------------------------------------------
+Test on the values of the Statistic H
+
+Number of degrees of freedom          :  384
+ChiSquare statistic                   : 8.28e+9
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic M
+
+Number of degrees of freedom          :  384
+ChiSquare statistic                   : 5.15e+9
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic J
+
+Number of degrees of freedom          : 5000
+ChiSquare statistic                   : 1.24e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic R
+
+Number of degrees of freedom          :  378
+ChiSquare statistic                   : 1.65e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic C
+
+Number of degrees of freedom          :  200
+ChiSquare statistic                   : 1.72e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:05.37
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  5
+ Total CPU time:   00:02:05.37
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 78  RandomWalk1 H (L=10000, r=0)     eps  
+ 78  RandomWalk1 M (L=10000, r=0)     eps  
+ 78  RandomWalk1 J (L=10000, r=0)     eps  
+ 78  RandomWalk1 R (L=10000, r=0)     eps  
+ 78  RandomWalk1 C (L=10000, r=0)     eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n307, Linux
+
+tea3.y
+
+
+swalk_RandomWalk1 test:
+-----------------------------------------------
+   N =  1,  n = 1000000,  r = 15,   s = 15,   L0 = 10000,   L1 = 10000
+
+
+
+-----------------------------------------------
+Test on the values of the Statistic H
+
+Number of degrees of freedom          :  384
+ChiSquare statistic                   :  438.54
+p-value of test                       :    0.03
+
+
+-----------------------------------------------
+Test on the values of the Statistic M
+
+Number of degrees of freedom          :  384
+ChiSquare statistic                   :  388.45
+p-value of test                       :    0.43
+
+
+-----------------------------------------------
+Test on the values of the Statistic J
+
+Number of degrees of freedom          : 5000
+ChiSquare statistic                   : 5118.01
+p-value of test                       :    0.12
+
+
+-----------------------------------------------
+Test on the values of the Statistic R
+
+Number of degrees of freedom          :  378
+ChiSquare statistic                   :  369.04
+p-value of test                       :    0.62
+
+
+-----------------------------------------------
+Test on the values of the Statistic C
+
+Number of degrees of freedom          :  200
+ChiSquare statistic                   :  174.61
+p-value of test                       :    0.90
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:08.81
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  5
+ Total CPU time:   00:02:08.81
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = n311, Linux
+
+tea3.y
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r =  0,   d =   64,   t =  7,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         : 310849019
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131941106182139
+  j =  1                              :        217573993
+  j =  2                              :         37444827
+  j =  3                              :         12877218
+  j =  4                              :          6267468
+  j =  5                              :          3549607
+
+-----------------------------------------------
+CPU time used                    :  00:04:03.61
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:04:03.65
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+  7  CollisionOver, t = 7             eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n243, Linux
+
+tea3.y
+
+
+scomp_LinearComp test:
+-----------------------------------------------
+   N =  1,  n = 400020,  r =  0,    s = 1
+
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   12
+Chi2 statistic for size of jumps      :   10.37
+p-value of test                       :    0.58
+
+
+-----------------------------------------------
+Normal statistic for number of jumps  :   -1.19
+p-value of test                       :    0.88
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:36.62
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  2
+ Total CPU time:   00:02:36.62
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n149, Linux
+
+tea3.y
+
+
+scomp_LinearComp test:
+-----------------------------------------------
+   N =  1,  n = 400020,  r = 29,    s = 1
+
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   12
+Chi2 statistic for size of jumps      :    8.68
+p-value of test                       :    0.73
+
+
+-----------------------------------------------
+Normal statistic for number of jumps  :    0.53
+p-value of test                       :    0.30
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:37.28
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  2
+ Total CPU time:   00:02:37.28
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n314, Linux
+
+tea3.y
+
+
+scomp_LempelZiv test:
+-----------------------------------------------
+   N = 10,  n = 134217728,  r =  0,   s =   30,   k =   27
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :1.30e-174
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Tests on the sum of all N observations
+Standardized normal statistic         :  -70.40
+p-value of test                       : 1 - eps1    *****
+
+Sample variance                       :   22.35
+p-value of test                       : 1.9e-38    *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:01.72
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:01:01.72
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 82  LempelZiv, r = 0               1 - eps1
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n307, Linux
+
+tea3.y
+
+
+scomp_LempelZiv test:
+-----------------------------------------------
+   N = 10,  n = 134217728,  r = 15,   s =   15,   k =   27
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.14
+p-value of test                       :    0.61
+
+Kolmogorov-Smirnov- statistic = D-    :    0.10
+p-value of test                       :    0.75
+
+Anderson-Darling statistic = A2       :    0.26
+p-value of test                       :    0.97
+
+Tests on the sum of all N observations
+Standardized normal statistic         :   -0.46
+p-value of test                       :    0.68
+
+Sample variance                       :    1.17
+p-value of test                       :    0.31
+
+-----------------------------------------------
+CPU time used                    :  00:01:05.54
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:01:05.54
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n107, Linux
+
+tea3.y
+
+
+sspectral_Fourier3 test:
+-----------------------------------------------
+   N = 100000,  n = 16384,  r =  0,   s =    3,   k =   14
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.90
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.099
+p-value of test                       : 9.4e-36    *****
+
+Anderson-Darling statistic = A2       : 1.18e+5
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:21.60
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:01:21.60
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 84  Fourier3, r = 0                  eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n314, Linux
+
+tea3.y
+
+
+sspectral_Fourier3 test:
+-----------------------------------------------
+   N = 100000,  n = 16384,  r = 27,   s =    3,   k =   14
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.048
+p-value of test                       :  5.0e-9    *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.031
+p-value of test                       :  4.4e-4    *****
+
+Anderson-Darling statistic = A2       :   33.70
+p-value of test                       : 3.9e-16    *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:24.23
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:01:24.23
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 85  Fourier3, r = 27               3.9e-16
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n307, Linux
+
+tea3.y
+
+
+sstring_LongestHeadRun test:
+-----------------------------------------------
+   N =  1,  n = 1000,  r =  0,   s = 3,   L = 10000020
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    8
+Chi-square statistic                  :53188.54
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+Global longest run of 1               : 1932.00
+p-value of test                       :   eps      *****
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:04:34.43
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  2
+ Total CPU time:   00:04:34.43
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 86  LongestHeadRun, r = 0            eps  
+ 86  LongestHeadRun, r = 0            eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n307, Linux
+
+tea3.y
+
+
+sstring_LongestHeadRun test:
+-----------------------------------------------
+   N =  1,  n = 1000,  r = 27,   s = 3,   L = 10000020
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    8
+Chi-square statistic                  :    4.82
+p-value of test                       :    0.78
+
+-----------------------------------------------
+Global longest run of 1               :   32.00
+p-value of test                       :    0.50
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:05:06.24
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  2
+ Total CPU time:   00:05:06.24
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n108, Linux
+
+tea3.y
+
+
+sstring_PeriodsInStrings test:
+-----------------------------------------------
+   N = 10,  n = 500000000,  r =  0,   s =   10
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          :  200
+Chi-square statistic                  : 3.20e+6
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:08:02.05
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:08:02.05
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 88  PeriodsInStrings, r = 0          eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n307, Linux
+
+tea3.y
+
+
+sstring_PeriodsInStrings test:
+-----------------------------------------------
+   N = 10,  n = 500000000,  r = 20,   s =   10
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.16
+p-value of test                       :    0.53
+
+Kolmogorov-Smirnov- statistic = D-    :    0.27
+p-value of test                       :    0.20
+
+Anderson-Darling statistic = A2       :    0.78
+p-value of test                       :    0.49
+
+Test on the sum of all N observations
+Number of degrees of freedom          :  200
+Chi-square statistic                  :  207.88
+p-value of test                       :    0.34
+
+-----------------------------------------------
+CPU time used                    :  00:08:19.69
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:08:19.69
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = n238, Linux
+
+tea3.y
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r = 24,   d =   64,   t =  7,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         :     1277
+p-value of test                       :    0.9911
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940795334397
+  j =  1                              :        599997446
+  j =  2                              :             1277
+  j =  3                              :                0
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:05:36.63
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:05:36.68
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n108, Linux
+
+tea3.y
+
+
+sstring_HammingWeight2 test:
+-----------------------------------------------
+   N = 10,  n = 1000000000,  r =  0,   s = 3,   L = 1000000
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 10000
+Chi-square statistic                  : 6.48e+7
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:04:23.87
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:04:23.87
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 90  HammingWeight2, r = 0            eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n311, Linux
+
+tea3.y
+
+
+sstring_HammingWeight2 test:
+-----------------------------------------------
+   N = 10,  n = 1000000000,  r = 27,   s = 3,   L = 1000000
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    : 5.81e-3
+p-value of test                       :    0.9939
+
+Kolmogorov-Smirnov- statistic = D-    :    0.57
+p-value of test                       :  6.8e-4    *****
+
+Anderson-Darling statistic = A2       :    6.80
+p-value of test                       :  4.5e-4    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 10000
+Chi-square statistic                  :10519.70
+p-value of test                       :  1.5e-4    *****
+
+-----------------------------------------------
+CPU time used                    :  00:04:40.64
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:04:40.64
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 91  HammingWeight2, r = 27          1.5e-4
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n314, Linux
+
+tea3.y
+
+
+sstring_HammingCorr test:
+-----------------------------------------------
+   N =  1,  n = 1000000000,  r = 10,   s = 10,   L = 30
+
+
+
+-----------------------------------------------
+Normal statistic                      :   11.01
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:04:36.29
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:04:36.29
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 92  HammingCorr, L = 30              eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n306, Linux
+
+tea3.y
+
+
+sstring_HammingCorr test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r = 10,   s = 10,   L = 300
+
+
+
+-----------------------------------------------
+Normal statistic                      :   31.57
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:04:29.42
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:04:29.42
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 93  HammingCorr, L = 300             eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n154, Linux
+
+tea3.y
+
+
+sstring_HammingCorr test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r = 10,   s = 10,   L = 1200
+
+
+
+-----------------------------------------------
+Normal statistic                      :  120.94
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:17:47.17
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:17:47.17
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 94  HammingCorr, L = 1200            eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n307, Linux
+
+tea3.y
+
+
+sstring_HammingIndep test:
+-----------------------------------------------
+   N = 10,  n = 30000000,  r =  0,   s = 3,   L = 30,   d = 0
+
+
+
+Counters with expected numbers >= 10
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 4890
+Chi-square statistic                  :6.09e+11
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:08:06.10
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:08:06.10
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 95  HammingIndep, L=30, r=0          eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n306, Linux
+
+tea3.y
+
+
+sstring_HammingIndep test:
+-----------------------------------------------
+   N = 10,  n = 30000000,  r = 27,   s = 3,   L = 30,   d = 0
+
+
+
+Counters with expected numbers >= 10
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    : 2.66e-3
+p-value of test                       :    0.9973
+
+Kolmogorov-Smirnov- statistic = D-    :    0.47
+p-value of test                       :  7.7e-3
+
+Anderson-Darling statistic = A2       :    4.02
+p-value of test                       :  8.9e-3
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 4890
+Chi-square statistic                  : 5176.22
+p-value of test                       :  2.2e-3
+
+-----------------------------------------------
+CPU time used                    :  00:08:33.03
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:08:33.03
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n304, Linux
+
+tea3.y
+
+
+sstring_HammingIndep test:
+-----------------------------------------------
+   N =  1,  n = 30000000,  r =  0,   s = 4,   L = 300,   d = 0
+
+
+
+Counters with expected numbers >= 10
+-----------------------------------------------
+Number of degrees of freedom          : 4117
+Chi-square statistic                  :7.06e+10
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:06:03.87
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:03.87
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 97  HammingIndep, L=300, r=0         eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n306, Linux
+
+tea3.y
+
+
+sstring_HammingIndep test:
+-----------------------------------------------
+   N =  1,  n = 30000000,  r = 26,   s = 4,   L = 300,   d = 0
+
+
+
+Counters with expected numbers >= 10
+-----------------------------------------------
+Number of degrees of freedom          : 4117
+Chi-square statistic                  : 4154.61
+p-value of test                       :    0.34
+
+-----------------------------------------------
+CPU time used                    :  00:06:22.67
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:22.67
+
+ All tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = n154, Linux
+
+tea3.y
+
+
+sstring_HammingIndep test:
+-----------------------------------------------
+   N =  1,  n = 10000000,  r =  0,   s = 5,   L = 1200,   d = 0
+
+
+
+Counters with expected numbers >= 10
+-----------------------------------------------
+Number of degrees of freedom          : 11825
+Chi-square statistic                  : 3.46e+9
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:06:34.63
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:06:34.63
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 99  HammingIndep, L=1200, r=0        eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = n238, Linux
+
+tea3.y
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r =  0,   d =    8,   t = 14,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         : 419531474
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131941214864594
+  j =  1                              :        138204590
+  j =  2                              :         20397091
+  j =  3                              :          7023213
+  j =  4                              :          3580847
+  j =  5                              :          2156580
+
+-----------------------------------------------
+CPU time used                    :  00:03:28.88
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        tea3.y
+ Number of statistics:  1
+ Total CPU time:   00:03:28.93
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+  9  CollisionOver, t = 14            eps  
+ ----------------------------------------------
+
+
+
