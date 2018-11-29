@@ -8,8 +8,10 @@
 #define test11(HASH)                \
 uint32_t test_##HASH()              \
 {                                   \
-    static uint32_t seed = 0u;      \
-    return HASH(seed++);            \
+    static uint32_t s = 0u;         \
+    uint2 m = morton2(s++);         \
+                                    \
+    return HASH(seed(m));           \
 }
 
 #define test21(HASH)                \
