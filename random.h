@@ -81,6 +81,15 @@ uint city(uint s)
     return fmix(mur(b, mur(len, c)));
 }
 
+// Hash from https://www.cs.ubc.ca/~rbridson/docs/schechter-sca08-turbulence.pdf
+// - Schechter and Bridson, Evolving Sub-Grid Turbulence for Smoke Animation, 2008
+uint esgtsa(uint s) {
+    s = (s ^ 2747636419u) * 2654435769u;// % 4294967296u;
+    s = (s ^ (s >> 16u)) * 2654435769u;// % 4294967296u;
+    s = (s ^ (s >> 16u)) * 2654435769u;// % 4294967296u;
+    return s;
+}
+
 // UE4 RandFast function
 float fast(float2 v) {
     v = (1./4320.) * v + float2(0.25,0.);
@@ -248,15 +257,6 @@ uint ranlim32(uint j)
     y = w1 ^ (w1 << 17); y ^= y >> 15; y ^= y << 5;
 
     return (x + v) ^ (y + w2);
-}
-
-// Hash from https://www.cs.ubc.ca/~rbridson/docs/schechter-sca08-turbulence.pdf
-// - Schechter and Bridson, Evolving Sub-Grid Turbulence for Smoke Animation, 2008
-uint sca08(uint s) {
-    s = (s ^ 2747636419u) * 2654435769u;// % 4294967296u;
-    s = (s ^ (s >> 16u)) * 2654435769u;// % 4294967296u;
-    s = (s ^ (s >> 16u)) * 2654435769u;// % 4294967296u;
-    return s;
 }
 
 // SuperFastHash, adapated from http://www.azillionmonkeys.com/qed/hash.html
@@ -444,116 +444,14 @@ uint2 pcg2d(uint2 v)
     return v;
 }
 
-uint3 sca08_pcg3d( uint u )
+uint3 hashmul( uint u )
 {
-    return pcg3d(uint3(sca08(u), 0, 0)); 
-}
-
-uint3 sca08_hash31( uint u )
-{
-    uint n = sca08(u);
+    uint n = esgtsa(u);
 
     return uint3(n, n * 16807u, n * 48271u);// n * 69621u);
 }
 
-uint3 sca08_hash3( uint u )
+uint3 hashadd( uint u )
 {
-    return uint3(sca08(u), sca08(u + 16807u), sca08(u + 48271u));
-}
-
-uint pcg1da( uint v )
-{   
-	v = v * 1664525u + 1013904223u;   
-
-    uint y = v;
-    uint z = 1u;
-
-    z += v*y;
-    v += y*z;
-
-    v = v ^ (v>>16u);    
-    
-    return v;
-}
-
-uint pcg1db( uint v )
-{
-    v = v * 1664525u + 1013904223u;
-
-    v += v*v*v;
-
-    v = v ^ (v>>16u);
-
-    return v;
-}
-
-uint pcg1dc( uint v )
-{
-    v = v * 1664525u + 1013904223u;
-    v = v ^ (v>>16u);
-    return v;
-}
-
-uint pcg1dd( uint v )
-{
-    v = v * 1664525u + 1013904223u;
-    v = v*v*v;
-    v = v ^ (v>>16u);
-    return v;
-}
-
-uint3 pcg3d20(uint2 u)
-{
-    uint3 v = uint3(u.x, u.y, 0u);
-
-    v = v * 1664525u + 1013904223u;
-
-    v.x += v.y*v.z;
-    v.y += v.z*v.x;
-    v.z += v.x*v.y;
-
-    v.x += v.y*v.z;
-    v.y += v.z*v.x;
-    v.z += v.x*v.y;
-    
-    v = v ^ (v>>16u);
-
-    return v;
-}
-
-uint3 pcg3d21(uint2 u)
-{
-    uint3 v = uint3(u.x, u.y, 1u);
-
-    v = v * 1664525u + 1013904223u;
-
-    v.x += v.y*v.z;
-    v.y += v.z*v.x;
-    v.z += v.x*v.y;
-
-    v.x += v.y*v.z;
-    v.y += v.z*v.x;
-    v.z += v.x*v.y;
-    
-    v = v ^ (v>>16u);
-
-    return v;
-}
-
-uint3 pcg3d21a(uint2 u)
-{
-    u = u * 1664525u + 1013904223u;
-    uint3 v = uint3(u.x, u.y, 1u);
-
-    v.x += v.y;//*v.z;
-    v.y += v.x;//*v.z;
-    v.z = v.x*v.y;
-
-    v.x += v.y*v.z;
-    v.y += v.z*v.x;
-    v.z += v.x*v.y;
-
-    v = v ^ (v>>16u);
-
-    return v;
+    return uint3(esgtsa(u), esgtsa(u + 16807u), esgtsa(u + 48271u));
 }

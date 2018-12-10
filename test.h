@@ -8,10 +8,25 @@
 #define test11(HASH)                \
 uint32_t test_##HASH()              \
 {                                   \
+    static uint32_t seed = 0u;      \
+                                    \
+    return HASH(seed++);            \
+}                                   \
+                                    \
+uint32_t test_##HASH##_seeded()     \
+{                                   \
     static uint32_t s = 0u;         \
     uint2 m = morton2(s++);         \
                                     \
     return HASH(seed(m));           \
+}                                   \
+                                    \
+uint32_t test_##HASH##_nested()     \
+{                                   \
+    static uint32_t seed = 0u;      \
+    uint2 m = morton2(seed++);      \
+                                    \
+    return HASH(HASH(m.x) + m.y);   \
 }
 
 #define test21(HASH)                \
@@ -50,13 +65,6 @@ uint32_t test_##HASH##y()           \
 {                                   \
     static uint32_t seed = 0u;      \
     return HASH(morton2(seed++)).y; \
-}
-
-#define test31(HASH)                \
-uint32_t test_##HASH()              \
-{                                   \
-    static uint32_t seed = 0u;      \
-    return HASH(morton3(seed++));   \
 }
 
 #define test41(HASH)                \
@@ -109,52 +117,6 @@ uint32_t test_##HASH##z()           \
 {                                   \
     static uint32_t seed = 0u;      \
     return HASH(morton3(seed++)).z; \
-}
-
-#define test23(HASH)                \
-uint32_t test_##HASH()              \
-{                                   \
-    static uint32_t seed = 0u;      \
-    static uint32_t count = 0u;     \
-    static uint3 p;                 \
-    static uint2 m;                 \
-                                    \
-    if (count == 0) {               \
-        m = morton2(seed);          \
-        p = HASH(m);                \
-                                    \
-        count++;                    \
-                                    \
-        return p.x;                 \
-    } else if (count == 1) {        \
-        count++;                    \
-                                    \
-        return p.y;                 \
-    } else {                        \
-                                    \
-        seed++;                     \
-        count = 0;                  \
-                                    \
-        return p.z;                 \
-    }                               \
-}                                   \
-                                    \
-uint32_t test_##HASH##x()           \
-{                                   \
-    static uint32_t seed = 0u;      \
-    return HASH(morton2(seed++)).x; \
-}                                   \
-                                    \
-uint32_t test_##HASH##y()           \
-{                                   \
-    static uint32_t seed = 0u;      \
-    return HASH(morton2(seed++)).y; \
-}                                   \
-                                    \
-uint32_t test_##HASH##z()           \
-{                                   \
-    static uint32_t seed = 0u;      \
-    return HASH(morton2(seed++)).z; \
 }
 
 #define test13(HASH)                \
@@ -357,6 +319,7 @@ MAKETEA(6)
 
 test11(bbs)
 test11(city)
+test11(esgtsa)
 ftest21(fast)
 ftest21(ign)
 test11(iqint1)
@@ -369,7 +332,6 @@ test33(pcg3d)
 test33(pcg3d16)
 ftest21(pseudo)
 test11(ranlim32)
-test11(sca08)
 test11(superfast)
 test22(tea2)
 test22(tea3)
@@ -387,13 +349,6 @@ test33(Rand3DPCG32)
 test44(Rand4DPCG32)
 test22(pcg2d)
 test44(pcg4d)
-test13(sca08_pcg3d)
-test13(sca08_hash31)
-test13(sca08_hash3)
-test11(pcg1da)
-test11(pcg1db)
-test11(pcg1dc)
-test11(pcg1dd)
-test23(pcg3d20)
-test23(pcg3d21)
-test23(pcg3d21a)
+
+test13(hashadd)
+test13(hashmul)

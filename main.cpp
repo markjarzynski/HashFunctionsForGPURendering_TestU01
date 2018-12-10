@@ -29,10 +29,26 @@ int main ( int argc, char** argv )
 
     Rep = new int[Rep_len + 1];
 
-    string outfile = "/umbc/xfs1/bailey/users/markj1/", hash, test;
+    bool output_to_file = false;
+
+    string outfile = "", hash = "", test = "";
 
     if (argc > 1)
     {
+        for (int i = 1; i < argc; i++)
+        {
+            if (strncmp(argv[i], "--output=", 9) == 0)
+            {
+                output_to_file = true;
+
+                int len = strlen(argv[i]) - 8;
+                char temp[len];
+                strncpy(temp, argv[i] + 9, len);
+
+                outfile = temp;
+            }
+        }
+
         for (int i = 1; i < argc; i++)
         {
             if (strcmp(argv[i], "--small") == 0)
@@ -93,16 +109,15 @@ int main ( int argc, char** argv )
             {
                 if ( strncmp(argv[i], "--test=", 7) == 0 )
                 {
-                    int len = strlen(argv[i]) - 7;
+                    int len = strlen(argv[i]) - 6;
                     char temp[len];
                     strncpy(temp, argv[i] + 7, len);
+                    cout << temp << endl;
                     test = temp;
-
-                    //cout << test << endl;
+                    cout << test << endl;
                     
                     int i = atoi(temp);
                     Rep[i] = 1;
-                    //cout << Rep[i] << "," << i << endl;
                 }
             }
         } 
@@ -142,10 +157,19 @@ int main ( int argc, char** argv )
             }
 
             genbits("bbs", bbs)
+            genbits("bbs_seeded", bbs_seeded)
+            genbits("bbs_nested", bbs_nested)
             genbits("city", city)
+            genbits("city_seeded", city_seeded)
+            genbits("city_nested", city_nested)
+            genbits("esgtsa", esgtsa)
+            genbits("esgtsa_seeded", esgtsa_seeded)
+            genbits("esgtsa_nested", esgtsa_nested)
             gen01("fast", fast)
             gen01("ign", ign)
             genbits("iqint1", iqint1)
+            genbits("iqint1_seeded", iqint1_seeded)
+            genbits("iqint1_nested", iqint1_nested)
             genbits("iqint2", iqint2)
             genbits("iqint2.x", iqint2x)
             genbits("iqint2.y", iqint2y)
@@ -153,6 +177,8 @@ int main ( int argc, char** argv )
             genbits("iqint3", iqint3)
             genbits("jkiss32", jkiss32)
             genbits("lcg", lcg)
+            genbits("lcg_seeded", lcg_seeded)
+            genbits("lcg_nested", lcg_nested)
             genbits("murmur3", murmur3)
             genbits("pcg3d", pcg3d)
             genbits("pcg3d.x", pcg3dx)
@@ -164,8 +190,11 @@ int main ( int argc, char** argv )
             genbits("pcg3d16.z", pcg3d16z)
             gen01("pseudo", pseudo)
             genbits("ranlim32", ranlim32)
-            genbits("sca08", sca08)
+            genbits("ranlim32_seeded", ranlim32_seeded)
+            genbits("ranlim32_nested", ranlim32_nested)
             genbits("superfast", superfast)
+            genbits("superfast_seeded", superfast_seeded)
+            genbits("superfast_nested", superfast_nested)
             genbits("tea2", tea2)
             genbits("tea2.x", tea2x)
             genbits("tea2.y", tea2y)
@@ -183,8 +212,12 @@ int main ( int argc, char** argv )
             genbits("tea6.y", tea6y)
             gen01("trig", trig)
             genbits("wang", wang)
+            genbits("wang_seeded", wang_seeded)
+            genbits("wang_nested", wang_nested)
             genbits("xorshift128", xorshift128)            
             genbits("xorshift32", xorshift32)
+            genbits("xorshift32_seeded", xorshift32_seeded)
+            genbits("xorshift32_nested", xorshift32_nested)
             genbits("xxhash32", xxhash32)
             gen01("hashwithoutsine", hashwithoutsine)
             genbits("hybridtaus", hybridtaus)
@@ -198,16 +231,9 @@ int main ( int argc, char** argv )
             genbits("pcg4d.y", pcg4dy)
             genbits("pcg4d.z", pcg4dz)
             genbits("pcg4d.w", pcg4dw)
-            genbits("sca08_pcg3d", sca08_pcg3d)
-            genbits("sca08_hash31", sca08_hash31)
-            genbits("sca08_hash3", sca08_hash3)
-            genbits("pcg1da", pcg1da)
-            genbits("pcg1db", pcg1db)
-            genbits("pcg1dc", pcg1dc)
-            genbits("pcg1dd", pcg1dd)
-            genbits("pcg3d20", pcg3d20)
-            genbits("pcg3d21", pcg3d21)
-            genbits("pcg3d21a", pcg3d21a)
+
+            genbits("hashadd", hashadd)
+            genbits("hashmul", hashmul)
 
             else
             {
@@ -217,9 +243,12 @@ int main ( int argc, char** argv )
 #undef genbits
 #undef gen01
 
-            outfile += "/" + hash + "-" + test + ".txt";
-            freopen(outfile.c_str(), "w", stdout);
-            //setvbuf(stdout, NULL, _IONBF, 0);
+            if (output_to_file) 
+            {
+                outfile += "/" + hash + "-" + test + ".txt";
+                freopen(outfile.c_str(), "w", stdout);
+                //setvbuf(stdout, NULL, _IONBF, 0);
+            }
 
             if (size == 0)
             {
@@ -244,7 +273,10 @@ int main ( int argc, char** argv )
 
             unif01_DeleteExternGenBits(gen);
 
-            fclose(stdout);
+            if (output_to_file)
+            {
+                fclose(stdout);
+            }
         }
     }
     else 
