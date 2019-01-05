@@ -85,10 +85,10 @@ uint4 morton4 (uint64_t m)
 
     for (int i = 0; i < 16; i++)
     {
-        v.x |= (m & uint64_t(1u) << (4 * i)) >> (3 * i);
-        v.y |= (m & uint64_t(1u) << (4 * i + 1)) >> (3 * i + 1);
-        v.z |= (m & uint64_t(1u) << (4 * i + 2)) >> (3 * i + 2);
-        v.w |= (m & uint64_t(1u) << (4 * i + 3)) >> (3 * i + 3);
+        v.x |= (m & (uint64_t(1u) << (4 * i))) >> (3 * i);
+        v.y |= (m & (uint64_t(1u) << (4 * i + 1))) >> (3 * i + 1);
+        v.z |= (m & (uint64_t(1u) << (4 * i + 2))) >> (3 * i + 2);
+        v.w |= (m & (uint64_t(1u) << (4 * i + 3))) >> (3 * i + 3);
     }
 
     return v;

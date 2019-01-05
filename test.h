@@ -27,6 +27,38 @@ uint32_t test_##HASH##_nested()     \
     uint2 m = morton2(seed++);      \
                                     \
     return HASH(HASH(m.x) + m.y);   \
+}                                   \
+                                    \
+uint32_t test_##HASH##_seed3()      \
+{                                   \
+    static uint32_t s = 0u;         \
+    uint3 m = morton3(s++);         \
+                                    \
+    return HASH(seed3(m));          \
+}                                   \
+                                    \
+uint32_t test_##HASH##_nested3()    \
+{                                   \
+    static uint32_t seed = 0u;      \
+    uint3 m = morton3(seed++);      \
+                                    \
+    return HASH(HASH(HASH(m.x) + m.y) + m.z);   \
+}                                   \
+                                    \
+uint32_t test_##HASH##_seed4()      \
+{                                   \
+    static uint32_t s = 0u;         \
+    uint4 m = morton4(s++);         \
+                                    \
+    return HASH(seed4(m));          \
+}                                   \
+                                    \
+uint32_t test_##HASH##_nested4()    \
+{                                   \
+    static uint32_t seed = 0u;      \
+    uint4 m = morton4(seed++);      \
+                                    \
+    return HASH(HASH(HASH(HASH(m.x) + m.y) + m.z) + m.w);   \
 }
 
 #define test21(HASH)                \

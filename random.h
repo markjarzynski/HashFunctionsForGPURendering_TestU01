@@ -52,6 +52,15 @@ uint seed(uint2 p) {
     return 19u * p.x + 47u * p.y + 101u;
 }
 
+// convert 3D seed to 1D
+uint seed3(uint3 p) {
+    return 19u * p.x + 47u * p.y + 101u * p.z + 131u;
+}
+
+uint seed4(uint4 p) {
+    return 19u * p.x + 47u * p.y + 101u * p.z + 131u * p.w + 173u;
+}
+
 
 // Hashes
 
