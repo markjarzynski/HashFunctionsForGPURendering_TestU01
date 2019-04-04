@@ -59,6 +59,69 @@ uint32_t test_##HASH##_nested4()    \
     uint4 m = morton4(seed++);      \
                                     \
     return HASH(HASH(HASH(HASH(m.x) + m.y) + m.z) + m.w);   \
+}                                   \
+                                    \
+uint32_t test_##HASH##_2()          \
+{                                   \
+    static uint32_t seed = 0u;      \
+    static uint32_t count = 0u;     \
+    static uint2 m, p;              \
+                                    \
+    if (count == 0) {               \
+        m = morton2(seed);          \
+        p = uint2(HASH(m.x), HASH(m.y)); \
+        count++;                    \
+        return p.x;                 \
+    } else {                        \
+        seed++;                     \
+        count = 0;                  \
+        return p.y;                 \
+    }                               \
+}                                   \
+                                    \
+uint32_t test_##HASH##_3()          \
+{                                   \
+    static uint32_t seed = 0u;      \
+    static uint32_t count = 0u;     \
+    static uint3 p, m;              \
+                                    \
+    if (count == 0) {               \
+        m = morton3(seed);          \
+        p = uint3(HASH(m.x), HASH(m.y), HASH(m.z)); \
+        count++;                    \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else {                        \
+        seed++;                     \
+        count = 0;                  \
+        return p.z;                 \
+    }                               \
+}                                   \
+                                    \
+uint32_t test_##HASH##_4()          \
+{                                   \
+    static uint32_t seed = 0u;      \
+    static uint32_t count = 0u;     \
+    static uint4 p, m;              \
+                                    \
+    if (count == 0) {               \
+        m = morton4(seed);          \
+        p = uint4(HASH(m.x), HASH(m.y), HASH(m.z), HASH(m.w));  \
+        count++;                    \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else if (count == 2) {        \
+        count++;                    \
+        return p.z;                 \
+    } else {                        \
+        seed++;                     \
+        count = 0;                  \
+        return p.w;                 \
+    }                               \
 }
 
 #define test21(HASH)                \
