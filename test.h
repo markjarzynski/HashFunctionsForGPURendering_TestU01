@@ -122,6 +122,69 @@ uint32_t test_##HASH##_4()          \
         count = 0;                  \
         return p.w;                 \
     }                               \
+}                                   \
+                                    \
+uint32_t test_##HASH##_xor2()          \
+{                                   \
+    static uint32_t seed = 0u;      \
+    static uint32_t count = 0u;     \
+    static uint2 m, p;              \
+                                    \
+    if (count == 0) {               \
+        m = morton2(seed);          \
+        p = HASH(m.x * 1597334677u ^ m.y * 3812015801u) * uint2(0x1u, 0x3fffu); \
+        count++;                    \
+        return p.x;                 \
+    } else {                        \
+        seed++;                     \
+        count = 0;                  \
+        return p.y;                 \
+    }                               \
+}                                   \
+                                    \
+uint32_t test_##HASH##_xor3()          \
+{                                   \
+    static uint32_t seed = 0u;      \
+    static uint32_t count = 0u;     \
+    static uint3 p, m;              \
+                                    \
+    if (count == 0) {               \
+        m = morton3(seed);          \
+        p = HASH(m.x * 1597334677u ^ m.y * 3812015801u ^ m.z * 3299493293u) * uint3(0x1u, 0x1ffu, 0x3ffffu); \
+        count++;                    \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else {                        \
+        seed++;                     \
+        count = 0;                  \
+        return p.z;                 \
+    }                               \
+}                                   \
+                                    \
+uint32_t test_##HASH##_xor4()          \
+{                                   \
+    static uint32_t seed = 0u;      \
+    static uint32_t count = 0u;     \
+    static uint4 p, m;              \
+                                    \
+    if (count == 0) {               \
+        m = morton4(seed);          \
+        p = HASH(m.x * 1597334677u ^ m.y * 3812015801u ^ m.z * 3299493293u ^ m.w) * uint4(0x1u, 0x7fu, 0x3fffu, 0x1fffffu); \
+        count++;                    \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else if (count == 2) {        \
+        count++;                    \
+        return p.z;                 \
+    } else {                        \
+        seed++;                     \
+        count = 0;                  \
+        return p.w;                 \
+    }                               \
 }
 
 #define test21(HASH)                \
