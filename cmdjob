@@ -13,10 +13,10 @@ cat << EOF > $jobfile
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=markj1@umbc.edu
 #SBATCH --partition=batch
-#SBATCH --array=0-26
-#SBATCH --mem-per-cpu=2000
+#SBATCH --nodes=7
+#SBATCH --ntasks-per-node=16
 
-srun ./main --output=/umbc/xfs1/bailey/users/markj1/ --big --test=\$((4 * \$SLURM_ARRAY_TASK_ID + 1)) --test=\$((4 * \$SLURM_ARRAY_TASK_ID + 2)) --test=\$((4 * \$SLURM_ARRAY_TASK_ID + 3)) --test=\$((4 * \$SLURM_ARRAY_TASK_ID + 4)) $ALGO
+srun ./main --output=/umbc/xfs1/bailey/users/markj1/ --big $ALGO
 
 EOF
 
