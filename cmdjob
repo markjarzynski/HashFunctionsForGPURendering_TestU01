@@ -9,7 +9,8 @@ cat << EOF > $jobfile
 #SBATCH --job-name=$ALGO
 #SBATCH --output=$ALGO.txt
 #SBATCH --error=$ALGO.err
-#SBATCH --qos=short
+#SBATCH --account=pi_bailey
+#SBATCH --qos=normal
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=markj1@umbc.edu
 #SBATCH --partition=batch
