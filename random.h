@@ -395,39 +395,39 @@ float hashwithoutsine12(float2 p)
 
 float hashwithoutsine13(float3 p3)
 {
-    p3  = fract(p3 * .1031);
+    p3  = frac(p3 * .1031);
     p3 += dot(p3, float3(p3.y, p3.z, p3.x) + 19.19);
-    return fract((p3.x + p3.y) * p3.z);
+    return frac((p3.x + p3.y) * p3.z);
 }
 
 float2 hashwithoutsine21(float p)
 {
-    vec3 p3 = fract(float3(p) * float3(.1031, .1030, .0973));
+    float3 p3 = frac(float3(p) * float3(.1031, .1030, .0973));
     p3 += dot(p3, float3(p3.y, p3.z, p3.x) + 19.19);
-    return fract((float2(p3.x, p3.x) + float2(p3.y, p3.z)) * float2(p3.z, p3.y));
+    return frac((float2(p3.x, p3.x) + float2(p3.y, p3.z)) * float2(p3.z, p3.y));
 
 }
 
 float2 hashwithoutsine22(float2 p)
 {
-    vec3 p3 = fract(float3(p.x, p.y, p.x) * float3(.1031, .1030, .0973));
+    float3 p3 = frac(float3(p.x, p.y, p.x) * float3(.1031, .1030, .0973));
     p3 += dot(p3, float3(p3.y, p3.z, p3.x) + 19.19);
-    return fract((float2(p3.x, p3.x) + float2(p3.y, p3.z)) * float2(p3.z, p3.y));
+    return frac((float2(p3.x, p3.x) + float2(p3.y, p3.z)) * float2(p3.z, p3.y));
 
 }
 
 float2 hashwithoutsine23(float3 p3)
 {
-    p3 = fract(p3 * float3(.1031, .1030, .0973));
+    p3 = frac(p3 * float3(.1031, .1030, .0973));
     p3 += dot(p3, float3(p3.y, p3.z, p3.x) + 19.19);
-    return fract((float2(p3.x, p3.x) + float2(p3.y, p3.z)) * float2(p3.z, p3.y));
+    return frac((float2(p3.x, p3.x) + float2(p3.y, p3.z)) * float2(p3.z, p3.y));
 }
 
 float3 hashwithoutsine31(float p)
 {
-   vec3 p3 = fract(float3(p) * float3(.1031, .1030, .0973));
+   float3 p3 = frac(float3(p) * float3(.1031, .1030, .0973));
    p3 += dot(p3, float3(p3.y, p3.z, p3.x) + 19.19);
-   return fract((float3(p3.x, p3.x, p3.y) + float3(p3.y, p3.z, p3.z)) * float3(p3.z, p3.y, p3.x)); 
+   return frac((float3(p3.x, p3.x, p3.y) + float3(p3.y, p3.z, p3.z)) * float3(p3.z, p3.y, p3.x)); 
 }
 
 float3 hashwithoutsine32(float2 p)
@@ -439,7 +439,7 @@ float3 hashwithoutsine32(float2 p)
 
 float3 hashwithoutsine33(float3 p3)
 {
-    p3 = frac(p3 * vec3(.1031, .1030, .0973));
+    p3 = frac(p3 * float3(.1031, .1030, .0973));
     p3 += dot(p3, float3(p3.y, p3.x, p3.z) + 19.19);
     return frac((float3(p3.x, p3.x, p3.y) + float3(p3.y, p3.x, p3.x)) * float3(p3.z, p3.y, p3.x));
 }
@@ -451,21 +451,21 @@ float4 hashwithoutsine41(float p)
     return frac((float4(p4.x, p4.x, p4.y, p4.z) + float4(p4.y, p4.z, p4.z, p4.w)) * float4(p4.z, p4.y, p4.w, p4.x));
 }
 
-float4 hashwithoutsine42(vec2 p)
+float4 hashwithoutsine42(float2 p)
 {
     float4 p4 = frac(float4(p.x, p.y, p.x, p.y) * float4(.1031, .1030, .0973, .1099));
     p4 += dot(p4, float4(p4.w, p4.z, p4.x, p4.y) + 19.19);
     return frac((float4(p4.x,p4.x,p4.y, p4.z ) + float4(p4.y, p4.z, p4.z, p4.w)) * float4(p4.z, p4.y, p4.w, p4.x));
 }
 
-float4 hash43(vec3 p)
+float4 hashwithoutsine43(float3 p)
 {
     float4 p4 = frac(float4(p.x, p.y, p.z, p.x)  * float4(.1031, .1030, .0973, .1099));
     p4 += dot(p4, float4(p4.w, p4.z, p4.x, p4.y) + 19.19);
     return frac((float4(p4.x, p4.x, p4.y, p4.z) + float4(p4.y, p4.z, p4.z, p4.w)) * float4(p4.z, p4.y, p4.w, p4.x));
 }
 
-float4 hash44(float4 p4)
+float4 hashwithoutsine44(float4 p4)
 {
     p4 = frac(p4  * float4(.1031, .1030, .0973, .1099));
     p4 += dot(p4, float4(p4.w, p4.z, p4.x, p4.y) + 19.19);

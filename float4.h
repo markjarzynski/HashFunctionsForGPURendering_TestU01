@@ -24,6 +24,27 @@ public:
     float4 (float4* v) {
         x = v->x; y = v->y; z = v->z; w = v->w;
     }
+
+public:
+    float4& operator += (const float4* rhs)
+    {
+        x += rhs->x;
+        y += rhs->y;
+        z += rhs->z;
+        w += rhs->w;
+
+        return *this;
+    }
+
+    float4& operator += (const float rhs)
+    {
+        x += rhs;
+        y += rhs;
+        z += rhs;
+        w += rhs;
+
+        return *this;
+    }
 };
 
 // vector addition

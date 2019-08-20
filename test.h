@@ -397,9 +397,9 @@ double test_##HASH()                \
     static float2 p;                \
                                     \
     if (count == 0) {               \
-        p = HASH(seed)              \
+        p = HASH(seed);             \
         count++;                    \
-        return p.x                  \
+        return p.x;                 \
     } else {                        \
         seed++; count = 0;          \
         return p.y;                 \
@@ -428,13 +428,40 @@ double test_##HASH()                \
 #define ftest23(HASH)               \
 double test_##HASH()                \
 {                                   \
+    static uint seed = 0u;          \
+    static int count = 0;           \
+    static float2 p;                \
+    static uint3 m;                 \
                                     \
+    if (count == 0) {               \
+        m = morton3(seed);          \
+        p = HASH(float3(m.x, m.y, m.z)); \
+        count++;                    \
+        return p.x;                 \
+    } else {                        \
+        seed++; count = 0;          \
+        return p.y;                 \
+    }                               \
 }
 
 #define ftest31(HASH)               \
 double test_##HASH()                \
 {                                   \
+    static uint32_t seed = 0u;      \
+    static uint32_t count = 0u;     \
+    static float3 p;                \
                                     \
+    if (count == 0) {               \
+        p = HASH(float(seed));      \
+        count++;                    \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else {                        \
+        seed++; count = 0;          \
+        return p.z;                 \
+    }                               \
 }
 
 
@@ -481,36 +508,122 @@ uint32_t test_##HASH##z()           \
     return HASH(float2(m.x,m.y)).z; \
 }
 
+
 #define ftest33(HASH)               \
 double test_##HASH()                \
 {                                   \
+    static uint seed = 0u;          \
+    static int count = 0;           \
+    static float3 p;                \
+    static uint3 m;                 \
                                     \
+    if (count == 0) {               \
+        m = morton3(seed);          \
+        p = HASH(float3(m.x,m.y,m.z));   \
+        count++;                    \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else {                        \
+        seed++; count = 0;          \
+        return p.z;                 \
+    }                               \
 }
 
 #define ftest41(HASH)               \
 double test_##HASH()                \
 {                                   \
+    static uint seed = 0u;          \
+    static int count = 0;           \
+    static float4 p;                \
                                     \
+    if (count == 0) {               \
+        p = HASH(float(seed));      \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else if (count == 2) {        \
+        count++;                    \
+        return p.z;                 \
+    } else {                        \
+        seed++; count = 0;          \
+        return p.w;                 \
+    }                               \
 }
 
 #define ftest42(HASH)               \
 double test_##HASH()                \
 {                                   \
+    static uint seed = 0u;          \
+    static int count = 0;           \
+    static float4 p;                \
+    static uint2 m;                 \
                                     \
+    if (count == 0) {               \
+        m = morton2(seed);          \
+        p = HASH(float2(m.x, m.y)); \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else if (count == 2) {        \
+        count++;                    \
+        return p.z;                 \
+    } else {                        \
+        seed++; count = 0;          \
+        return p.w;                 \
+    }                               \
 }
 
 #define ftest43(HASH)               \
 double test_##HASH()                \
 {                                   \
+    static uint seed = 0u;          \
+    static int count = 0;           \
+    static float4 p;                \
+    static uint3 m;                 \
                                     \
+    if (count == 0) {               \
+        m = morton3(seed);          \
+        p = HASH(float3(m.x, m.y, m.z)); \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else if (count == 2) {        \
+        count++;                    \
+        return p.z;                 \
+    } else {                        \
+        seed++; count = 0;          \
+        return p.w;                 \
+    }                               \
 }
 
 #define ftest44(HASH)               \
 double test_##HASH()                \
 {                                   \
+    static uint seed = 0u;          \
+    static int count = 0;           \
+    static float4 p;                \
+    static uint4 m;                 \
                                     \
+    if (count == 0) {               \
+        m = morton4(seed);          \
+        p = HASH(float4(m.x, m.y, m.z, m.w)); \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else if (count == 2) {        \
+        count++;                    \
+        return p.z;                 \
+    } else {                        \
+        seed++; count = 0;          \
+        return p.w;                 \
+    }                               \
 }
-
 
 #define test13(HASH)                \
 uint32_t test_##HASH()              \
@@ -571,8 +684,8 @@ MAKETEA(6)
 test11(bbs)
 test11(city)
 test11(esgtsa)
-ftest21(fast)
-ftest21(ign)
+ftest12(fast)
+ftest12(ign)
 test11(iqint1)
 test33(iqint2)
 test21(iqint3)
@@ -581,7 +694,7 @@ test11(lcg)
 test21(murmur3)
 test33(pcg3d)
 test33(pcg3d16)
-ftest21(pseudo)
+ftest12(pseudo)
 test11(ranlim32)
 test11(superfast)
 test22(tea2)
@@ -589,11 +702,10 @@ test22(tea3)
 test22(tea4)
 test22(tea5)
 test22(tea6)
-ftest21(trig)
+ftest12(trig)
 test11(wang)
 test44(xorshift128)
 test11(xorshift32)
-ftest23(hashwithoutsine)
 test41(hybridtaus)
 test33(Rand3DPCG32)
 test44(Rand4DPCG32)
@@ -621,124 +733,16 @@ uint test_xxhash32_3()
     return xxhash32(morton3(seed++));
 }
 
-double test_hashwithoutsine11()
-{
-    static uint seed = 0u;
-    return hashwithoutsine11(float(seed++));
-}
-
-double test_hashwithoutsine12()
-{
-    static uint seed = 0u;
-    uint2 m = morton2(seed++);
-    return hashwithoutsine12(float2(m.x,m.y));
-}
-
-float test_hashwithoutsine13()
-{
-    static uint seed = 0u;
-    return hashwithoutsine13(morton3(seed++));
-}
-
-float test_hashwithoutsine21()
-{
-    static uint seed = 0u, count = 0u;
-    static uint2 p;
-    if (count == 0) {
-        p = hashwithoutsine21(seed);
-        count++;
-        return p.x;
-    } else {
-        seed++;
-        count = 0;
-        return p.y;
-    }
-}
-
-float test_hashwithoutsine22()
-{
-    static uint seed = 0u, count = 0u;
-    static uint2 p, m;
-    if (count == 0) {
-        m = morton2(seed);
-        p = hashwithoutsine22(m);
-        count++;
-        return p.x;
-    } else {
-        seed++;
-        count = 0;
-        return p.y;
-    }
-}
-
-float test_hashwithoutsine23()
-{
-    static uint seed = 0u, count = 0u;
-    static uint2 p; static uint3 m;
-    if (count == 0) {
-        m = morton3(seed);
-        p = hashwithoutsine23(m);
-        count++;
-        return p.x;
-    } else {
-        seed++;
-        count = 0;
-        return p.y;
-    }
-}
-
-float test_hashwithoutsine31()
-{
-    static uint seed = 0u, count = 0u
-    static uint3 p;
-
-    if (count == 0) {
-        p = hashwithoutsine31(seed);
-        count++;
-        return p.x;
-    } else if (count == 1) {
-        count++;
-        return p.y;
-    } else {
-        seed++; count = 0;
-        return p.z;
-    }    
-}
-
-float test_hashwithoutsine32()
-{
-    static uint seed = 0u, count = 0u
-    static uint3 p; static uint2 m;
-
-    if (count == 0) {
-        m = morton2(seed)
-        p = hashwithoutsine32(m);
-        count++;
-        return p.x;
-    } else if (count == 1) {
-        count++;
-        return p.y;
-    } else {
-        seed++; count = 0;
-        return p.z;
-    }    
-}
-
-float test_hashwithoutsine33()
-{
-    static uint seed = 0u, count = 0u
-    static uint3 p, m;
-
-    if (count == 0) {
-        m = morton3(seed)
-        p = hashwithoutsine33(m);
-        count++;
-        return p.x;
-    } else if (count == 1) {
-        count++;
-        return p.y;
-    } else {
-        seed++; count = 0;
-        return p.z;
-    }    
-}
+ftest11(hashwithoutsine11)
+ftest12(hashwithoutsine12)
+ftest13(hashwithoutsine13)
+ftest21(hashwithoutsine21)
+ftest22(hashwithoutsine22)
+ftest23(hashwithoutsine23)
+ftest31(hashwithoutsine31)
+ftest32(hashwithoutsine32)
+ftest33(hashwithoutsine33)
+ftest41(hashwithoutsine41)
+ftest42(hashwithoutsine42)
+ftest43(hashwithoutsine43)
+ftest44(hashwithoutsine44)

@@ -25,6 +25,24 @@ public:
         x = v->x; y = v->y; z = v->z;
     }
 
+public:
+    float3& operator += (const float3* rhs)
+    {
+        x += rhs->x;
+        y += rhs->y;
+        z += rhs->z;
+
+        return *this;
+    }
+
+    float3& operator += (const float rhs)
+    {
+        x += rhs;
+        y += rhs;
+        z += rhs;
+
+        return *this;
+    }
 };
 
 // vector addition
