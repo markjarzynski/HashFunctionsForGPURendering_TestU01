@@ -47,6 +47,13 @@ uint mur(uint a, uint h) {
   return h * 5u + 0xe6546b64u;
 }
 
+uint bswap32(uint x) {
+    return (((x & 0x000000ffu) << 24) |
+            ((x & 0x0000ff00u) <<  8) |
+            ((x & 0x00ff0000u) >>  8) |
+            ((x & 0xff000000u) >> 24));
+}
+
 // convert 2D seed to 1D
 uint seed(uint2 p) {
     return 19u * p.x + 47u * p.y + 101u;
@@ -88,6 +95,47 @@ uint city(uint s)
     }
     
     return fmix(mur(b, mur(len, c)));
+}
+
+// CityHash32, adapted from Hash32Len5to12 in https://github.com/google/cityhash
+uint city(uint2 s)
+{
+    uint len = 8u;
+    uint a = len, b = len * 5, c = 9, d = b;
+
+    a += bswap32(s.x);
+    b += bswap32(s.y);
+    c += bswap32(s.y);
+
+    return fmix(mur(c, mur(b, mur(a, d)))); 
+}
+
+// CityHash32, adapted from Hash32Len5to12 in https://github.com/google/cityhash
+uint city(uint3 s)
+{
+    uint len = 12u;
+    uint a = len, b = len * 5, c = 9, d = b;
+
+    a += bswap32(s.x);
+    b += bswap32(s.z);
+    c += bswap32(s.y);
+
+    return fmix(mur(c, mur(b, mur(a, d)))); 
+}
+
+// CityHash32, adapted from Hash32Len12to24 in https://github.com/google/cityhash
+uint city(uint4 s)
+{
+    uint len = 16u;
+    uint a = bswap32(s.w);
+    uint b = bswap32(s.y);
+    uint c = bswap32(s.z);
+    uint d = bswap32(s.z);
+    uint e = bswap32(s.x);
+    uint f = bswap32(s.w);
+    uint h = len;
+
+    return fmix(mur(f, mur(e, mur(d, mur(c, mur(b, mur(a, h))))))); 
 }
 
 // Hash from https://www.cs.ubc.ca/~rbridson/docs/schechter-sca08-turbulence.pdf
@@ -178,29 +226,140 @@ uint lcg(uint p)
 	return p * 1664525u + 1013904223u;
 }
 
-// Adapted from MurmurHas3_x86_32 from https://github.com/aappleby/smhasher
-uint murmur3(uint2 seed)
+// Adapted from MurmurHash3_x86_32 from https://github.com/aappleby/smhasher
+uint murmur3(uint seed)
 {
-    uint h = seed.x;
-    uint k = seed.y;
+    uint h = 0u;
+    uint k = seed;
     
-    k *= c1; 
-    k = uint(rotl(k,15u));
+    k *= c1;
+    k = rotl(k,15u);
     k *= c2;
 
     h ^= k;
-
     h = rotl(h,13u);	
     h = h*5u+0xe6546b64u;
+   
+    h ^= 4u; 
     
-    h ^= h >> 16u;
-    h *= 0x85ebca6bu;
-    h ^= h >> 13u;
-    h *= 0xc2b2ae35u;
-    h ^= h >> 16u;
-
-    return h;
+    return fmix(h);
 }
+
+uint murmur3(uint2 seed)
+{
+    uint h = 0u;
+    uint k = seed.x;
+    
+    k *= c1;
+    k = rotl(k,15u);
+    k *= c2;
+
+    h ^= k;
+    h = rotl(h,13u);
+    h = h*5u+0xe6546b64u;
+
+    k = seed.y;
+
+    k *= c1;
+    k = rotl(k,15u);
+    k *= c2;
+
+    h ^= k;
+    h = rotl(h,13u);
+    h = h*5u+0xe6546b64u;
+
+    h ^= 8u;
+
+    return fmix(h);
+}
+
+
+uint murmur3(uint3 seed)
+{
+    uint h = 0u;
+    uint k = seed.x;
+    
+    k *= c1;
+    k = rotl(k,15u);
+    k *= c2;
+
+    h ^= k;
+    h = rotl(h,13u);
+    h = h*5u+0xe6546b64u;
+
+    k = seed.y;
+
+    k *= c1;
+    k = rotl(k,15u);
+    k *= c2;
+
+    h ^= k;
+    h = rotl(h,13u);
+    h = h*5u+0xe6546b64u;
+    
+    k = seed.z;
+
+    k *= c1;
+    k = rotl(k,15u);
+    k *= c2;
+
+    h ^= k;
+    h = rotl(h,13u);
+    h = h*5u+0xe6546b64u;
+
+    h ^= 12u;
+
+    return fmix(h);
+}
+
+uint murmur3(uint4 seed)
+{
+    uint h = 0u;
+    uint k = seed.x;
+    
+    k *= c1;
+    k = rotl(k,15u);
+    k *= c2;
+
+    h ^= k;
+    h = rotl(h,13u);
+    h = h*5u+0xe6546b64u;
+
+    k = seed.y;
+
+    k *= c1;
+    k = rotl(k,15u);
+    k *= c2;
+
+    h ^= k;
+    h = rotl(h,13u);
+    h = h*5u+0xe6546b64u;
+    
+    k = seed.z;
+
+    k *= c1;
+    k = rotl(k,15u);
+    k *= c2;
+
+    h ^= k;
+    h = rotl(h,13u);
+    h = h*5u+0xe6546b64u;
+    
+    k = seed.w;
+
+    k *= c1;
+    k = rotl(k,15u);
+    k *= c2;
+
+    h ^= k;
+    h = rotl(h,13u);
+    h = h*5u+0xe6546b64u;
+
+    h ^= 16u;
+
+    return fmix(h);
+}
+
 
 // UE4 RandPCG3D32
 uint3 pcg3d(uint3 v)
@@ -231,6 +390,9 @@ uint3 pcg3d16(uint3 v)
     v.x += v.y*v.z;
     v.y += v.z*v.x;
     v.z += v.x*v.y;
+
+    //v = v >> 16u;
+
     return v;
 }
 
@@ -287,7 +449,96 @@ uint superfast(uint data)
     hash += hash >> 6;
     
     return hash;
+}
 
+uint superfast(uint2 data)
+{
+    uint hash = 8u, tmp;
+
+    hash += data.x & 0xffffu;
+    tmp = (((data.x >> 16) & 0xffffu) << 11) ^ hash;
+    hash = (hash << 16) ^ tmp;
+    hash += hash >> 11;
+ 
+    hash += data.y & 0xffffu;
+    tmp = (((data.y >> 16) & 0xffffu) << 11) ^ hash;
+    hash = (hash << 16) ^ tmp;
+    hash += hash >> 11;
+ 
+    /* Force "avalanching" of final 127 bits */
+    hash ^= hash << 3;
+    hash += hash >> 5;
+    hash ^= hash << 4;
+    hash += hash >> 17;
+    hash ^= hash << 25;
+    hash += hash >> 6;
+    
+    return hash;
+}
+
+uint superfast(uint3 data)
+{
+    uint hash = 8u, tmp;
+
+    hash += data.x & 0xffffu;
+    tmp = (((data.x >> 16) & 0xffffu) << 11) ^ hash;
+    hash = (hash << 16) ^ tmp;
+    hash += hash >> 11;
+ 
+    hash += data.y & 0xffffu;
+    tmp = (((data.y >> 16) & 0xffffu) << 11) ^ hash;
+    hash = (hash << 16) ^ tmp;
+    hash += hash >> 11;
+    
+    hash += data.z & 0xffffu;
+    tmp = (((data.z >> 16) & 0xffffu) << 11) ^ hash;
+    hash = (hash << 16) ^ tmp;
+    hash += hash >> 11;
+ 
+    /* Force "avalanching" of final 127 bits */
+    hash ^= hash << 3;
+    hash += hash >> 5;
+    hash ^= hash << 4;
+    hash += hash >> 17;
+    hash ^= hash << 25;
+    hash += hash >> 6;
+    
+    return hash;
+}
+
+uint superfast(uint4 data)
+{
+    uint hash = 8u, tmp;
+
+    hash += data.x & 0xffffu;
+    tmp = (((data.x >> 16) & 0xffffu) << 11) ^ hash;
+    hash = (hash << 16) ^ tmp;
+    hash += hash >> 11;
+ 
+    hash += data.y & 0xffffu;
+    tmp = (((data.y >> 16) & 0xffffu) << 11) ^ hash;
+    hash = (hash << 16) ^ tmp;
+    hash += hash >> 11;
+    
+    hash += data.z & 0xffffu;
+    tmp = (((data.z >> 16) & 0xffffu) << 11) ^ hash;
+    hash = (hash << 16) ^ tmp;
+    hash += hash >> 11;
+    
+    hash += data.w & 0xffffu;
+    tmp = (((data.w >> 16) & 0xffffu) << 11) ^ hash;
+    hash = (hash << 16) ^ tmp;
+    hash += hash >> 11;
+ 
+    /* Force "avalanching" of final 127 bits */
+    hash ^= hash << 3;
+    hash += hash >> 5;
+    hash ^= hash << 4;
+    hash += hash >> 17;
+    hash ^= hash << 25;
+    hash += hash >> 6;
+    
+    return hash;
 }
 
 uint2 tea(int t, uint2 p)
@@ -574,4 +825,42 @@ uint3 hashmul( uint u )
 uint3 hashadd( uint u )
 {
     return uint3(esgtsa(u), esgtsa(u + 16807u), esgtsa(u + 48271u));
+}
+
+uint pcg( uint v )
+{
+/*
+    uint initstate = 42u;
+    uint intseq = 54u;
+
+    uint state = 0u;
+    uint inc = (initseq << 1u) | 1u;
+    
+    state = state * 6364136223846793005ULL + inc;
+    state += initstate;
+    state = state * 6364136223846793005ULL + inc;
+    
+    uint oldstate = state;
+    uint xorshifted = ((oldstate >> 18u) ^ oldstate) >> 27u);
+    uint rot = oldstate >> 59u;
+    return (xorshifted >> rot) | (xorshifted << ((-rot) & 31));
+*/
+
+/*
+	v = v * 1664525u + 1013904223u;
+    v = (( v >> 10u ) ^ v) >> 11u;
+    uint rot = v >> 27u;
+    return (v >> rot) | (v << ((-rot) & 31));
+*/
+/*
+    uint state = 0u;
+    state = state * 747796405U + 2891336453U;
+    state += initstate;
+    state = state * 747796405U + 2891336453U;
+*/
+    uint state = v * 747796405u + 2891336453u;
+    uint word = ((state >> ((state >> 28u) + 4u)) ^ state) * 277803737u;
+    return (word >> 22u) ^ word;
+
+
 }

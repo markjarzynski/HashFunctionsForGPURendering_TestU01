@@ -13,7 +13,7 @@ uint32_t test_##HASH()              \
     return HASH(seed++);            \
 }                                   \
                                     \
-uint32_t test_##HASH##_seeded()     \
+uint32_t test_##HASH##_linear2()     \
 {                                   \
     static uint32_t s = 0u;         \
     uint2 m = morton2(s++);         \
@@ -21,7 +21,7 @@ uint32_t test_##HASH##_seeded()     \
     return HASH(seed(m));           \
 }                                   \
                                     \
-uint32_t test_##HASH##_nested()     \
+uint32_t test_##HASH##_nested2()     \
 {                                   \
     static uint32_t seed = 0u;      \
     uint2 m = morton2(seed++);      \
@@ -29,7 +29,7 @@ uint32_t test_##HASH##_nested()     \
     return HASH(HASH(m.x) + m.y);   \
 }                                   \
                                     \
-uint32_t test_##HASH##_seed3()      \
+uint32_t test_##HASH##_linear3()      \
 {                                   \
     static uint32_t s = 0u;         \
     uint3 m = morton3(s++);         \
@@ -45,7 +45,7 @@ uint32_t test_##HASH##_nested3()    \
     return HASH(HASH(HASH(m.x) + m.y) + m.z);   \
 }                                   \
                                     \
-uint32_t test_##HASH##_seed4()      \
+uint32_t test_##HASH##_linear4()      \
 {                                   \
     static uint32_t s = 0u;         \
     uint4 m = morton4(s++);         \
@@ -60,7 +60,8 @@ uint32_t test_##HASH##_nested4()    \
                                     \
     return HASH(HASH(HASH(HASH(m.x) + m.y) + m.z) + m.w);   \
 }                                   \
-                                    \
+
+/*
 uint32_t test_##HASH##_2()          \
 {                                   \
     static uint32_t seed = 0u;      \
@@ -186,8 +187,9 @@ uint32_t test_##HASH##_xor4()          \
         return p.w;                 \
     }                               \
 }
+*/
 
-#define test21(HASH)                \
+#define test12(HASH)                \
 uint32_t test_##HASH()              \
 {                                   \
     static uint32_t seed = 0u;      \
@@ -225,7 +227,7 @@ uint32_t test_##HASH##y()           \
     return HASH(morton2(seed++)).y; \
 }
 
-#define test41(HASH)                \
+#define test14(HASH)                \
 uint32_t test_##HASH()              \
 {                                   \
     static uint32_t seed = 0u;      \
@@ -277,7 +279,7 @@ uint32_t test_##HASH##z()           \
     return HASH(morton3(seed++)).z; \
 }
 
-#define test13(HASH)                \
+#define test31(HASH)                \
 uint32_t test_##HASH()              \
 {                                   \
     static uint32_t seed = 0u;      \
@@ -625,7 +627,7 @@ double test_##HASH()                \
     }                               \
 }
 
-#define test13(HASH)                \
+#define test31(HASH)                \
 uint32_t test_##HASH()              \
 {                                   \
     static uint32_t seed = 0u;      \
@@ -688,10 +690,10 @@ ftest12(fast)
 ftest12(ign)
 test11(iqint1)
 test33(iqint2)
-test21(iqint3)
-test21(jkiss32)
+test12(iqint3)
+test12(jkiss32)
 test11(lcg)
-test21(murmur3)
+test11(murmur3)
 test33(pcg3d)
 test33(pcg3d16)
 ftest12(pseudo)
@@ -706,14 +708,16 @@ ftest12(trig)
 test11(wang)
 test44(xorshift128)
 test11(xorshift32)
-test41(hybridtaus)
+test14(hybridtaus)
 test33(Rand3DPCG32)
 test44(Rand4DPCG32)
 test22(pcg2d)
 test44(pcg4d)
+test11(pcg)
 
-test13(hashadd)
-test13(hashmul)
+
+test31(hashadd)
+test31(hashmul)
 
 uint test_xxhash32()
 {
@@ -746,3 +750,57 @@ ftest41(hashwithoutsine41)
 ftest42(hashwithoutsine42)
 ftest43(hashwithoutsine43)
 ftest44(hashwithoutsine44)
+
+uint test_city_2()
+{
+    static uint32_t seed = 0u;
+    return city(morton2(seed++));
+}
+
+uint test_city_3()
+{
+    static uint32_t seed = 0u;
+    return city(morton3(seed++));
+}
+
+uint test_city_4()
+{
+    static uint32_t seed = 0u;
+    return city(morton4(seed++));
+}
+
+uint test_murmur3_2()
+{
+    static uint32_t seed = 0u;
+    return murmur3(morton2(seed++));
+}
+
+uint test_murmur3_3()
+{
+    static uint32_t seed = 0u;
+    return murmur3(morton3(seed++));
+}
+
+uint test_murmur3_4()
+{
+    static uint32_t seed = 0u;
+    return murmur3(morton4(seed++));
+}
+
+uint test_superfast_2()
+{
+    static uint32_t seed = 0u;
+    return superfast(morton2(seed++));
+}
+
+uint test_superfast_3()
+{
+    static uint32_t seed = 0u;
+    return superfast(morton3(seed++));
+}
+
+uint test_superfast_4()
+{
+    static uint32_t seed = 0u;
+    return superfast(morton4(seed++));
+}
