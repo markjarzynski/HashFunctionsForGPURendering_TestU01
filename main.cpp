@@ -281,6 +281,13 @@ int main ( int argc, char** argv )
         genbits("superfast_3", superfast_3)
         genbits("superfast_4", superfast_4)
 
+        genbits("murmur3_linear2", murmur3_linear2)
+        genbits("murmur3_linear3", murmur3_linear3)
+        genbits("murmur3_linear4", murmur3_linear4)
+        genbits("murmur3_nested2", murmur3_nested2)
+        genbits("murmur3_nested3", murmur3_nested3)
+        genbits("murmur3_nested4", murmur3_nested4)
+
 
         else
         {
