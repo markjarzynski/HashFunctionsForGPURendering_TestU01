@@ -368,6 +368,82 @@ uint32_t test_##HASH##w()           \
     return HASH(morton4(seed++)).w; \
 }
 
+#define test41(HASH)                \
+uint32_t test_##HASH()              \
+{                                   \
+    static uint32_t seed = 0u;      \
+    static uint32_t count = 0u;     \
+    static uint4 p;                 \
+                                    \
+    if (count == 0) {               \
+        p = HASH(seed);             \
+        count++;                    \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else if (count == 2) {        \
+        count++;                    \
+        return p.z;                 \
+    } else {                        \
+        seed++;                     \
+        count = 0;                  \
+        return p.w;                 \
+    }                               \
+}
+
+#define test42(HASH)                \
+uint32_t test_##HASH()              \
+{                                   \
+    static uint32_t seed = 0u;      \
+    static uint32_t count = 0u;     \
+    static uint4 p;                 \
+    static uint2 m;                 \
+                                    \
+    if (count == 0) {               \
+        m = morton2(seed);          \
+        p = HASH(m);                \
+        count++;                    \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else if (count == 2) {        \
+        count++;                    \
+        return p.z;                 \
+    } else {                        \
+        seed++;                     \
+        count = 0;                  \
+        return p.w;                 \
+    }                               \
+}
+
+#define test43(HASH)                \
+uint32_t test_##HASH()              \
+{                                   \
+    static uint32_t seed = 0u;      \
+    static uint32_t count = 0u;     \
+    static uint4 p;                 \
+    static uint3 m;                 \
+                                    \
+    if (count == 0) {               \
+        m = morton3(seed);          \
+        p = HASH(m);                \
+        count++;                    \
+        return p.x;                 \
+    } else if (count == 1) {        \
+        count++;                    \
+        return p.y;                 \
+    } else if (count == 2) {        \
+        count++;                    \
+        return p.z;                 \
+    } else {                        \
+        seed++;                     \
+        count = 0;                  \
+        return p.w;                 \
+    }                               \
+}
+
 #define ftest11(HASH)               \
 double test_##HASH()                \
 {                                   \
@@ -691,6 +767,7 @@ ftest12(ign)
 test11(iqint1)
 test33(iqint2)
 test12(iqint3)
+test12(iqint3_1)
 test12(jkiss32)
 test11(lcg)
 test11(murmur3)
@@ -719,11 +796,7 @@ test11(pcg)
 test31(hashadd)
 test31(hashmul)
 
-uint test_xxhash32()
-{
-    static uint32_t seed = 0u;
-    return xxhash32(seed++);
-}
+test11(xxhash32)
 
 uint test_xxhash32_2()
 {
@@ -735,6 +808,12 @@ uint test_xxhash32_3()
 {
     static uint32_t seed = 0u;
     return xxhash32(morton3(seed++));
+}
+
+uint test_xxhash32_4()
+{   
+    static uint32_t seed = 0u;
+    return xxhash32(morton4(seed++));
 }
 
 ftest11(hashwithoutsine11)
@@ -803,4 +882,72 @@ uint test_superfast_4()
 {
     static uint32_t seed = 0u;
     return superfast(morton4(seed++));
+}
+
+test41(md5_1)
+test42(md5_2)
+test43(md5_3)
+test44(md5)
+
+
+#define test21_a(HASH)              \
+uint test_##HASH()                  \
+{                                   \
+    static uint seed = 0u;          \
+    static uint count = 0u;         \
+    static uint2 m, p;              \
+                                    \
+    if (count == 0) {               \
+        count++;                    \ 
+        return HASH(seed);          \
+    } else {                        \
+        count = 0;                  \
+        return HASH(seed++ + a);    \
+    }                               \
+}
+
+test33(test)
+
+uint test_pcg3d_31()
+{
+    static uint32_t seed = 0u;
+    static uint32_t count = 0u;
+    static uint3 p;
+
+    if (count == 0) {
+        p = pcg3d(uint3(seed, 1u, 1u));
+
+        count++;
+
+        return p.x;
+    } else if (count == 1) {
+        count++;
+
+        return p.y;
+    } else {
+
+        seed++;
+        count = 0;
+
+        return p.z;
+    }
+}
+
+uint test_pcg3d_21()
+{
+    static uint32_t seed = 0u;
+    static uint32_t count = 0u;
+    static uint3 p;
+
+    if (count == 0) {
+        p = pcg3d(uint3(seed, 1u, 1u));
+
+        count++;
+
+        return p.y;
+    } else {
+        seed++;
+        count = 0;
+        return p.z;
+    }
 }

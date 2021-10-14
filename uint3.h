@@ -113,6 +113,11 @@ inline uint3 operator >> (const uint3 &a, const uint s)
     return uint3(a.x >> s, a.y >> s, a.z >> s);
 }
 
+inline uint3 operator << (const uint3 &a, const uint s)
+{
+    return uint3(a.x << s, a.y << s, a.z << s);
+}
+
 inline uint3 operator ^ (const uint3 &a, const uint s)
 {
     return uint3(a.x ^ s, a.y ^ s, a.z ^ s);

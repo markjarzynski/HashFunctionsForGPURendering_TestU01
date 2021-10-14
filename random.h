@@ -200,6 +200,16 @@ uint iqint3(uint2 x)
     return n;
 }
 
+uint iqint3_1(uint2 x)
+{
+    uint2 q = 1103515245U * ( (x>>1U) ^ (uint2(x.y, x.x)) );//1103515245U * ( (x>>1U) ^ (x.yx   ) );
+    uint  n = 1103515245U * ( (q.x  ) ^ (q.y>>3U) );
+
+    n = n ^ (n >> 16u);
+
+    return n;
+}
+
 // JKiss32
 // - David Jones, Good Practice in (Pseudo) Random Number Generation for 
 //   Bioinformatics Applications, 2010
@@ -225,6 +235,159 @@ uint lcg(uint p)
 {
 	return p * 1664525u + 1013904223u;
 }
+
+#define A0 0x67452301u
+#define B0 0xefcdab89u
+#define C0 0x98badcfeu
+#define D0 0x10325476u
+
+uint F(uint3 v) { return (v.x & v.y) | (~v.x & v.z); }
+uint G(uint3 v) { return (v.x & v.z) | (v.y & ~v.z); }
+uint H(uint3 v) { return v.x ^ v.y ^ v.z; }
+uint I(uint3 v) { return v.y ^ (v.x | ~v.z); }
+
+void rotate(uint4* r)
+{
+    uint temp = r->x;
+    r->x = r->y;
+    r->y = r->z;
+    r->z = r->w;
+    r->w = temp;
+}
+
+void FF(uint4* v, uint4* r, uint x, uint ac)
+{
+    v->x = v->y + rotl(v->x + F(uint3(v->y, v->z, v->w)) + x + ac, r->x);
+
+    rotate(r);
+    rotate(v);
+}
+
+void GG(uint4* v, uint4* r, uint x, uint ac)
+{
+    v->x = v->y + rotl(v->x + G(uint3(v->y, v->z, v->w)) + x + ac, r->x);
+    rotate(r);
+    rotate(v);
+}
+
+void HH(uint4* v, uint4* r, uint x, uint ac)
+{
+    v->x = v->y + rotl(v->x + H(uint3(v->y, v->z, v->w)) + x + ac, r->x);
+    rotate(r);
+    rotate(v);
+}
+
+void II(uint4* v, uint4* r, uint x, uint ac)
+{
+    v->x = v->y + rotl(v->x + I(uint3(v->y, v->z, v->w)) + x + ac, r->x);
+    rotate(r);
+    rotate(v);
+}
+
+uint K(uint i) {
+    return uint(abs(sin(float(i)+1.)) * float(0xffffffffu));
+}
+
+uint4 md5(uint4 u) {
+    uint4 digest = uint4(A0, B0, C0, D0);
+    uint4 r, v = digest;
+    uint i = 0u;
+
+    uint M[16];
+    M[0] = u.x; M[1] = u.y; M[2] = u.z; M[3] = u.w;
+    M[4] = M[5] = M[6] = M[7] = M[8] = M[9] = M[10] = M[11] = M[12] = M[13] = M[14] = M[15] = 0u;
+
+    r = uint4(7, 12, 17, 22);
+    FF(&v, &r, M[0], K(i++));
+    FF(&v, &r, M[1], K(i++));
+    FF(&v, &r, M[2], K(i++));
+    FF(&v, &r, M[3], K(i++));
+    FF(&v, &r, M[4], K(i++));
+    FF(&v, &r, M[5], K(i++));
+    FF(&v, &r, M[6], K(i++));
+    FF(&v, &r, M[7], K(i++));
+    FF(&v, &r, M[8], K(i++));
+    FF(&v, &r, M[9], K(i++));
+    FF(&v, &r, M[10], K(i++));
+    FF(&v, &r, M[11], K(i++));
+    FF(&v, &r, M[12], K(i++));
+    FF(&v, &r, M[13], K(i++));
+    FF(&v, &r, M[14], K(i++));
+    FF(&v, &r, M[15], K(i++));
+
+    r = uint4(5, 9, 14, 20);
+    GG(&v, &r, M[1], K(i++));
+    GG(&v, &r, M[6], K(i++));
+    GG(&v, &r, M[11], K(i++));
+    GG(&v, &r, M[0], K(i++));
+    GG(&v, &r, M[5], K(i++));
+    GG(&v, &r, M[10], K(i++));
+    GG(&v, &r, M[15], K(i++));
+    GG(&v, &r, M[4], K(i++));
+    GG(&v, &r, M[9], K(i++));
+    GG(&v, &r, M[14], K(i++));
+    GG(&v, &r, M[3], K(i++));
+    GG(&v, &r, M[8], K(i++));
+    GG(&v, &r, M[13], K(i++));
+    GG(&v, &r, M[2], K(i++));
+    GG(&v, &r, M[7], K(i++));
+    GG(&v, &r, M[12], K(i++));
+
+    r = uint4(4, 11, 16, 23);
+    HH(&v, &r, M[5], K(i++));
+    HH(&v, &r, M[8], K(i++));
+    HH(&v, &r, M[11], K(i++));
+    HH(&v, &r, M[14], K(i++));
+    HH(&v, &r, M[1], K(i++));
+    HH(&v, &r, M[4], K(i++));
+    HH(&v, &r, M[7], K(i++));
+    HH(&v, &r, M[10], K(i++));
+    HH(&v, &r, M[13], K(i++));
+    HH(&v, &r, M[0], K(i++));
+    HH(&v, &r, M[3], K(i++));
+    HH(&v, &r, M[6], K(i++));
+    HH(&v, &r, M[9], K(i++));
+    HH(&v, &r, M[12], K(i++));
+    HH(&v, &r, M[15], K(i++));
+    HH(&v, &r, M[2], K(i++));
+
+    r = uint4(6, 10, 15, 21);
+    II(&v, &r, M[0], K(i++));
+    II(&v, &r, M[7], K(i++));
+    II(&v, &r, M[14], K(i++));
+    II(&v, &r, M[5], K(i++));
+    II(&v, &r, M[12], K(i++));
+    II(&v, &r, M[3], K(i++));
+    II(&v, &r, M[10], K(i++));
+    II(&v, &r, M[1], K(i++));
+    II(&v, &r, M[8], K(i++));
+    II(&v, &r, M[15], K(i++));
+    II(&v, &r, M[6], K(i++));
+    II(&v, &r, M[13], K(i++));
+    II(&v, &r, M[4], K(i++));
+    II(&v, &r, M[11], K(i++));
+    II(&v, &r, M[2], K(i++));
+    II(&v, &r, M[9], K(i++));
+
+    return digest + v;
+}
+
+uint4 md5_1(uint u)
+{
+    return md5(uint4(u, 0u, 0u, 0u));
+}
+
+uint4 md5_2(uint2 u)
+{
+    return md5(uint4(u.x, u.y, 0u, 0u));
+}
+
+uint4 md5_3(uint3 u)
+{
+    return md5(uint4(u.x, u.y, u.z, 0u));
+}
+
+
 
 // Adapted from MurmurHash3_x86_32 from https://github.com/aappleby/smhasher
 uint murmur3(uint seed)
@@ -597,11 +760,25 @@ uint xxhash32(uint p)
 {
     const uint PRIME32_2 = 2246822519U, PRIME32_3 = 3266489917U;
     const uint PRIME32_4 = 668265263U, PRIME32_5 = 374761393U;
-    uint h32 = p + PRIME32_5;
+    /*uint h32 = p + PRIME32_5;
     h32 = PRIME32_4*((h32 << 17) | (h32 >> (32 - 17)));
     h32 = PRIME32_2*(h32^(h32 >> 15));
     h32 = PRIME32_3*(h32^(h32 >> 13));
     return h32^(h32 >> 16);
+    */
+    
+    uint h32 = p + PRIME32_5;
+    
+
+    h32 += p * PRIME32_3;
+    h32 = rotl(h32, 17) * PRIME32_4;
+
+    h32 ^= h32 >> 15;
+    h32 *= PRIME32_2;
+    h32 ^= h32 >> 13;
+    h32 *= PRIME32_3;
+    h32 ^= h32 >> 16;
+    return h32;
 }
 
 uint xxhash32(uint2 p)
@@ -627,6 +804,22 @@ uint xxhash32(uint3 p)
     h32 = PRIME32_3*(h32^(h32 >> 13));
     return h32^(h32 >> 16);
 }
+
+uint xxhash32(uint4 p)
+{
+    const uint PRIME32_2 = 2246822519U, PRIME32_3 = 3266489917U;
+    const uint PRIME32_4 = 668265263U, PRIME32_5 = 374761393U;
+    uint h32 =  p.w + PRIME32_5 + p.x*PRIME32_3;
+    h32 = PRIME32_4*((h32 << 17) | (h32 >> (32 - 17)));
+    h32 += p.y * PRIME32_3;
+    h32 = PRIME32_4*((h32 << 17) | (h32 >> (32 - 17)));
+    h32 += p.z * PRIME32_3;
+    h32 = PRIME32_4*((h32 << 17) | (h32 >> (32 - 17)));
+    h32 = PRIME32_2*(h32^(h32 >> 15));
+    h32 = PRIME32_3*(h32^(h32 >> 13));
+    return h32^(h32 >> 16);
+}
+
 
 // Hash without Sine, https://www.shadertoy.com/view/4djSRW
 float hashwithoutsine11(float p)
@@ -781,6 +974,23 @@ uint4 Rand4DPCG32(uint4 v)
 
 uint4 pcg4d(uint4 v)
 {
+    v = v * 1664525u + 1013904223u;
+
+    v.x += v.y*v.w;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y; 
+    v.w += v.y*v.z;
+
+    v = v ^ (v >> 16u);
+
+    v.x += v.y*v.w;
+    v.y += v.z*v.x;
+    v.z += v.x*v.y;
+    v.w += v.y*v.z;
+
+    return v;
+
+    /*
 	v = v * 1664525u + 1013904223u;   
     
     v.x += v.y*v.w;
@@ -788,14 +998,17 @@ uint4 pcg4d(uint4 v)
     v.z += v.x*v.y;
     v.w += v.y*v.z;
 
+
     v.x += v.y*v.w;
     v.y += v.z*v.x;
     v.z += v.x*v.y;
     v.w += v.y*v.z;
 
     v = v ^ (v>>16u);
-    
+
     return v;
+    
+    */
 }
 
 uint2 pcg2d(uint2 v)
@@ -863,4 +1076,20 @@ uint pcg( uint v )
     return (word >> 22u) ^ word;
 
 
+}
+
+
+uint3 test(uint3 v) {
+ 
+    uint4 p = uint4(v.x, v.y, v.z, v.x ^ v.y ^ v.z);
+
+    p = p * 1664525u + 1013904223u;
+    
+    p = p + uint4(p.w, p.x, p.y, p.z) * uint4(p.z, p.w, p.x, p.y);
+    p = p ^ uint4(p.w, p.x, p.y, p.z) >> 16u;
+    p = p + uint4(p.w, p.x, p.y, p.z) * uint4(p.z, p.w, p.x, p.y);
+    p = p ^ uint4(p.w, p.x, p.y, p.z) >> 16u;
+    p = p + uint4(p.w, p.x, p.y, p.z) * uint4(p.z, p.w, p.x, p.y);
+
+    return uint3(p.x, p.y, p.z);
 }
