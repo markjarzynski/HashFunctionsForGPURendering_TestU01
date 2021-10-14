@@ -1,0 +1,4532 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_HammingIndep test:
+-----------------------------------------------
+   N =  1,  n = 30000000,  r =  0,   s = 4,   L = 300,   d = 0
+
+
+
+Counters with expected numbers >= 10
+-----------------------------------------------
+Number of degrees of freedom          : 4117
+Chi-square statistic                  : 1.15e+6
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:26.05
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_HammingIndep test:
+-----------------------------------------------
+   N =  1,  n = 30000000,  r = 26,   s = 4,   L = 300,   d = 0
+
+
+
+Counters with expected numbers >= 10
+-----------------------------------------------
+Number of degrees of freedom          : 4117
+Chi-square statistic                  : 3.17e+6
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:04.01
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_HammingIndep test:
+-----------------------------------------------
+   N =  1,  n = 10000000,  r =  0,   s = 5,   L = 1200,   d = 0
+
+
+
+Counters with expected numbers >= 10
+-----------------------------------------------
+Number of degrees of freedom          : 11825
+Chi-square statistic                  : 7.54e+5
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:39.72
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_HammingIndep test:
+-----------------------------------------------
+   N =  1,  n = 10000000,  r = 25,   s = 5,   L = 1200,   d = 0
+
+
+
+Counters with expected numbers >= 10
+-----------------------------------------------
+Number of degrees of freedom          : 11825
+Chi-square statistic                  : 1.50e+6
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:16.53
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:09:26.33
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 97  HammingIndep, L=300, r=0         eps  
+ 98  HammingIndep, L=300, r=26        eps  
+ 99  HammingIndep, L=1200, r=0        eps  
+ 100  HammingIndep, L=1200, r=25       eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_Run test:
+-----------------------------------------------
+   N =  1,  n = 2000000000,  r =  0,   s =    3
+
+
+-----------------------------------------------
+Total number of 1 runs:  2000000001
+
+Number of degrees of freedom          :   54
+Chi2 statistic for number of runs     :71844.68
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Total number of bits:  8000299863
+
+Normal statistic for number of bits   :    2.37
+p-value of test                       :  8.9e-3
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:02.29
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_Run test:
+-----------------------------------------------
+   N =  1,  n = 2000000000,  r = 27,   s =    3
+
+
+-----------------------------------------------
+Total number of 1 runs:  2000000000
+
+Number of degrees of freedom          :   54
+Chi2 statistic for number of runs     :1.91e+10
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Total number of bits:  7999999935
+
+Normal statistic for number of bits   : -5.14e-4
+p-value of test                       :    0.50
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:51.47
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_AutoCor test:
+-----------------------------------------------
+   N = 10,  n = 1000000030,  r =  0,   s = 3,   d = 1
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.20
+p-value of test                       :    0.40
+
+Kolmogorov-Smirnov- statistic = D-    :    0.60
+p-value of test                       :  3.2e-4    *****
+
+Anderson-Darling statistic = A2       :   32.87
+p-value of test                       : 9.1e-16    *****
+
+Tests on the sum of all N observations
+Standardized normal statistic         :    5.99
+p-value of test                       :  1.0e-9    *****
+
+Sample variance                       :   15.99
+p-value of test                       : 1.6e-26    *****
+
+-----------------------------------------------
+CPU time used                    :  00:03:52.50
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_AutoCor test:
+-----------------------------------------------
+   N = 10,  n = 1000000029,  r =  0,   s = 3,   d = 3
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Tests on the sum of all N observations
+Standardized normal statistic         : -392.90
+p-value of test                       : 1 - eps1    *****
+
+Sample variance                       :    0.60
+p-value of test                       :    0.80
+
+-----------------------------------------------
+CPU time used                    :  00:03:10.32
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  6
+ Total CPU time:   00:10:56.60
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 101  Run of bits, r = 0               eps  
+ 102  Run of bits, r = 27              eps  
+ 103  AutoCor, d=1, r=0               1.0e-9
+ 104  AutoCor, d=3, r=0              1 - eps1
+ ----------------------------------------------
+ All other tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_AutoCor test:
+-----------------------------------------------
+   N = 10,  n = 1000000030,  r = 27,   s = 3,   d = 1
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.50
+p-value of test                       :  4.0e-3
+
+Kolmogorov-Smirnov- statistic = D-    :    0.50
+p-value of test                       :  4.1e-3
+
+Anderson-Darling statistic = A2       :    3.84
+p-value of test                       :    0.01
+
+Tests on the sum of all N observations
+Standardized normal statistic         : 2.00e-5
+p-value of test                       :    0.50
+
+Sample variance                       : 6.41e-6
+p-value of test                       : 1 - eps1    *****
+
+-----------------------------------------------
+CPU time used                    :  00:03:08.46
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_AutoCor test:
+-----------------------------------------------
+   N = 10,  n = 1000000029,  r = 27,   s = 3,   d = 3
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Tests on the sum of all N observations
+Standardized normal statistic         : -3.27e+4
+p-value of test                       : 1 - eps1    *****
+
+Sample variance                       : 5.89e-5
+p-value of test                       : 1 - eps1    *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:53.26
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  2
+ Total CPU time:   00:06:01.74
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 106  AutoCor, d=3, r=27             1 - eps1
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r =  0,   d =    8,   t = 14,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         :     2155
+p-value of test                       : 8.0e-87    *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940795335275
+  j =  1                              :        599995690
+  j =  2                              :             2155
+  j =  3                              :                0
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:04:55.50
+
+Generator state:
+
+
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r = 27,   d =    8,   t = 14,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         : 599512935
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131941394846055
+  j =  1                              :              105
+  j =  2                              :                0
+  j =  3                              :                0
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:01:45.01
+
+Generator state:
+
+
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r =  0,   d =    4,   t = 21,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         :   507972
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940795841092
+  j =  1                              :        598984056
+  j =  2                              :           507972
+  j =  3                              :                0
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:04:47.73
+
+Generator state:
+
+
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r = 28,   d =    4,   t = 21,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         : 599909629
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131941395242749
+  j =  1                              :              251
+  j =  2                              :                0
+  j =  3                              :                0
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:01:11.29
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:12:39.91
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+  9  CollisionOver, t = 14          8.0e-87
+ 10  CollisionOver, t = 14            eps  
+ 11  CollisionOver, t = 21            eps  
+ 12  CollisionOver, t = 21            eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 100,  n = 10000000,  r =  0,    d = 2147483648,    t = 2,    p = 1
+
+
+      Number of cells = d^t = 4611686018427387904
+      Lambda = Poisson mean =      54.2101
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    5421.01
+Total observed number                 : 498436674
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:04:11.40
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 20000000,  r =  0,    d = 2097152,    t = 3,    p = 1
+
+
+      Number of cells = d^t = 9223372036854775808
+      Lambda = Poisson mean =     216.8404
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    4336.81
+Total observed number                 : 125815029
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:55.30
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 30000000,  r = 14,    d = 65536,    t = 4,    p = 1
+
+
+      Number of cells = d^t = 18446744073709551616
+      Lambda = Poisson mean =     365.9182
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    7318.36
+Total observed number                 : 599999720
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:14.41
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 20000000,  r =  0,    d = 512,    t = 7,    p = 1
+
+
+      Number of cells = d^t = 9223372036854775808
+      Lambda = Poisson mean =     216.8404
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    4336.81
+Total observed number                 :  301088
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:30.57
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:10:51.80
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 13  BirthdaySpacings, t = 2          eps  
+ 14  BirthdaySpacings, t = 3          eps  
+ 15  BirthdaySpacings, t = 4          eps  
+ 16  BirthdaySpacings, t = 7          eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 20000000,  r =  7,    d = 512,    t = 7,    p = 1
+
+
+      Number of cells = d^t = 9223372036854775808
+      Lambda = Poisson mean =     216.8404
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    4336.81
+Total observed number                 : 1331798
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:40.84
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 30000000,  r = 14,    d = 256,    t = 8,    p = 1
+
+
+      Number of cells = d^t = 18446744073709551616
+      Lambda = Poisson mean =     365.9182
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    7318.36
+Total observed number                 : 598139316
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:03:40.00
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 30000000,  r = 22,    d = 256,    t = 8,    p = 1
+
+
+      Number of cells = d^t = 18446744073709551616
+      Lambda = Poisson mean =     365.9182
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    7318.36
+Total observed number                 : 599994972
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:03:02.86
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 30000000,  r =  0,    d = 16,    t = 16,    p = 1
+
+
+      Number of cells = d^t = 18446744073709551616
+      Lambda = Poisson mean =     365.9182
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    7318.36
+Total observed number                 :  279560
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:05:39.41
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:15:03.28
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 17  BirthdaySpacings, t = 7          eps  
+ 18  BirthdaySpacings, t = 8          eps  
+ 19  BirthdaySpacings, t = 8          eps  
+ 20  BirthdaySpacings, t = 16         eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smarsa_BirthdaySpacings test:
+-----------------------------------------------
+   N = 20,  n = 30000000,  r = 26,    d = 16,    t = 16,    p = 1
+
+
+      Number of cells = d^t = 18446744073709551616
+      Lambda = Poisson mean =     365.9182
+
+
+----------------------------------------------------
+Total expected number = N*Lambda      :    7318.36
+Total observed number                 : 599997660
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:04:57.67
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+snpair_ClosePairs test:
+-----------------------------------------------
+   N = 30,  n = 6000000,  r =  0,  t = 3,  p = 0,  m = 30,  Torus =  TRUE
+
+
+---------------------------------------
+Test based on the 2 nearest points (NP):
+
+Stat. AD on the N values (NP)         : 1072.10
+p-value of test                       :   eps      *****
+
+
+A2 test based on the spacings between the
+   successive jump times of process Y_n(t):
+
+A2 test on the values of A2 (m-NP)    : 1072.10
+p-value of test                       :   eps      *****
+
+Test on the Nm values of W_{n,i}(mNP1):32163.12
+p-value of test                       :   eps      *****
+
+Test on the jump times of Y
+   (superposition of Yn):
+
+Expected number of jumps of Y = mN    :     900
+Number of jumps of Y                  :  497714
+p-value of test                       :   eps      *****
+
+Stat. AD (mNP2)                       : 3.49e+5
+p-value of test                       :   eps      *****
+
+Stat. AD after spacings (mNP2-S)      : 1.76e+7
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:03:12.73
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+snpair_ClosePairs test:
+-----------------------------------------------
+   N = 20,  n = 4000000,  r =  0,  t = 5,  p = 0,  m = 30,  Torus =  TRUE
+
+
+---------------------------------------
+Test based on the 2 nearest points (NP):
+
+Stat. AD on the N values (NP)         :   52.75
+p-value of test                       : 1.7e-24    *****
+
+
+A2 test based on the spacings between the
+   successive jump times of process Y_n(t):
+
+A2 test on the values of A2 (m-NP)    :  277.69
+p-value of test                       :1.5e-122    *****
+
+Test on the Nm values of W_{n,i}(mNP1):  370.00
+p-value of test                       :1.0e-162    *****
+
+Test on the jump times of Y
+   (superposition of Yn):
+
+Expected number of jumps of Y = mN    :     600
+Number of jumps of Y                  :     916
+p-value of test                       : 3.2e-33    *****
+
+Stat. AD (mNP2)                       :   72.07
+p-value of test                       : 5.8e-33    *****
+
+Stat. AD after spacings (mNP2-S)      : 1158.39
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:00.17
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+snpair_ClosePairs test:
+-----------------------------------------------
+   N = 10,  n = 3000000,  r =  0,  t = 9,  p = 0,  m = 30,  Torus =  TRUE
+
+
+---------------------------------------
+Test based on the 2 nearest points (NP):
+
+Stat. AD on the N values (NP)         :    2.87
+p-value of test                       :    0.03
+
+
+A2 test based on the spacings between the
+   successive jump times of process Y_n(t):
+
+A2 test on the values of A2 (m-NP)    :    1.83
+p-value of test                       :    0.12
+
+Test on the Nm values of W_{n,i}(mNP1):    2.15
+p-value of test                       :    0.08
+
+Test on the jump times of Y
+   (superposition of Yn):
+
+Expected number of jumps of Y = mN    :     300
+Number of jumps of Y                  :     288
+p-value of test                       :    0.74
+
+Stat. AD (mNP2)                       :   11.65
+p-value of test                       :  2.5e-6    *****
+
+Stat. AD after spacings (mNP2-S)      :    6.46
+p-value of test                       :  6.1e-4    *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:56.23
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  19
+ Total CPU time:   00:13:07.35
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 21  BirthdaySpacings, t = 16         eps  
+ 22  ClosePairs NP, t = 3             eps  
+ 22  ClosePairs mNP, t = 3            eps  
+ 22  ClosePairs mNP1, t = 3           eps  
+ 22  ClosePairs mNP2, t = 3           eps  
+ 22  ClosePairs NJumps, t = 3         eps  
+ 22  ClosePairs mNP2S, t = 3          eps  
+ 23  ClosePairs NP, t = 5           1.7e-24
+ 23  ClosePairs mNP, t = 5         1.5e-122
+ 23  ClosePairs mNP1, t = 5        1.0e-162
+ 23  ClosePairs mNP2, t = 5         5.8e-33
+ 23  ClosePairs NJumps, t = 5       3.2e-33
+ 23  ClosePairs mNP2S, t = 5          eps  
+ 24  ClosePairs mNP2, t = 9          2.5e-6
+ 24  ClosePairs mNP2S, t = 9         6.1e-4
+ ----------------------------------------------
+ All other tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+snpair_ClosePairs test:
+-----------------------------------------------
+   N =  5,  n = 2000000,  r =  0,  t = 16,  p = 0,  m = 30,  Torus =  TRUE
+
+
+---------------------------------------
+Test based on the 2 nearest points (NP):
+
+Stat. AD on the N values (NP)         :    5.05
+p-value of test                       :  3.0e-3
+
+
+A2 test based on the spacings between the
+   successive jump times of process Y_n(t):
+
+A2 test on the values of A2 (m-NP)    :  178.68
+p-value of test                       : 1.8e-79    *****
+
+Test on the Nm values of W_{n,i}(mNP1): 2868.31
+p-value of test                       :   eps      *****
+
+Test on the jump times of Y
+   (superposition of Yn):
+
+Expected number of jumps of Y = mN    :     150
+Number of jumps of Y                  :     244
+p-value of test                       : 1.2e-12    *****
+
+Stat. AD (mNP2)                       :   18.13
+p-value of test                       :  3.1e-9    *****
+
+Stat. AD after spacings (mNP2-S)      : 5134.07
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:03:08.37
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_SimpPoker test:
+-----------------------------------------------
+   N =  1,  n = 400000000,  r =  0,   d =    8,   k =    8
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    7
+Chi-square statistic                  :24254.48
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:31.00
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_SimpPoker test:
+-----------------------------------------------
+   N =  1,  n = 400000000,  r = 27,   d =    8,   k =    8
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    7
+Chi-square statistic                  : 6.22e+9
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:24.50
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_SimpPoker test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r =  0,   d =   32,   k =   32
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   18
+Chi-square statistic                  :19633.22
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:35.20
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  9
+ Total CPU time:   00:07:39.57
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 25  ClosePairs mNP, t = 16         1.8e-79
+ 25  ClosePairs mNP1, t = 16          eps  
+ 25  ClosePairs mNP2, t = 16         3.1e-9
+ 25  ClosePairs NJumps, t = 16      1.2e-12
+ 25  ClosePairs mNP2S, t = 16         eps  
+ 26  SimpPoker, r = 0                 eps  
+ 27  SimpPoker, r = 27                eps  
+ 28  SimpPoker, r = 0                 eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_SimpPoker test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r = 25,   d =   32,   k =   32
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   18
+Chi-square statistic                  :1.76e+13
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:26.98
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_CouponCollector test:
+-----------------------------------------------
+   N =  1,  n = 200000000,  r =  0,   d =    8
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   54
+Chi-square statistic                  : 1.03e+6
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:03.06
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_CouponCollector test:
+-----------------------------------------------
+   N =  1,  n = 200000000,  r = 10,   d =    8
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   54
+Chi-square statistic                  : 1.42e+6
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:10.18
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_CouponCollector test:
+-----------------------------------------------
+   N =  1,  n = 200000000,  r = 20,   d =    8
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   54
+Chi-square statistic                  : 9.31e+7
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:35.41
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:08:15.63
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 29  SimpPoker, r = 25                eps  
+ 30  CouponCollector, r = 0           eps  
+ 31  CouponCollector, r = 10          eps  
+ 32  CouponCollector, r = 20          eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_CouponCollector test:
+-----------------------------------------------
+   N =  1,  n = 200000000,  r = 27,   d =    8
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   54
+Chi-square statistic                  : 7.17e+8
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:03:06.34
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_Gap test:
+-----------------------------------------------
+   N =  1,  n = 500000000,  r =  0,   Alpha =        0,   Beta  =   0.0625
+
+
+-----------------------------------------------
+Number of degrees of freedom          :  232
+Chi-square statistic                  : 1.79e+7
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:03:00.70
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_Gap test:
+-----------------------------------------------
+   N =  1,  n = 300000000,  r = 25,   Alpha =        0,   Beta  =  0.03125
+
+
+-----------------------------------------------
+Number of degrees of freedom          :  434
+Chi-square statistic                  : 3.32e+9
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:03:44.85
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_Gap test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r =  0,   Alpha =        0,   Beta  = 0.0078125
+
+
+-----------------------------------------------
+Number of degrees of freedom          : 1437
+Chi-square statistic                  : 1.38e+8
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:04:19.41
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:14:11.33
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 33  CouponCollector, r = 27          eps  
+ 34  Gap, r = 0                       eps  
+ 35  Gap, r = 25                      eps  
+ 36  Gap, r = 0                       eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+sknuth_Gap test:
+-----------------------------------------------
+   N =  1,  n = 10000000,  r = 20,   Alpha =        0,   Beta  = 0.000976562
+
+
+-----------------------------------------------
+Number of degrees of freedom          : 7046
+Chi-square statistic                  : 1.44e+9
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:03:51.87
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+sknuth_Run test:
+-----------------------------------------------
+   N =  5,  n = 1000000000,  r =  0,   Up = FALSE
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  178.68
+p-value of test                       : 1.8e-79    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          :   30
+Chi-square statistic                  :28508.00
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:07.86
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+sknuth_Run test:
+-----------------------------------------------
+   N = 10,  n = 1000000000,  r = 15,   Up =  TRUE
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          :   60
+Chi-square statistic                  : 1.41e+8
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:04:25.75
+
+Generator state:
+
+
+
+
+***********************************************************
+Test sknuth_Permutation calling smultin_Multinomial
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_Multinomial test:
+-----------------------------------------------
+   N =  1,  n = 1000000000,  r =  5,   t =  3,
+       Sparse =  FALSE
+
+       GenerCell = smultin_GenerCellPermut
+       Number of cells = t! =                  6
+       Expected number per cell =  1.6666667e+08
+       Hashing =  FALSE
+
+   For Delta > -1, we use the ChiSquare approximation
+   Correction factor of the ChiSquare: 
+       Delta =     1,    Mu =  2.5000002e-09,    Sigma =          1
+
+-----------------------------------------------
+Test Results for Delta =   1.0000
+
+Number of degrees of freedom          :    5
+Value of the statistic                : 4520.36
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:22.36
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:11:47.86
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 37  Gap, r = 20                      eps  
+ 38  Run, r = 0                       eps  
+ 39  Run, r = 15                      eps  
+ 40  Permutation, t = 3               eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test sknuth_Permutation calling smultin_Multinomial
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_Multinomial test:
+-----------------------------------------------
+   N =  1,  n = 1000000000,  r =  5,   t =  5,
+       Sparse =  FALSE
+
+       GenerCell = smultin_GenerCellPermut
+       Number of cells = t! =                120
+       Expected number per cell =   8333333.3
+       Hashing =  FALSE
+
+   For Delta > -1, we use the ChiSquare approximation
+   Correction factor of the ChiSquare: 
+       Delta =     1,    Mu =  5.9500005e-08,    Sigma =          1
+
+-----------------------------------------------
+Test Results for Delta =   1.0000
+
+Number of degrees of freedom          :  119
+Value of the statistic                :33558.79
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:38.37
+
+Generator state:
+
+
+
+
+***********************************************************
+Test sknuth_Permutation calling smultin_Multinomial
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_Multinomial test:
+-----------------------------------------------
+   N =  1,  n = 500000000,  r =  5,   t =  7,
+       Sparse =  FALSE
+
+       GenerCell = smultin_GenerCellPermut
+       Number of cells = t! =               5040
+       Expected number per cell =   99206.349
+       Hashing =  FALSE
+
+   For Delta > -1, we use the ChiSquare approximation
+   Correction factor of the ChiSquare: 
+       Delta =     1,    Mu =  5.0390004e-06,    Sigma =          1
+
+-----------------------------------------------
+Test Results for Delta =   1.0000
+
+Number of degrees of freedom          : 5039
+Value of the statistic                :76372.35
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:54.81
+
+Generator state:
+
+
+
+
+***********************************************************
+Test sknuth_Permutation calling smultin_Multinomial
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_Multinomial test:
+-----------------------------------------------
+   N =  1,  n = 500000000,  r = 10,   t = 10,
+       Sparse =  FALSE
+
+       GenerCell = smultin_GenerCellPermut
+       Number of cells = t! =            3628800
+       Expected number per cell =    137.7866
+       Hashing =  FALSE
+
+   For Delta > -1, we use the ChiSquare approximation
+   Correction factor of the ChiSquare: 
+       Delta =     1,    Mu =   0.0036287993,    Sigma =          1
+
+-----------------------------------------------
+Test Results for Delta =   1.0000
+
+Number of degrees of freedom          : 3628799
+Value of the statistic                : 9.31e+7
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:03:35.47
+
+Generator state:
+
+
+
+
+***********************************************************
+Test sknuth_CollisionPermut calling smultin_Multinomial
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_Multinomial test:
+-----------------------------------------------
+   N = 20,  n = 20000000,  r =  0,   t = 14,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellPermut
+       Number of cells = t! =        87178291200
+       Expected number per cell =  1 /  4358.9146
+       EColl = n^2 / (2k) =   2294.14912
+       Hashing =   TRUE
+
+       Collision test,    Mu =      2293.9736,    Sigma =    47.8841
+
+-----------------------------------------------
+Test Results for Collisions
+
+For the total number of collisions, we use
+      the Poisson approximation:
+Expected number of collisions = N*Mu  :    45879.47
+Observed number of collisions         :    46320
+p-value of test                       :    0.02
+
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :    1743165870320
+  j =  1                              :        399907364
+  j =  2                              :            46312
+  j =  3                              :                4
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:05:11.25
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:13:19.90
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 41  Permutation, t = 5               eps  
+ 42  Permutation, t = 7               eps  
+ 43  Permutation, t = 10              eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test sknuth_CollisionPermut calling smultin_Multinomial
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+smultin_Multinomial test:
+-----------------------------------------------
+   N = 20,  n = 20000000,  r = 10,   t = 14,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellPermut
+       Number of cells = t! =        87178291200
+       Expected number per cell =  1 /  4358.9146
+       EColl = n^2 / (2k) =   2294.14912
+       Hashing =   TRUE
+
+       Collision test,    Mu =      2293.9736,    Sigma =    47.8841
+
+-----------------------------------------------
+Test Results for Collisions
+
+For the total number of collisions, we use
+      the Poisson approximation:
+Expected number of collisions = N*Mu  :    45879.47
+Observed number of collisions         :   117671
+p-value of test                       :   eps      *****
+
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :    1743165941671
+  j =  1                              :        399764697
+  j =  2                              :           117593
+  j =  3                              :               39
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:06:09.37
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_MaxOft test:
+-----------------------------------------------
+   N = 40,  n = 10000000,  r =  0,   d = 100000,   t =  8
+
+      Number of categories = 100000
+      Expected number per category  = 100.00
+
+
+-----------------------------------------------
+Test results for chi2 with 99999 degrees of freedom:
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       : 1429.47
+p-value of test                       :   eps      *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 3999960
+Chi-square statistic                  : 1.67e+7
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test results for Anderson-Darling:
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.99
+p-value of test                       : 3.7e-81    *****
+
+Kolmogorov-Smirnov- statistic = D-    :1.14e-32
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  818.02
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:03:27.98
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_MaxOft test:
+-----------------------------------------------
+   N = 30,  n = 10000000,  r =  0,   d = 100000,   t = 16
+
+      Number of categories = 100000
+      Expected number per category  = 100.00
+
+
+-----------------------------------------------
+Test results for chi2 with 99999 degrees of freedom:
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       : 1072.10
+p-value of test                       :   eps      *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 2999970
+Chi-square statistic                  : 7.12e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test results for Anderson-Darling:
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       : 9.0e-77    *****
+
+Kolmogorov-Smirnov- statistic = D-    :6.27e-40
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  457.31
+p-value of test                       :1.1e-200    *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:03:22.61
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_MaxOft test:
+-----------------------------------------------
+   N = 20,  n = 10000000,  r =  0,   d = 100000,   t = 24
+
+      Number of categories = 100000
+      Expected number per category  = 100.00
+
+
+-----------------------------------------------
+Test results for chi2 with 99999 degrees of freedom:
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  714.74
+p-value of test                       :   eps      *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 1999980
+Chi-square statistic                  : 3.80e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test results for Anderson-Darling:
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       : 1.3e-73    *****
+
+Kolmogorov-Smirnov- statistic = D-    :8.42e-28
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  398.39
+p-value of test                       :4.7e-175    *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:40.03
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  7
+ Total CPU time:   00:15:40.05
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 45  CollisionPermut, r = 10          eps  
+ 46  MaxOft, t = 8                    eps  
+ 46  MaxOft AD, t = 8                 eps  
+ 47  MaxOft, t = 16                   eps  
+ 47  MaxOft AD, t = 16             1.1e-200
+ 48  MaxOft, t = 24                   eps  
+ 48  MaxOft AD, t = 24             4.7e-175
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_SerialOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N =  1,  n = 1000000000,  r =  0,   d =  256,   t =  3,
+       Sparse =  FALSE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =           16777216
+       Expected number per cell =   59.604645
+       Hashing =  FALSE
+
+   For Delta > -1, we use the ChiSquare approximation
+   Correction factor of the ChiSquare: 
+       Delta =     1,    Mu =   0.0083558402,    Sigma =          1
+
+-----------------------------------------------
+Test Results for Delta =   1.0000
+
+Number of degrees of freedom          : 16711680
+Value of the statistic                : 3.28e+8
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:10.29
+
+Generator state:
+
+
+
+
+***********************************************************
+Test smarsa_SerialOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N =  1,  n = 1000000000,  r = 22,   d =  256,   t =  3,
+       Sparse =  FALSE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =           16777216
+       Expected number per cell =   59.604645
+       Hashing =  FALSE
+
+   For Delta > -1, we use the ChiSquare approximation
+   Correction factor of the ChiSquare: 
+       Delta =     1,    Mu =   0.0083558402,    Sigma =          1
+
+-----------------------------------------------
+Test Results for Delta =   1.0000
+
+Number of degrees of freedom          : 16711680
+Value of the statistic                :2.08e+12
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:00:46.98
+
+Generator state:
+
+
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r =  0,   d = 2097152,   t =  2,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         :  2946896
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940798280016
+  j =  1                              :        594124561
+  j =  2                              :          2910311
+  j =  3                              :            18111
+  j =  4                              :              121
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:02:49.04
+
+Generator state:
+
+
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r =  9,   d = 2097152,   t =  2,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         : 114537461
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940909870581
+  j =  1                              :        392704529
+  j =  2                              :         74331396
+  j =  3                              :         15502768
+  j =  4                              :          2541858
+  j =  5                              :           338856
+
+-----------------------------------------------
+CPU time used                    :  00:02:36.14
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:07:22.48
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+  1  SerialOver, r = 0                eps  
+  2  SerialOver, r = 22               eps  
+  3  CollisionOver, t = 2             eps  
+  4  CollisionOver, t = 2             eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+sknuth_MaxOft test:
+-----------------------------------------------
+   N = 20,  n = 10000000,  r =  0,   d = 100000,   t = 32
+
+      Number of categories = 100000
+      Expected number per category  = 100.00
+
+
+-----------------------------------------------
+Test results for chi2 with 99999 degrees of freedom:
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  714.74
+p-value of test                       :   eps      *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 1999980
+Chi-square statistic                  : 3.34e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test results for Anderson-Darling:
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       : 3.2e-60    *****
+
+Kolmogorov-Smirnov- statistic = D-    :4.61e-28
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  341.74
+p-value of test                       :2.0e-150    *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:03:38.34
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+svaria_SampleProd test:
+-----------------------------------------------
+   N = 40,  n = 10000000,  r =  0,   t = 8
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :1.06e-57
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       : 1429.47
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:45.93
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+svaria_SampleProd test:
+-----------------------------------------------
+   N = 20,  n = 10000000,  r =  0,   t = 16
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :1.66e-75
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  714.74
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:03.00
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode133, Linux
+
+lcg_xor4
+
+
+svaria_SampleProd test:
+-----------------------------------------------
+   N = 20,  n = 10000000,  r =  0,   t = 24
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :4.66e-91
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  714.74
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:38.73
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  5
+ Total CPU time:   00:11:06.02
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 49  MaxOft, t = 32                   eps  
+ 49  MaxOft AD, t = 32             2.0e-150
+ 50  SampleProd, t = 8                eps  
+ 51  SampleProd, t = 16               eps  
+ 52  SampleProd, t = 24               eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_SampleMean test:
+-----------------------------------------------
+   N = 20000000,  n = 30,  r =  0
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    : 1.52e-3
+p-value of test                       : 4.9e-41    *****
+
+Kolmogorov-Smirnov- statistic = D-    : 6.38e-4
+p-value of test                       :  8.5e-8    *****
+
+Anderson-Darling statistic = A2       :  120.77
+p-value of test                       : 3.2e-54    *****
+
+-----------------------------------------------
+CPU time used                    :  00:00:36.61
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_SampleMean test:
+-----------------------------------------------
+   N = 20000000,  n = 30,  r = 10
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.013
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.013
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :16250.29
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:00:37.12
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_SampleCorr test:
+-----------------------------------------------
+   N =  1,  n = 2000000000,  r =  0,   k = 1
+
+
+-----------------------------------------------
+Normal statistic                      :   56.33
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:00:46.92
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_SampleCorr test:
+-----------------------------------------------
+   N =  1,  n = 2000000000,  r =  0,   k = 2
+
+
+-----------------------------------------------
+Normal statistic                      :   -7.10
+p-value of test                       : 1 - 6.5e-13    *****
+
+-----------------------------------------------
+CPU time used                    :  00:00:47.96
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:02:48.63
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 53  SampleMean, r = 0              3.2e-54
+ 54  SampleMean, r = 10               eps  
+ 55  SampleCorr, k = 1                eps  
+ 56  SampleCorr, k = 2              1 - 6.5e-13
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_AppearanceSpacings test:
+-----------------------------------------------
+   N =  1,   Q = 10000000,   K = 1000000000,   r = 0,   s = 3,   L = 15
+
+   Sequences of n = (K + Q)L =  15150000000 bits
+   Q = 10000000 initialization blocks
+   K = 1000000000 blocks for the test
+   the blocks have L = 15 bits
+
+
+
+-----------------------------------------------
+Normal statistic                      :   -3.57
+p-value of test                       :    0.9998    *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:38.37
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_AppearanceSpacings test:
+-----------------------------------------------
+   N =  1,   Q = 10000000,   K = 1000000000,   r = 27,   s = 3,   L = 15
+
+   Sequences of n = (K + Q)L =  15150000000 bits
+   Q = 10000000 initialization blocks
+   K = 1000000000 blocks for the test
+   the blocks have L = 15 bits
+
+
+
+-----------------------------------------------
+Normal statistic                      : -1.70e+5
+p-value of test                       : 1 - eps1    *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:28.55
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_WeightDistrib test:
+-----------------------------------------------
+   N =  1,  n = 20000000,  r =  0,  k = 256,  Alpha =      0,  Beta =   0.25
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   67
+Chi-square statistic                  : 8.29e+5
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:44.68
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_WeightDistrib test:
+-----------------------------------------------
+   N =  1,  n = 20000000,  r = 20,  k = 256,  Alpha =      0,  Beta =   0.25
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   67
+Chi-square statistic                  :58189.74
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:49.99
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:08:41.60
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 57  AppearanceSpacings, r = 0       0.9998 
+ 58  AppearanceSpacings, r = 27     1 - eps1
+ 59  WeightDistrib, r = 0             eps  
+ 60  WeightDistrib, r = 20            eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_WeightDistrib test:
+-----------------------------------------------
+   N =  1,  n = 20000000,  r = 28,  k = 256,  Alpha =      0,  Beta =   0.25
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   67
+Chi-square statistic                  : 3.28e+8
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:00.09
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_WeightDistrib test:
+-----------------------------------------------
+   N =  1,  n = 20000000,  r =  0,  k = 256,  Alpha =      0,  Beta = 0.0625
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   37
+Chi-square statistic                  : 7.11e+5
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:46.36
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_WeightDistrib test:
+-----------------------------------------------
+   N =  1,  n = 20000000,  r = 10,  k = 256,  Alpha =      0,  Beta = 0.0625
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   37
+Chi-square statistic                  : 1.57e+5
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:55.02
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_WeightDistrib test:
+-----------------------------------------------
+   N =  1,  n = 20000000,  r = 26,  k = 256,  Alpha =      0,  Beta = 0.0625
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   37
+Chi-square statistic                  : 2.11e+7
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:53.07
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:07:34.56
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 61  WeightDistrib, r = 28            eps  
+ 62  WeightDistrib, r = 0             eps  
+ 63  WeightDistrib, r = 10            eps  
+ 64  WeightDistrib, r = 26            eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+svaria_SumCollector test:
+-----------------------------------------------
+   N =  1,  n = 500000000,  r =  0,   g = 10
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   29
+Chi-square statistic                  :15436.08
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:03:45.11
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smarsa_MatrixRank test:
+-----------------------------------------------
+   N = 10,  n = 1000000,  r =  0,    s = 5,    L = 30,    k = 30
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.11
+p-value of test                       :    0.73
+
+Kolmogorov-Smirnov- statistic = D-    :    0.47
+p-value of test                       :  7.4e-3
+
+Anderson-Darling statistic = A2       :    2.54
+p-value of test                       :    0.05
+
+Test on the sum of all N observations
+Number of degrees of freedom          :   40
+Chi-square statistic                  :   47.78
+p-value of test                       :    0.19
+
+-----------------------------------------------
+CPU time used                    :  00:01:30.37
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smarsa_MatrixRank test:
+-----------------------------------------------
+   N = 10,  n = 1000000,  r = 25,    s = 5,    L = 30,    k = 30
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          :   40
+Chi-square statistic                  :8.94e+10
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:24.43
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smarsa_MatrixRank test:
+-----------------------------------------------
+   N =  1,  n = 5000,  r =  0,    s = 4,    L = 1000,    k = 1000
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    3
+Chi-square statistic                  :    2.32
+p-value of test                       :    0.51
+
+-----------------------------------------------
+CPU time used                    :  00:02:13.00
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:08:52.94
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 65  SumCollector                     eps  
+ 67  MatrixRank, L=30, r=26           eps  
+ ----------------------------------------------
+ All other tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smarsa_MatrixRank test:
+-----------------------------------------------
+   N =  1,  n = 5000,  r = 26,    s = 4,    L = 1000,    k = 1000
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    3
+Chi-square statistic                  : 7847.51
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:15.61
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smarsa_MatrixRank test:
+-----------------------------------------------
+   N =  1,  n = 80,  r = 15,    s = 15,    L = 5000,    k = 5000
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    2
+Chi-square statistic                  :    3.18
+p-value of test                       :    0.20
+
+-----------------------------------------------
+CPU time used                    :  00:01:50.09
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smarsa_MatrixRank test:
+-----------------------------------------------
+   N =  1,  n = 80,  r =  0,    s = 30,    L = 5000,    k = 5000
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    2
+Chi-square statistic                  :    3.22
+p-value of test                       :    0.20
+
+-----------------------------------------------
+CPU time used                    :  00:01:33.30
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smarsa_Savir2 test:
+-----------------------------------------------
+   N = 10,  n = 10000000,  r = 10,    m = 1048576,    t = 30
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          :  130
+Chi-square statistic                  :15030.40
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:07.63
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:06:46.64
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 69  MatrixRank, L=1000, r=26         eps  
+ 72  Savir2                           eps  
+ ----------------------------------------------
+ All other tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smarsa_GCD test:
+-----------------------------------------------
+   N = 10,  n = 50000000,  r =  0,   s = 30
+
+
+-----------------------------------------------
+Test results for GCD values:
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 17430
+Chi-square statistic                  : 4.44e+8
+p-value of test                       :   eps      *****
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:01.04
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+swalk_RandomWalk1 test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r =  0,   s = 5,   L0 =   50,   L1 =   50
+
+
+
+-----------------------------------------------
+Test on the values of the Statistic H
+
+Number of degrees of freedom          :   36
+ChiSquare statistic                   : 2275.53
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic M
+
+Number of degrees of freedom          :   35
+ChiSquare statistic                   : 1618.43
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic J
+
+Number of degrees of freedom          :   25
+ChiSquare statistic                   :  341.48
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic R
+
+Number of degrees of freedom          :   24
+ChiSquare statistic                   : 1644.80
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic C
+
+Number of degrees of freedom          :   17
+ChiSquare statistic                   : 1480.09
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:11.84
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+swalk_RandomWalk1 test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r = 25,   s = 5,   L0 =   50,   L1 =   50
+
+
+
+-----------------------------------------------
+Test on the values of the Statistic H
+
+Number of degrees of freedom          :   36
+ChiSquare statistic                   : 2.25e+7
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic M
+
+Number of degrees of freedom          :   35
+ChiSquare statistic                   : 5.36e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic J
+
+Number of degrees of freedom          :   25
+ChiSquare statistic                   : 3.26e+7
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic R
+
+Number of degrees of freedom          :   24
+ChiSquare statistic                   : 2.28e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic C
+
+Number of degrees of freedom          :   17
+ChiSquare statistic                   : 4.67e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:04.81
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+swalk_RandomWalk1 test:
+-----------------------------------------------
+   N =  1,  n = 10000000,  r =  0,   s = 10,   L0 = 1000,   L1 = 1000
+
+
+
+-----------------------------------------------
+Test on the values of the Statistic H
+
+Number of degrees of freedom          :  146
+ChiSquare statistic                   :90967.97
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic M
+
+Number of degrees of freedom          :  146
+ChiSquare statistic                   :45684.85
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic J
+
+Number of degrees of freedom          :  500
+ChiSquare statistic                   :12767.79
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic R
+
+Number of degrees of freedom          :  136
+ChiSquare statistic                   : 9577.82
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic C
+
+Number of degrees of freedom          :   74
+ChiSquare statistic                   : 9355.43
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:49.05
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  16
+ Total CPU time:   00:06:06.75
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 73  GCD                              eps  
+ 74  RandomWalk1 H (L=50, r=0)        eps  
+ 74  RandomWalk1 M (L=50, r=0)        eps  
+ 74  RandomWalk1 J (L=50, r=0)        eps  
+ 74  RandomWalk1 R (L=50, r=0)        eps  
+ 74  RandomWalk1 C (L=50, r=0)        eps  
+ 75  RandomWalk1 H (L=50, r=25)       eps  
+ 75  RandomWalk1 M (L=50, r=25)       eps  
+ 75  RandomWalk1 J (L=50, r=25)       eps  
+ 75  RandomWalk1 R (L=50, r=25)       eps  
+ 75  RandomWalk1 C (L=50, r=25)       eps  
+ 76  RandomWalk1 H (L=1000, r=0)      eps  
+ 76  RandomWalk1 M (L=1000, r=0)      eps  
+ 76  RandomWalk1 J (L=1000, r=0)      eps  
+ 76  RandomWalk1 R (L=1000, r=0)      eps  
+ 76  RandomWalk1 C (L=1000, r=0)      eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+swalk_RandomWalk1 test:
+-----------------------------------------------
+   N =  1,  n = 10000000,  r = 20,   s = 10,   L0 = 1000,   L1 = 1000
+
+
+
+-----------------------------------------------
+Test on the values of the Statistic H
+
+Number of degrees of freedom          :  146
+ChiSquare statistic                   : 6.29e+5
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic M
+
+Number of degrees of freedom          :  146
+ChiSquare statistic                   : 9.11e+5
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic J
+
+Number of degrees of freedom          :  500
+ChiSquare statistic                   : 1.11e+6
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic R
+
+Number of degrees of freedom          :  136
+ChiSquare statistic                   : 7.24e+5
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic C
+
+Number of degrees of freedom          :   74
+ChiSquare statistic                   : 8.04e+5
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:50.32
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+swalk_RandomWalk1 test:
+-----------------------------------------------
+   N =  1,  n = 1000000,  r =  0,   s = 15,   L0 = 10000,   L1 = 10000
+
+
+
+-----------------------------------------------
+Test on the values of the Statistic H
+
+Number of degrees of freedom          :  384
+ChiSquare statistic                   :  924.09
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic M
+
+Number of degrees of freedom          :  384
+ChiSquare statistic                   : 2629.02
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic J
+
+Number of degrees of freedom          : 5000
+ChiSquare statistic                   : 5407.28
+p-value of test                       :  3.5e-5    *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic R
+
+Number of degrees of freedom          :  378
+ChiSquare statistic                   : 3891.69
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic C
+
+Number of degrees of freedom          :  200
+ChiSquare statistic                   : 3616.04
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:36.21
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+swalk_RandomWalk1 test:
+-----------------------------------------------
+   N =  1,  n = 1000000,  r = 15,   s = 15,   L0 = 10000,   L1 = 10000
+
+
+
+-----------------------------------------------
+Test on the values of the Statistic H
+
+Number of degrees of freedom          :  384
+ChiSquare statistic                   : 1.22e+5
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic M
+
+Number of degrees of freedom          :  384
+ChiSquare statistic                   :93245.91
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic J
+
+Number of degrees of freedom          : 5000
+ChiSquare statistic                   :11628.70
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic R
+
+Number of degrees of freedom          :  378
+ChiSquare statistic                   : 1.38e+5
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+Test on the values of the Statistic C
+
+Number of degrees of freedom          :  200
+ChiSquare statistic                   : 1.29e+5
+p-value of test                       :   eps      *****
+
+
+-----------------------------------------------
+CPU time used                    :  00:01:34.87
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+scomp_LinearComp test:
+-----------------------------------------------
+   N =  1,  n = 400020,  r =  0,    s = 1
+
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   12
+Chi2 statistic for size of jumps      :    8.62
+p-value of test                       :    0.73
+
+
+-----------------------------------------------
+Normal statistic for number of jumps  :   -1.00
+p-value of test                       :    0.84
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:26.54
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  17
+ Total CPU time:   00:07:27.98
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 77  RandomWalk1 H (L=1000, r=20)     eps  
+ 77  RandomWalk1 M (L=1000, r=20)     eps  
+ 77  RandomWalk1 J (L=1000, r=20)     eps  
+ 77  RandomWalk1 R (L=1000, r=20)     eps  
+ 77  RandomWalk1 C (L=1000, r=20)     eps  
+ 78  RandomWalk1 H (L=10000, r=0)     eps  
+ 78  RandomWalk1 M (L=10000, r=0)     eps  
+ 78  RandomWalk1 J (L=10000, r=0)    3.5e-5
+ 78  RandomWalk1 R (L=10000, r=0)     eps  
+ 78  RandomWalk1 C (L=10000, r=0)     eps  
+ 79  RandomWalk1 H (L=10000, r=15)    eps  
+ 79  RandomWalk1 M (L=10000, r=15)    eps  
+ 79  RandomWalk1 J (L=10000, r=15)    eps  
+ 79  RandomWalk1 R (L=10000, r=15)    eps  
+ 79  RandomWalk1 C (L=10000, r=15)    eps  
+ ----------------------------------------------
+ All other tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+scomp_LinearComp test:
+-----------------------------------------------
+   N =  1,  n = 400020,  r = 29,    s = 1
+
+
+
+-----------------------------------------------
+Number of degrees of freedom          :   12
+Chi2 statistic for size of jumps      :   76.99
+p-value of test                       : 1.5e-11    *****
+
+
+-----------------------------------------------
+Normal statistic for number of jumps  : -429.26
+p-value of test                       : 1 - eps1    *****
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:00:03.00
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+scomp_LempelZiv test:
+-----------------------------------------------
+   N = 10,  n = 134217728,  r =  0,   s =   30,   k =   27
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.21
+p-value of test                       :    0.35
+
+Kolmogorov-Smirnov- statistic = D-    :   0.054
+p-value of test                       :    0.91
+
+Anderson-Darling statistic = A2       :    0.69
+p-value of test                       :    0.56
+
+Tests on the sum of all N observations
+Standardized normal statistic         :   -1.01
+p-value of test                       :    0.84
+
+Sample variance                       :    1.56
+p-value of test                       :    0.12
+
+-----------------------------------------------
+CPU time used                    :  00:00:56.17
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+scomp_LempelZiv test:
+-----------------------------------------------
+   N = 10,  n = 134217728,  r = 15,   s =   15,   k =   27
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Tests on the sum of all N observations
+Standardized normal statistic         : -1.94e+4
+p-value of test                       : 1 - eps1    *****
+
+Sample variance                       :   30.52
+p-value of test                       : 6.0e-54    *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:01.18
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+sspectral_Fourier3 test:
+-----------------------------------------------
+   N = 100000,  n = 16384,  r =  0,   s =    3,   k =   14
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.62
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :    0.36
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :72219.17
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:00:51.75
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  5
+ Total CPU time:   00:02:52.12
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 81  LinearComp, r = 29             1 - eps1
+ 81  LinearComp, r = 0              1.5e-11
+ 83  LempelZiv, r = 15              1 - eps1
+ 84  Fourier3, r = 0                  eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sspectral_Fourier3 test:
+-----------------------------------------------
+   N = 100000,  n = 16384,  r = 27,   s =    3,   k =   14
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.76
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :    0.23
+p-value of test                       :8.1e-191    *****
+
+Anderson-Darling statistic = A2       :90895.90
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:00:53.92
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_LongestHeadRun test:
+-----------------------------------------------
+   N =  1,  n = 1000,  r =  0,   s = 3,   L = 10000020
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    8
+Chi-square statistic                  :   10.72
+p-value of test                       :    0.22
+
+-----------------------------------------------
+Global longest run of 1               :   32.00
+p-value of test                       :    0.50
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:17.62
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_LongestHeadRun test:
+-----------------------------------------------
+   N =  1,  n = 1000,  r = 27,   s = 3,   L = 10000020
+
+
+-----------------------------------------------
+Number of degrees of freedom          :    8
+Chi-square statistic                  : 9850.28
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+Global longest run of 1               :   13.00
+p-value of test                       : 1 - eps1    *****
+
+
+
+-----------------------------------------------
+CPU time used                    :  00:02:03.18
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_PeriodsInStrings test:
+-----------------------------------------------
+   N = 10,  n = 500000000,  r =  0,   s =   10
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    : 1.51e-5
+p-value of test                       : 1 -  1.5e-5    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    0.75
+p-value of test                       :  1.4e-6    *****
+
+Anderson-Darling statistic = A2       :   22.86
+p-value of test                       : 2.4e-11    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          :  200
+Chi-square statistic                  :  369.62
+p-value of test                       : 3.2e-12    *****
+
+-----------------------------------------------
+CPU time used                    :  00:04:36.71
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  6
+ Total CPU time:   00:09:51.44
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 85  Fourier3, r = 27                 eps  
+ 87  LongestHeadRun, r = 27           eps  
+ 87  LongestHeadRun, r = 27         1 - eps1
+ 88  PeriodsInStrings, r = 0        3.2e-12
+ ----------------------------------------------
+ All other tests were passed
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r =  0,   d = 16384,   t =  3,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         :  2813576
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940798146696
+  j =  1                              :        594389897
+  j =  2                              :          2779590
+  j =  3                              :            16827
+  j =  4                              :              108
+  j =  5                              :                2
+
+-----------------------------------------------
+CPU time used                    :  00:04:37.12
+
+Generator state:
+
+
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r = 16,   d = 16384,   t =  3,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         : 358236321
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131941153569441
+  j =  1                              :        195822360
+  j =  2                              :         27626276
+  j =  3                              :         10116154
+  j =  4                              :          3102139
+  j =  5                              :           889503
+
+-----------------------------------------------
+CPU time used                    :  00:03:12.26
+
+Generator state:
+
+
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r =  0,   d =   64,   t =  7,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         :     1406
+p-value of test                       :    0.13
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131940795334526
+  j =  1                              :        599997188
+  j =  2                              :             1406
+  j =  3                              :                0
+  j =  4                              :                0
+  j =  5                              :                0
+
+-----------------------------------------------
+CPU time used                    :  00:05:08.22
+
+Generator state:
+
+
+
+
+***********************************************************
+Test smarsa_CollisionOver calling smultin_MultinomialOver
+
+***********************************************************
+HOST = cnode109, Linux
+
+lcg_xor4
+
+
+smultin_MultinomialOver test:
+-----------------------------------------------
+   N = 30,  n = 20000000,  r = 24,   d =   64,   t =  7,
+       Sparse =   TRUE
+
+       GenerCell = smultin_GenerCellSerial
+       Number of cells = d^t =      4398046511104
+       Expected number per cell =  1 /  219902.33
+       EColl = n^2 / (2k) =  45.47473509
+       Hashing =   TRUE
+
+       Collision test
+
+       CollisionOver:   density = n / k =  1 /  219902.33
+       Expected number of collisions = Mu =      45.47
+
+
+-----------------------------------------------
+Results of CollisionOver test:
+
+POISSON approximation                 :
+Expected number of collisions = N*Mu  :     1364.24
+Observed number of collisions         : 585100984
+p-value of test                       :   eps      *****
+
+-----------------------------
+Total number of cells containing j balls
+
+  j =  0                              :  131941380434104
+  j =  1                              :           759026
+  j =  2                              :           979385
+  j =  3                              :           678762
+  j =  4                              :           925075
+  j =  5                              :           619199
+
+-----------------------------------------------
+CPU time used                    :  00:01:47.05
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:14:44.84
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+  5  CollisionOver, t = 3             eps  
+  6  CollisionOver, t = 3             eps  
+  8  CollisionOver, t = 7             eps  
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_PeriodsInStrings test:
+-----------------------------------------------
+   N = 10,  n = 500000000,  r = 20,   s =   10
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.19
+p-value of test                       :    0.43
+
+Kolmogorov-Smirnov- statistic = D-    :    0.49
+p-value of test                       :  4.6e-3
+
+Anderson-Darling statistic = A2       :   12.42
+p-value of test                       :  1.1e-6    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          :  200
+Chi-square statistic                  :  304.00
+p-value of test                       :  2.9e-6    *****
+
+-----------------------------------------------
+CPU time used                    :  00:04:35.43
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_HammingWeight2 test:
+-----------------------------------------------
+   N = 10,  n = 1000000000,  r =  0,   s = 3,   L = 1000000
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 10000
+Chi-square statistic                  :40799.51
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:42.82
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_HammingWeight2 test:
+-----------------------------------------------
+   N = 10,  n = 1000000000,  r = 27,   s = 3,   L = 1000000
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    1.00
+p-value of test                       :   eps      *****
+
+Kolmogorov-Smirnov- statistic = D-    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 10000
+Chi-square statistic                  :    5.80
+p-value of test                       : 1 - eps1    *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:29.64
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_HammingCorr test:
+-----------------------------------------------
+   N =  1,  n = 1000000000,  r = 10,   s = 10,   L = 30
+
+
+
+-----------------------------------------------
+Normal statistic                      :-7664.45
+p-value of test                       : 1 - eps1    *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:55.01
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:09:42.92
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 89  PeriodsInStrings, r = 20        2.9e-6
+ 90  HammingWeight2, r = 0            eps  
+ 91  HammingWeight2, r = 27         1 - eps1
+ 92  HammingCorr, L = 30            1 - eps1
+ ----------------------------------------------
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                 Starting BigCrush
+                 Version: TestU01 1.2.3
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_HammingCorr test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r = 10,   s = 10,   L = 300
+
+
+
+-----------------------------------------------
+Normal statistic                      : -530.19
+p-value of test                       : 1 - eps1    *****
+
+-----------------------------------------------
+CPU time used                    :  00:01:48.03
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_HammingCorr test:
+-----------------------------------------------
+   N =  1,  n = 100000000,  r = 10,   s = 10,   L = 1200
+
+
+
+-----------------------------------------------
+Normal statistic                      : -131.77
+p-value of test                       : 1 - eps1    *****
+
+-----------------------------------------------
+CPU time used                    :  00:07:03.61
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_HammingIndep test:
+-----------------------------------------------
+   N = 10,  n = 30000000,  r =  0,   s = 3,   L = 30,   d = 0
+
+
+
+Counters with expected numbers >= 10
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 4890
+Chi-square statistic                  :21605.35
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:03:05.74
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = cnode203, Linux
+
+lcg_xor4
+
+
+sstring_HammingIndep test:
+-----------------------------------------------
+   N = 10,  n = 30000000,  r = 27,   s = 3,   L = 30,   d = 0
+
+
+
+Counters with expected numbers >= 10
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.000
+p-value of test                       : 1 - eps1    *****
+
+Kolmogorov-Smirnov- statistic = D-    :    1.00
+p-value of test                       :   eps      *****
+
+Anderson-Darling statistic = A2       :  357.37
+p-value of test                       :3.2e-157    *****
+
+Test on the sum of all N observations
+Number of degrees of freedom          : 4890
+Chi-square statistic                  : 8.70e+8
+p-value of test                       :   eps      *****
+
+-----------------------------------------------
+CPU time used                    :  00:02:39.91
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        lcg_xor4
+ Number of statistics:  4
+ Total CPU time:   00:14:37.29
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 93  HammingCorr, L = 300           1 - eps1
+ 94  HammingCorr, L = 1200          1 - eps1
+ 95  HammingIndep, L=30, r=0          eps  
+ 96  HammingIndep, L=30, r=27         eps  
+ ----------------------------------------------
+
+
+
